@@ -1,0 +1,2665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Aria is a business focused HTML landing page template built with Bootstrap to help you create lead generation websites for companies and their services.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Kapsül Harita</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+<style type="text/css">
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-header {
+  padding: 2px 20px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 20px;
+}
+
+.modal-footer {
+  padding: 20px;
+  background-color: #5cb85c;
+  color: white;
+}
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 100%;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+/* The grid: Four equal columns that floats next to each other */
+.column_map {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column_map img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column_map img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row_map:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container_map {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn_map {
+  position: absolute;
+  right: auto;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container_slide {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container_slide {
+  text-align: center;
+  background-color: blue;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row_slide:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column_slide {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.column_gallery {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row_gallery::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  </style>
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+
+        <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header">ANASAYFA <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#intro">KAPSÜL HARİTA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#services">HighLife+</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#projects">Projeler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#nasıl">Nasıl Kullanılır?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#hakkımızda">Kapsül Haritanın Amacı</a>
+                </li>
+
+                <!-- Dropdown Menu -->          
+            <!--<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">TERMS CONDITIONS</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a>
+                    </div>
+                </li>
+            -->
+                <!-- end of dropdown menu -->
+            </ul>
+
+            <!-- SOSYAL MEDYA KODU-->
+
+    	</div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navbar -->
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <h1>KAPSÜL HARİTA <br><span id="js-rotating">Kültürel Yerler, Yöresel Lezzetler</span></h1>
+                            <p class="p-heading p-large">Çok gezen de bilir, çok okuyan da. Okuyarak Türkiye'yi gezmek istiyorsan, hoşgeldin.</p>
+                            <a class="btn-solid-lg page-scroll" href="#intro">HARİTA'YA GİT</a>
+                        </div>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+
+    <!-- Kapsül Harita -->
+    <div id="intro" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="text-container">
+                    <ul class="list-group list-group-horizontal" style="list-style-type:none;">
+
+                    	<table>
+							<tbody>
+							<tr>
+							<td><div class="btn-group dropdown">
+                           <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" ria-haspopup="true" aria-expanded="false" style="background-color: #68C7E3
+							">Akdeniz Bölgesi<span class="sr-only">Toggle Dropdown</span></button>
+                           <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button" id="myBtn">Adana</button>
+                                <button class="dropdown-item" type="button" id="myBtn7">Antalya</button>
+                                <button class="dropdown-item" type="button" id="myBtn31">Hatay</button>
+                                <button class="dropdown-item" type="button" id="myBtn32">Isparta</button>
+                                <button class="dropdown-item" type="button" id="myBtn33">Mersin</button>
+                        	</div>
+                       		</div></td>
+							<td>
+							<div class="btn-group dropdown">
+                           <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" ria-haspopup="true" aria-expanded="false" style="background-color: #D26975">Ege Bölgesi<span class="sr-only">Toggle Dropdown</span></button>
+                           	<div class="dropdown-menu">
+                                <button class="dropdown-item" type="button" id="myBtn3">Afyonkarahisar</button>
+                                <button class="dropdown-item" type="button" id="myBtn35">İzmir</button>
+                                <button class="dropdown-item" type="button" id="myBtn48">Muğla</button>
+                        	</div>
+                       		</div>
+                       		</td>
+							<td>
+							<div class="btn-group dropdown">
+                           <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" ria-haspopup="true" aria-expanded="false" style="background-color: #29B8AB
+							">Marmara Bölgesi</button>
+                           <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button" id="myBtn17">Çanakkale</button>
+                                <button class="dropdown-item" type="button" id="myBtn22">Edirne</button>
+                                <button class="dropdown-item" type="button" id="myBtn34">İstanbul</button>
+                                <button class="dropdown-item" type="button" id="myBtn59">Tekirdağ</button>
+                        	</div>
+                       		</div>
+							</td>
+							<td>
+							<div class="btn-group dropdown">
+                           <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" ria-haspopup="true" aria-expanded="false" style="background-color: #DEAB42
+							">Doğu Anadolu Bölgesi<span class="sr-only">Toggle Dropdown</span></button>
+                           <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button" id="myBtn25">Erzurum</button>
+                                <button class="dropdown-item" type="button" id="myBtn36">Kars</button>
+                                <button class="dropdown-item" type="button" id="myBtn65">Van</button>
+                                <button class="dropdown-item" type="button" id="myBtn30">Hakkari</button>
+                        	</div>
+                       		</div>								
+							</td>
+							<td>
+							<div class="btn-group dropdown">
+                           <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" ria-haspopup="true" aria-expanded="false" style="background-color: #BA76D5
+							">Güneydoğu Anadolu Bölgesi</button>
+                           <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button" id="myBtn47">Mardin</button>
+                                <button class="dropdown-item" type="button" id="myBtn63">Şanlıurfa</button>
+                                <!--<button class="dropdown-item" type="button">Güneydoğu Anadolu3</button>-->
+                       		</div>
+                       		</div>								
+							</td>
+							<td>
+							<div class="btn-group dropdown">
+                           <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" ria-haspopup="true" aria-expanded="false" style="background-color: #E0D648">İç Anadolu Bölgesi<span class="sr-only">Toggle Dropdown</span></button>
+                           <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button" id="myBtn6">Ankara</button>
+                                <button class="dropdown-item" type="button" id="myBtn38">Kayseri</button>
+                                <button class="dropdown-item" type="button" id="myBtn58">Sivas</button>
+                        	</div>
+                       		</div>	
+							</td>
+							<td>
+                       		<div class="btn-group dropdown">
+                           <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" ria-haspopup="true" aria-expanded="false" style="background-color: #85C77E">Karadeniz Bölgesi<span class="sr-only">Toggle Dropdown</span></button>
+                           <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button" id="myBtn53">Rize</button>
+                                <button class="dropdown-item" type="button" id="myBtn55">Samsun</button>
+                                <button class="dropdown-item" type="button" id="myBtn61">Trabzon</button>
+                                <button class="dropdown-item" type="button" id="myBtn67">Zonguldak</button>
+                                <button class="dropdown-item" type="button" id="myBtn28">Giresun</button>
+                                <button class="dropdown-item" type="button" id="myBtn29">Gümüşhane</button>
+                       		</div>
+                       		</div>								
+							</td>
+							</tr>
+							</tbody>
+						</table>
+
+                 
+	                   		<!-- The Modal -->
+							<div id="myModal1" class="modal">
+                <!-- Modal content ADANA -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p><b style="color: #68C7E3">Plaka:</b> 01</p>
+                  <p><b style="color: #68C7E3">Nüfus:</b> 2.258.718</p>
+                  <p><b style="color: #68C7E3">Yüzölçümü:</b> 13.844 km²</p>
+                  <p><b style="color: #68C7E3">İklim:</b> Adana'nın iklimi, Akdeniz iklimi özelliklerini taşır; yazları çok sıcak ve kurak, kışlar ise ılık ve yağışlıdır.</p>
+                  <p><b style="color: #68C7E3">Geçim Kaynağı:</b> Türkiye'nin en gelişmiş tarım bölgesi olan Adana, Türkiye'nin pamuk üretiminin dörtte birini karşılar. Ayrıca, pamuk ambarı olduğu gibi, tahıl, susam, kavun, karpuz, incir, üzüm ve turunçgiller bakımından da önemli yer tutar. </p>
+                  <br>
+                  <p><b style="color: #68C7E3">Mutfak:</b></p>
+                  <p>Adana tarihi ve kültürü kadar zengin bir mutfağa da sahiptir. Adana yöresine baktığımızda yağlı, acılı, hamurlu ve et ağırlıklı yemeklerin ön plana çıktığı görülmektedir. </p>
+                 <table>
+                <div class="row_gallery">
+                <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/adanakebap.jpg">
+                      <img src="images/adanakebap.jpg" alt="adanakebap" width="600" height="400">
+                    </a>
+                    <div class="desc">Adana Kebap</div>
+                  </div>
+              </div>
+
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/karındolması.jpg">
+                      <img src="images/karındolması.jpg" alt="KarınDolması" width="600" height="400">
+                    </a>
+                    <div class="desc">Karın Dolması</div>
+                  </div>
+              </div>
+
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/bicibici.jpg">
+                      <img src="images/bicibici.jpg" alt="ZeytimSalatası" width="600" height="400">
+                    </a>
+                    <div class="desc">Bici Bici</div>
+                  </div>
+              </div>
+
+                </div>
+              </table>
+                <br>
+                <p><b style="color: #68C7E3">Kültürel Yerler:</b></p>
+                  <table>
+                  <div class="row_gallery">
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/sabancıcamii.jpg">
+                      <img src="images/sabancıcamii.jpg" alt="SabancıMerkezCamii" width="600" height="400">
+                    </a>
+                    <div class="desc">Sabancı Merkez Camii</div>
+                    </div>
+                    </div>
+
+                    <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/ataturkevi.jpg">
+                      <img src="images/ataturkevi.jpg" alt="SaintPierre" width="600" height="400">
+                    </a>
+                    <div class="desc">Atatürk Evi</div>
+                    </div>
+                    </div>
+
+                    <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/taskopru.jpg">
+                      <img src="images/taskopru.jpg" alt="Titus" width="600" height="400">
+                    </a>
+                    <div class="desc">Adana Taş Köprü</div>
+                    </div>
+                  </div>
+              </div>
+                </table>
+                </div>
+              </div>
+
+              <div id="myModal32" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p><b style="color: #68C7E3">Plaka:</b> 32</p>
+                  <p><b style="color: #68C7E3">Nüfus:</b> 418.780</p>
+                  <p><b style="color: #68C7E3">Yüzölçümü:</b> 8933 km²</p>
+                  <p><b style="color: #68C7E3">İklim:</b> Isparta ilinde Akdeniz iklimi görülmektedir. Yazlar sıcak ve nemlidir, kışlar ise yağışlı ve daha ılımandır.</p>
+                  <p><b style="color: #68C7E3">Geçim Kaynağı:</b> Isparta ilinde çalışan nüfusun büyük çoğunluğu tarım sektöründe görülmektedir. Gül, elma ve kiraz yetiştiriciliği yaygındır. Sanayi sektörü de ilimizde gelişmektedir. Gül yetiştiriciliği ile kozmetik sanayi gelişmiştir. Yaygın olarak bilinen Isparta halıları da tekstil sanayi ürünü olarak ortaya çıkmaktadır.</p>
+                  <br>
+                  <p><b style="color: #68C7E3">Mutfak:</b></p>
+                <table>
+                  <div class="row_gallery">
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/kirazr.jpg">
+                      <img src="images/kirazr.jpg" alt="KirazReçeli" width="600" height="400">
+                    </a>
+                    <div class="desc">Kiraz Reçeli</div>
+                    </div>
+                    </div>
+
+                  <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/güll.jpg">
+                      <img src="images/güll.jpg" alt="GülLokumu" width="600" height="400">
+                    </a>
+                    <div class="desc">Gül Lokumu</div>
+                    </div>
+                    </div>
+
+                    <div class="gallery">
+                    <div class="column_gallery">
+                    <a target="_blank" href="images/güls.jpg">
+                      <img src="images/güls.jpg" alt="HatayArkeolojiMüzesi" width="600" height="400">
+                    </a>
+                    <div class="desc">Gül Suyu</div>
+                    </div>
+                  </div>
+              </div>
+                </table>
+                <br>
+                <p><b style="color: #68C7E3">Kültürel Yerler:</b></p>
+                <table>
+                  <div class="row_gallery">
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/egirdir.jpg">
+                      <img src="images/egirdir.jpg" alt="EğirdirGölü" width="600" height="400">
+                    </a>
+                    <div class="desc">Eğirdir Gölü</div>
+                  </div>
+                    </div>
+
+                  <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/adada.jpg">
+                      <img src="images/adada.jpg" alt="Adada" width="600" height="400">
+                    </a>
+                    <div class="desc">Adada</div>
+                    </div>
+                  </div>
+              </div>
+                </table>
+                </div>
+              </div>
+
+              <div id="myModal33" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p><b style="color: #68C7E3">Plaka:</b> 33</p>
+                  <p><b style="color: #68C7E3">Nüfus:</b> 1.868.757</p>
+                  <p><b style="color: #68C7E3">Yüzölçümü:</b> 15853 km²</p>
+                  <p><b style="color: #68C7E3">İklim:</b> Mersin ilimizde Akdeniz iklimi görülmektedir. Yazları sıcak ve kurakken, kışları ılık ve yağışlı geçer.</p>
+                  <p><b style="color: #68C7E3">Geçim Kaynağı:</b> Mersin nüfusun çoğunluğu tarım sektöründe çalışır. Sanayi alanında da gelişmiş olan ilimiz, denizyolu taşımacılığı açısından da oldukça önemli bir yere sahiptir.</p>
+                  <br>
+                  <p><b style="color: #68C7E3">Mutfak:</b></p>
+                <table>
+                  <div class="row_gallery">
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/tantuni.jpg">
+                      <img src="images/tantuni.jpg" alt="Tantuni" width="600" height="400">
+                    </a>
+                    <div class="desc">Tantuni</div>
+                    </div>
+                  </div>
+
+                    <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/cezerye.jpg">
+                      <img src="images/cezerye.jpg" alt="Cezerye" width="600" height="400">
+                    </a>
+                    <div class="desc">Cezerye</div>
+                    </div>
+                  </div>
+
+                    <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/kerebiç.jpg">
+                      <img src="images/kerebiç.jpg" alt="Kerebiç" width="600" height="400">
+                    </a>
+                    <div class="desc">Kerebiç</div>
+                    </div>
+                  </div>
+              </div>
+                </table>
+                <br>
+                <p><b style="color: #68C7E3">Kültürel Yerler:</b></p>
+                <table>
+                  <div class="row_gallery">
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/kızkalesi.jpg">
+                      <img src="images/kızkalesi.jpg" alt="KızKalesi" width="600" height="400">
+                    </a>
+                    <div class="desc">Kız Kalesi</div>
+                    </div>
+                  </div>
+
+                  <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/tarsus.jpg">
+                      <img src="images/tarsus.jpg" alt="TarsusŞelalesi" width="600" height="400">
+                    </a>
+                    <div class="desc">Tarsus Şelalesi</div>
+                    </div>
+                  </div>
+
+                  <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/astım.jpg">
+                      <img src="images/astım.jpg" alt="AstımMağarası" width="600" height="400">
+                    </a>
+                    <div class="desc">Astım Mağarası</div>
+                    </div>
+                  </div>
+              </div>
+                </table>
+                </div>
+              </div>
+
+							<div id="myModal7" class="modal">
+							  <!-- Modal ANTALYA content -->
+
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p><b style="color: #68C7E3">Plaka:</b> 07</p>
+                  <p><b style="color: #68C7E3">Nüfus:</b> 2.548.308</p>
+                  <p><b style="color: #68C7E3">Yüzölçümü:</b> 20.177 km²</p>
+                  <p><b style="color: #68C7E3">İklim:</b> Antalya klasik bir Akdeniz iklimine sahiptir. Yazları sıcak ve kurakken, kışları ılık ve yağışlı geçer.</p>
+                  <p><b style="color: #68C7E3">Geçim Kaynağı:</b> Antalya ilimizde görülen başlıca geçim kaynakları turizm, ticaret ve tarımdır. Ticaret alanında ATSO, tarım alanında kıyı kesimlerde görülen portakal, muz, avokado gibi tropikal meyvelerin üretimi ve turizm alanında tatil beldeleri ile bilinir.</p>
+                  <br>
+                  <p><b style="color: #68C7E3">Mutfak:</b> Antalya, Akdeniz mutfağı özelliğini taşıyan zengin bir mutfak kültürüne sahiptir. Turizm kenti olmasından dolayı Arap ve Afrika mutfaklarından da etkilenmiştir.</p>
+                  <p></p>
+                 <table>
+                <div class="row_gallery">
+                <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/antalyapiyazi.jpg">
+                      <img src="images/antalyapiyazi.jpg" alt="Antalya Piyazı" width="600" height="400">
+                    </a>
+                    <div class="desc">Antalya Piyazı</div>
+                  </div>
+              </div>
+
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/giritkebabı.jpg">
+                      <img src="images/giritkebabı.jpg" alt="EnginarlıGiritKebabı" width="600" height="400">
+                    </a>
+                    <div class="desc">Enginarlı Girit Kebabı</div>
+                  </div>
+              </div>
+
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/yanıkdondurma.jpg">
+                      <img src="images/yanıkdondurma.jpg" alt="YanıkDondurma" width="600" height="400">
+                    </a>
+                    <div class="desc">Yanık Donduma</div>
+                  </div>
+              </div>
+
+                </div>
+              </table>
+                <br>
+                <p><b style="color: #68C7E3">Kültürel Yerler:</b></p>
+                  <table>
+                  <div class="row_gallery">
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/kaleici.jpg">
+                      <img src="images/kaleici.jpg" alt="Kaleİçi" width="600" height="400">
+                    </a>
+                    <div class="desc">Kaleiçi</div>
+                    </div>
+                    </div>
+
+                    <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/konyaaltı.jpg">
+                      <img src="images/konyaaltı.jpg" alt="KonyaaltıPlajı" width="600" height="400">
+                    </a>
+                    <div class="desc">Konyaaltı Plajı</div>
+                    </div>
+                    </div>
+
+                    <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/perge.jpg">
+                      <img src="images/perge.jpg" alt="Perge" width="600" height="400">
+                    </a>
+                    <div class="desc">Perge Antik Kenti</div>
+                    </div>
+                  </div>
+              </div>
+                </table>
+                </div>
+              </div>
+
+
+							<div id="myModal31" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #68C7E3">Plaka:</b> 31</p>
+							    <p><b style="color: #68C7E3">Nüfus:</b> 1.659.320</p>
+							    <p><b style="color: #68C7E3">Yüzölçümü:</b> 5403 km²</p>
+							    <p><b style="color: #68C7E3">İklim:</b> Hatay klasik bir Akdeniz iklimine sahiptir. Yazları sıcak ve kurakken, kışları ılık ve yağışlı geçer.</p>
+							    <p><b style="color: #68C7E3">Geçim Kaynağı:</b> Hatay ekonomik açıdan çeşitliliği bulunan illerimizdendir. Tarım (turunçgil, pamuk ve zeytin vb.) ve hayvancılık yaygındır. Aynı zamanda Demir Çelik Fabrikası sayesinde sanayi oldukça gelişmiştir ve İskenderun’da bulunan liman dış ve iç ticaret için önemli bir kaynaktır.</p>
+							    <br>
+							    <p><b style="color: #68C7E3">Mutfak:</b></p>
+							    <p>Hatay mutfağı, UNESCO tarafından 2017 yılında Dünya Gastronomi Şehri olarak seçilmiştir. Farklı kültürlerin bir araya gelerek çeşitlendirdiği bu mutfak, farklı tatlarıyla insanların ağzında adeta bir lezzet şöleni yaratır.</p>
+								 <table>
+								<div class="row_gallery">
+								<div class="column_gallery">
+							    <div class="gallery">
+							    	<a target="_blank" href="images/abugannuş.jpg">
+							    		<img src="images/abugannuş.jpg" alt="Abugannüş" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Abugannüş</div>
+							    </div>
+							</div>
+
+							    <div class="column_gallery">
+							    <div class="gallery">
+							    	<a target="_blank" href="images/kağıtkebabı.jpeg">
+							    		<img src="images/kağıtkebabı.jpeg" alt="KağıtKebabı" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Kağıt Kebabı</div>
+							    </div>
+							</div>
+
+							    <div class="column_gallery">
+							    <div class="gallery">
+							    	<a target="_blank" href="images/zeytinsalatası.jpg">
+							    		<img src="images/zeytinsalatası.jpg" alt="ZeytimSalatası" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Zeytin Salatası</div>
+							    </div>
+							</div>
+
+							  </div>
+							</table>
+								<br>
+								<p><b style="color: #68C7E3">Kültürel Yerler:</b></p>
+									<table>
+									<div class="row_gallery">
+									<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/arkeoloji.jpg">
+							    		<img src="images/arkeoloji.jpg" alt="HatayArkeolojiMüzesi" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Hatay Arkeoloji Müzesi</div>
+							    	</div>
+							   		</div>
+
+							   		<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/kilise.jpg">
+							    		<img src="images/kilise.jpg" alt="SaintPierre" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Saint Pierre Kilisesi</div>
+							    	</div>
+							    	</div>
+
+							    	<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/titus.jpg">
+							    		<img src="images/titus.jpg" alt="Titus" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Titus Tüneli ve Beşikli Mağara</div>
+							    	</div>
+							    </div>
+							</div>
+								</table>
+							  </div>
+							</div>
+
+							<div id="myModal32" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #68C7E3">Plaka:</b> 32</p>
+							    <p><b style="color: #68C7E3">Nüfus:</b> 418.780</p>
+							    <p><b style="color: #68C7E3">Yüzölçümü:</b> 8933 km²</p>
+							    <p><b style="color: #68C7E3">İklim:</b> Isparta ilinde Akdeniz iklimi görülmektedir. Yazlar sıcak ve nemlidir, kışlar ise yağışlı ve daha ılımandır.</p>
+							    <p><b style="color: #68C7E3">Geçim Kaynağı:</b> Isparta ilinde çalışan nüfusun büyük çoğunluğu tarım sektöründe görülmektedir. Gül, elma ve kiraz yetiştiriciliği yaygındır. Sanayi sektörü de ilimizde gelişmektedir. Gül yetiştiriciliği ile kozmetik sanayi gelişmiştir. Yaygın olarak bilinen Isparta halıları da tekstil sanayi ürünü olarak ortaya çıkmaktadır.</p>
+							    <br>
+							    <p><b style="color: #68C7E3">Mutfak:</b></p>
+								<table>
+									<div class="row_gallery">
+									<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/kirazr.jpg">
+							    		<img src="images/kirazr.jpg" alt="KirazReçeli" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Kiraz Reçeli</div>
+							    	</div>
+							    	</div>
+
+									<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/güll.jpg">
+							    		<img src="images/güll.jpg" alt="GülLokumu" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Gül Lokumu</div>
+							    	</div>
+							    	</div>
+
+							    	<div class="gallery">
+							    	<div class="column_gallery">
+							    	<a target="_blank" href="images/güls.jpg">
+							    		<img src="images/güls.jpg" alt="HatayArkeolojiMüzesi" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Gül Suyu</div>
+							    	</div>
+							    </div>
+							</div>
+								</table>
+								<br>
+								<p><b style="color: #68C7E3">Kültürel Yerler:</b></p>
+								<table>
+									<div class="row_gallery">
+									<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/egirdir.jpg">
+							    		<img src="images/egirdir.jpg" alt="EğirdirGölü" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Eğirdir Gölü</div>
+							    </div>
+							    	</div>
+
+									<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/adada.jpg">
+							    		<img src="images/adada.jpg" alt="Adada" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Adada</div>
+							    	</div>
+							    </div>
+							</div>
+								</table>
+							  </div>
+							</div>
+
+							<div id="myModal33" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #68C7E3">Plaka:</b> 33</p>
+							    <p><b style="color: #68C7E3">Nüfus:</b> 1.868.757</p>
+							    <p><b style="color: #68C7E3">Yüzölçümü:</b> 15853 km²</p>
+							    <p><b style="color: #68C7E3">İklim:</b> Mersin ilimizde Akdeniz iklimi görülmektedir. Yazları sıcak ve kurakken, kışları ılık ve yağışlı geçer.</p>
+							    <p><b style="color: #68C7E3">Geçim Kaynağı:</b> Mersin nüfusun çoğunluğu tarım sektöründe çalışır. Sanayi alanında da gelişmiş olan ilimiz, denizyolu taşımacılığı açısından da oldukça önemli bir yere sahiptir.</p>
+							    <br>
+							    <p><b style="color: #68C7E3">Mutfak:</b></p>
+								<table>
+									<div class="row_gallery">
+									<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/tantuni.jpg">
+							    		<img src="images/tantuni.jpg" alt="Tantuni" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Tantuni</div>
+							    	</div>
+							    </div>
+
+							    	<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/cezerye.jpg">
+							    		<img src="images/cezerye.jpg" alt="Cezerye" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Cezerye</div>
+							    	</div>
+							    </div>
+
+							    	<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/kerebiç.jpg">
+							    		<img src="images/kerebiç.jpg" alt="Kerebiç" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Kerebiç</div>
+							    	</div>
+							    </div>
+							</div>
+								</table>
+								<br>
+								<p><b style="color: #68C7E3">Kültürel Yerler:</b></p>
+								<table>
+									<div class="row_gallery">
+									<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/kızkalesi.jpg">
+							    		<img src="images/kızkalesi.jpg" alt="KızKalesi" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Kız Kalesi</div>
+							    	</div>
+							    </div>
+
+									<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/tarsus.jpg">
+							    		<img src="images/tarsus.jpg" alt="TarsusŞelalesi" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Tarsus Şelalesi</div>
+							    	</div>
+							    </div>
+
+									<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/astım.jpg">
+							    		<img src="images/astım.jpg" alt="AstımMağarası" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Astım Mağarası</div>
+							    	</div>
+							    </div>
+							</div>
+								</table>
+							  </div>
+							</div>
+
+
+					
+                    		<!-- The Modal -->
+							<div id="myModal3" class="modal">
+							  <!-- Modal Afyon content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p><b style="color: #D26975">Plaka:</b> 03 </p>
+                  <p><b style="color: #D26975">Nüfus:</b> 736.912</p>
+                  <p><b style="color: #D26975">Yüzölçümü:</b> 114,23 km²</p>
+                  <p><b style="color: #D26975">İklim:</b> Afyonkarahisar iklimi yazları sıcak ve kurak, baharları ılık ve yağışlı, kışları soğuk ve kar yağışlı olarak tanımlanır.<p>
+                  <p><b style="color: #D26975">Geçim Kaynağı:</b> fyon'un başlıca gelir kaynağı tarım ve hayvancılıktır. Buğday, arpa ve ayçiçeği il ekonomisinde başta gelir.</p>
+                  <p><b style="color: #D26975">Mutfak:</b>2019 UNESCO Yaratıcı Şehirler Ağı’na Afyonkarahisar dahil edildi. </p>
+                  <table>
+                    <div class="row_gallery">
+                  <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/sucukdoner.jpg">
+                      <img src="images/sucukdoner.jpg" alt="SucukDoner" width="600" height="400">
+                    </a>
+                    <div class="desc">Sucuk Döner</div>
+                    </div>
+                  </div>
+                    <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/ekmekkadayıf.jpg">
+                      <img src="images/ekmekkadayıf.jpg" alt="EkmekKadayıf width="600" height="400">
+                    </a>
+                    <div class="desc">Ekmek Kadayıf</div>
+                    </div>
+                  </div>
+                    <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/keskek.jpg">
+                      <img src="images/keskek.jpg" alt="Keşkek" width="600" height="400">
+                    </a>
+                    <div class="desc">Keşkek</div>
+                    </div>
+                  </div>
+                </table>
+
+                <br>
+                <p><b style="color: #D26975">Kültürel Yerler:</b></p>
+                <table>
+                  <div class="row_gallery">
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/afyonkalesi.jpg">
+                      <img src="images/afyonkalesi.jpg" alt="AfyonKalesi" width="600" height="400">
+                    </a>
+                    <div class="desc">Afyonkarahisar Kalesi</div>
+                    </div>
+                  </div>
+
+                    <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/peribacaları.jpg">
+                      <img src="images/peribacaları.jpg" alt="PeriBacaları" width="600" height="400">
+                    </a>
+                    <div class="desc">İscehisar Peri Bacaları</div>
+                    </div>
+                  </div>
+
+                    <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/zafermuzesi.jpg">
+                      <img src="images/zafermuzesi.jpg" alt="ZaferMuzesi" width="600" height="400">
+                    </a>
+                    <div class="desc">Zafer Müzesi</div>
+                    </div>
+                  </div>
+              </div>
+            </table>
+
+
+
+							<div id="myModal35" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #D26975">Plaka:</b> 35</p>
+							    <p><b style="color: #D26975">Nüfus:</b> 4.320.519</p>
+							    <p><b style="color: #D26975">Yüzölçümü:</b> 12012 km²</p>
+							    <p><b style="color: #D26975">İklim:</b> İzmir, Akdeniz iklim kuşağında kalmaktadır. Yazları sıcak ve kurak, kışları ılık ve yağışlı geçmektedir.<p>
+							    <p><b style="color: #D26975">Geçim Kaynağı:</b> İzmir, ekonomik açıdan çeşitlilik gösteren illerimizdendir. Sanayi, tarım, ticaret ve turizme dayalı bir ekonomisi vardır. Tarım açısından oldukça zengin topraklara sahiptir.</p>
+							    <p><b style="color: #D26975">Mutfak:</b></p>
+							    <table>
+							    	<div class="row_gallery">
+									<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/zeytinyaglıe.jpg">
+							    		<img src="images/zeytinyaglıe.jpg" alt="ZeytinyağlıEnginar" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Zeytinyağlı Enginar</div>
+							    	</div>
+							    </div>
+							    	<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/boyoz.jpg">
+							    		<img src="images/boyoz.jpg" alt="Boyoz" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Boyoz</div>
+							    	</div>
+							    </div>
+							    	<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/börülce.jpg">
+							    		<img src="images/börülce.jpg" alt="DenizBörülcesiSalatası" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Deniz Börülcesi Salatası</div>
+							    	</div>
+							    </div>
+								</table>
+
+								<br>
+								<p><b style="color: #D26975">Kültürel Yerler:</b></p>
+								<table>
+									<div class="row_gallery">
+									<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/şirince.jpg">
+							    		<img src="images/şirince.jpg" alt="ŞirinceKöyü" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Şirince Köyü</div>
+							    	</div>
+							    </div>
+
+							    	<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/bergama.jpg">
+							    		<img src="images/bergama.jpg" alt="BergamaÇokKatmanlıAlanı" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Bergama Çok Katmanlı Peyzaj Alanı</div>
+							    	</div>
+							    </div>
+
+							    	<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/efes.jpg">
+							    		<img src="images/efes.jpg" alt="Efes" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Efes</div>
+							    	</div>
+							    </div>
+							</div>
+
+							    	<div class="row_gallery">
+							    	<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/saat.jpg">
+							    		<img src="images/saat.jpg" alt="Saat" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Saat Kulesi</div>
+							    	</div>
+							    </div>
+							</div>
+								</table>
+              </div>
+            </div>
+
+							<div id="myModal48" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p>Some text in the Modal Mugla..</p>
+							  </div>
+							</div>
+
+                    		<!-- The Modal -->
+							<div id="myModal25" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p>Some text in the Modal Erzurum..</p>
+							  </div>
+							</div>
+
+							<div id="myModal36" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p><b style="color: #DEAB42">Plaka:</b> 36</p>
+                  <p><b style="color: #DEAB42">Nüfus:</b> 284.923</p>
+                  <p><b style="color: #DEAB42">Yüzölçümü:</b> 9442 km²</p>
+                  <p><b style="color: #DEAB42">İklim:</b> Kars, yüksek yayla ikliminin görüldüğü bir ilimizdir. Kışlar uzun ve sert, yazlar ılık geçer. Yüksek miktarda kar yağışı görülür.</p>
+                  <p><b style="color: #DEAB42">Geçim Kaynağı:</b> Kars ilinin ekonomisinin büyük bir çoğunluğunu hayvancılık oluşturur. Bitki örtüsü sebebiyle hayvancılık gelişmiştir. İklim şartları sebebiyle tarla tarımı çok fazla görülmez.</p>
+                  <br>
+                  <p><b style="color: #DEAB42">Mutfak:</b></p>
+                  <ul>
+                  <li>Kete</li>
+                  <li>Katmer</li>
+                  <li>Umaç Helvası</li>
+                </ul>
+                <br>
+                <p><b style="color: #DEAB42">Kültürel Yerler:</b></p>
+                <table>
+                  <div class="row_gallery">
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/avköşkü.jpg">
+                      <img src="images/avköşkü.jpg" alt="AvKöşkü" width="600" height="400">
+                    </a>
+                    <div class="desc">Sarıkamış Katerina Av Köşkü</div>
+                     </div>
+                  </div>
+
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/kayakmerkezleri.jpg">
+                      <img src="images/kayakmerkezleri.jpg" alt="KayakMerkezleri" width="600" height="400">
+                    </a>
+                    <div class="desc">Kayak Merkezleri</div>
+                    </div>
+                  </div>
+
+                  <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/menuçehr.jpg">
+                      <img src="images/menuçehr.jpg" alt="Menuçehr" width="600" height="400">
+                    </a>
+                    <div class="desc">Menuçehr Camii</div>
+                    </div>
+                  </div>
+                  </div>
+                </table>
+              </div>
+            </div>
+
+
+							<div id="myModal65" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #DEAB42">Plaka:</b> 65</p>
+							    <p><b style="color: #DEAB42">Nüfus:</b> 1.149.342</p>
+							    <p><b style="color: #DEAB42">Yüzölçümü:</b> 19069 km²</p>
+							    <p><b style="color: #DEAB42">İklim:</b> Van ilinde kışlar sert ve uzun geçer. Çok yüksek bölgelerinde, Van Gölü bulunduğu için kışlar daha yumuşak geçer</p>
+							    <p><b style="color: #DEAB42">Geçim Kaynağı:</b> Van ilinin ekonomisi tarıma, küçükbaş hayvancılığa ve hayvan ürünlerini işleyen sanâyiye dayanır. </p>
+							    <p><b style="color: #DEAB42">Van Kedisi:</b> Van Kedisi sadece Van Denizi Havzası’nda yaşayan safkan bir kedi türüdür. Genetik bir bozukluk sonucu oluşan iki farklı göz rengi en önemli özelliğidir. Bazılarının her iki gözü de mavi; bazılarının her iki gözü de kehribar rengindedir. </p>
+							    <img src="images/kedi.png" style="width: 25%">
+							    <br>
+							    <p><b style="color: #DEAB42">Mutfak:</b></p>
+								<table>
+									<div class="row_gallery">
+									<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/otlu.jpg">
+							    		<img src="images/otlu.jpg" alt="OtluPeynir" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Otlu Peynir</div>
+							    	</div>
+							    </div>
+
+									<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/ayva.jpg">
+							    		<img src="images/ayva.jpg" alt="Ayva Yemeği" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Ayva Yemeği</div>
+							    	</div>
+							    </div>
+
+									<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/acem.jpg">
+							    		<img src="images/acem.jpg" alt="AcemKöftesi" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Acem Köftesi</div>
+							    	</div>
+							    </div>
+							</div>
+								</table>
+								<br>
+								<p><b style="color: #DEAB42">Kültürel Yerler:</b></p>
+								<ul>
+									<li>Van Gölü</li>
+									<li>Akdamar Adası</li>
+									<li>Erçek Kuş Gölü Cenneti</li>
+								</ul>
+							  </div>
+							</div>
+
+							<div id="myModal30" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #DEAB42">Plaka:</b> 30</p>
+							    <p><b style="color: #DEAB42">Nüfus:</b> 280.514</p>
+							    <p><b style="color: #DEAB42">Yüzölçümü:</b> 7228 km²</p>
+							    <p><b style="color: #DEAB42">İklim:</b> Yazlar az yağışlı ve sıcak, kışlar ise daha yağışlı ve oldukça soğuk geçmektedir. En çok yağış bahar aylarında gerçekleşir.</p>
+							    <p><b style="color: #DEAB42">Geçim Kaynağı:</b> Hakkari’nin ekilebilir tarım arazisi sayısı sınırlı sayıdadır, bu sebeple halkın temel geçim kaynağı yüzyıllardır hayvancılıktır. Arıcılık sezonu, bölgenin arazi yapısı ve zengin bitki örtüsü sayesinde diğer bölgelere göre daha uzun sürer.</p>
+							    <br>
+							    <p><b style="color: #DEAB42">Mutfak:</b></p>
+								<table>
+									<div class="row_gallery">
+									<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/doğaba.jpg">
+							    		<img src="images/doğaba.jpg" alt="Doğaba" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Doğaba</div>
+							    </div>
+							</div>
+							    </div>
+								</table>
+								<br>
+								<p><b style="color: #DEAB42">Kültürel Yerler:</b></p>
+								<ul>
+									<li>Meydan Medresesi</li>
+									<li>Nehri Taş Köprü</li>
+									<li>Kayme Sarayı</li>
+									<li>Berçelan Yaylası</li>
+								</ul>
+							  </div>
+							</div>
+
+							  </div>
+							</div>			
+
+
+    			
+                    		<!-- The Modal -->
+							<div id="myModal17" class="modal">
+							  <!-- Modal content çanakkale-->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p><b style="color: #29B8AB">Plaka:</b> 17</p>
+                  <p><b style="color: #29B8AB">Nüfus:</b> 541.548</p>
+                  <p><b style="color: #29B8AB">Yüzölçümü:</b> 1.016 km²</p>
+                  <p><b style="color: #29B8AB">İklim:</b> Çanakkale, Akdeniz ve Karadeniz iklimi arasında geçiş gösteren ılıman bir iklimdir.     </p>
+                  <p><b style="color: #29B8AB">Geçim Kaynağı:</b> Çanakkale'nin geçim kaynağı tarıma dayanır; sanayisi henüz gelişmektedir. Türkiye'de en çok ayçiçeği üretilen ikinci şehridir. </p>
+                  <p><b style="color: #29B8AB">Mutfak:</b></p>
+                  <table>
+                    <div class="row_gallery">
+                    <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/tumbi.jpg">
+                      <img src="images/tumbi.jpg" alt="Tumbi" width="600" height="400">
+                    </a>
+                    <div class="desc">Tumbi</div>
+                  </div>
+              </div>
+
+                  <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/ovmaccorbası.jpg">
+                      <img src="images/ovmaccorbası.jpg" alt="Ovmaç Çorbası" width="600" height="400">
+                    </a>
+                    <div class="desc">Ovmaç Çorbası</div>
+                  </div>
+              </div>
+
+                  <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/cırpma.jpg">
+                      <img src="images/cırpma.jpg" alt="Çırpma" width="600" height="400">
+                    </a>
+                    <div class="desc">Çırpma</div>
+                  </div>
+              </div>
+            </div>
+                </table>
+                <br>
+                <p><b style="color: #29B8AB">Kültürel Yerler:</b></p>
+                <ul>
+                  <li>Kilitbahir Kalesi</li>
+                  <li>Truva Antik Kenti</li>
+                  <li>Assos Antik Kenti</li>
+                  <li>Çanakkale Şehitleri Anıtı</li>
+
+                </ul>               
+                </div>
+              </div>  
+
+                    
+
+							<div id="myModal22" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p>Some text in the Modal Edirne..</p>
+							  </div>
+							</div>
+
+							<div id="myModal34" class="modal">
+							  <!-- Modal content -->
+							  	<div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #29B8AB">Plaka:</b> 34</p>
+							    <p><b style="color: #29B8AB">Nüfus:</b> 15.067.724</p>
+							    <p><b style="color: #29B8AB">Yüzölçümü:</b> 5712 km²</p>
+							    <p><b style="color: #29B8AB">İklim:</b> İstanbul, Karadeniz ile Akdeniz arasında bir geçiş iklimine sahiptir. Yılın bütün ayları nemli geçtiği için kar yağışları sık sık yaşanmaz.</p>
+							    <p><b style="color: #29B8AB">Geçim Kaynağı:</b> İstanbul, Türk ekonomisi için oldukça önemli bir konumda bulunmaktadır. Çağlar boyunca bir ticaret ve üretim şehri olan İstanbul, turizm sektöründe de önemli bir yere sahiptir. Yatırım ve finans konusunda da Türkiye’nin başkenti denilebilir. </p>
+							    <p><b style="color: #29B8AB">Mutfak:</b></p>
+							    <table>
+							    	<div class="row_gallery">
+							    	<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/sarıyer.jpg">
+							    		<img src="images/sarıyer.jpg" alt="Sarıyer" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Sarıyer Böreği</div>
+							    	</div>
+									</div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/balıkek.jpg">
+							    		<img src="images/balıkek.jpg" alt="BalıkEkmek" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Balık Ekmek</div>
+							    </div>
+							</div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/boza.jpg">
+							    		<img src="images/boza.jpg" alt="Boza" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Boza</div>
+							    </div>
+							    </div>
+							</div>
+								</table>
+								<br>
+								<p><b style="color: #29B8AB">Kültürel Yerler:</b></p>
+								<p>İstanbul, tarih boyunca kozmopolit bir kent olmuştur. Ev sahipliği yaptığı tüm milletlerden izler taşımasıyla geniş bir kültüre sahiptir. İstanbul’da, kültür turizmine ev sahipliği yapan 28 saray, 91 medrese, 517 cami, 164 kilise, 19 sinagog, 199 türbe, 595 çeşme ve 93 hamam olmak üzere toplam 1796 adet tarihi değere sahip mekân bulunmaktadır.</p>
+								<table>
+									<div class="row_gallery">
+							    	<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/dolmabahçe.jpg">
+							    		<img src="images/dolmabahçe.jpg" alt="DolmabahçeSarayı" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Dolmabahçe Sarayı</div>
+							    </div>
+							</div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/kapalıçarşı.jpg">
+							    		<img src="images/kapalıçarşı.jpg" alt="Kapalıçarşı" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Kapalıçarşı</div>
+							    </div>
+							</div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/kızk.jpg">
+							    		<img src="images/kızk.jpg" alt="Abugannüş" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Kız Kulesi</div>
+							    </div>
+							</div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/topkapı.jpg">
+							    		<img src="images/topkapı.jpg" alt="TopkapıSarayı" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Topkapı Sarayı</div>
+							    </div>
+							</div>
+						</div>
+								</table>							  
+								</div>
+                </div> 
+
+							<div id="myModal59" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #29B8AB">Plaka:</b> 59</p>
+							    <p><b style="color: #29B8AB">Nüfus:</b> 1.081.065</p>
+							    <p><b style="color: #29B8AB">Yüzölçümü:</b> 6218 km²</p>
+							    <p><b style="color: #29B8AB">İklim:</b> Marmara Denizi kıyısında bulunan illerde genellikle Akdeniz İklimi görülmektedir fakat Tekirdağ’da Akdeniz ikliminden farklı olarak kar yağışı görülebilmektedir. İlin iç kesimlerinde ise karasal iklimde olduğu gibi yazlar sıcak, kışlar soğuk geçer.  </p>
+							    <p><b style="color: #29B8AB">Geçim Kaynağı:</b> Tekirdağ ilindeki tarımsal üretim hayvansal üretime göre daha fazladır. Bitkisel üretimde en fazla üretilen ürün buğdaydır. Bu ürünü sırasıyla ayçiçeği, kanola, arpa, silajlık mısır takip etmektedir.  </p>
+							    <p><b style="color: #29B8AB">Mutfak:</b></p>
+							    <table>
+							    	<div class="row_gallery">
+							    	<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/tekirdagk.png">
+							    		<img src="images/tekirdagk.png" alt="TekirdağKöftesi" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Tekirdağ Köftesi</div>
+							    </div>
+							</div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/hayrabolu.png">
+							    		<img src="images/hayrabolu.png" alt="HayraboluTatlısı" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Hayrabolu Tatlısı</div>
+							    </div>
+							</div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/damat.png">
+							    		<img src="images/damat.png" alt="DamatPaçası" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Damat Paçası</div>
+							    </div>
+							</div>
+						</div>
+								</table>
+								<br>
+								<p><b style="color: #29B8AB">Kültürel Yerler:</b></p>
+								<ul>
+									<li>Çorlu Kalesi</li>
+									<li>Hora Feneri</li>
+									<li>Namık Kemal Evi ve Heykeli</li>
+								</ul>								
+							  </div>
+							</div>	
+
+                    
+                    		<!-- The Modal -->
+							<div id="myModal47" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p>Some text in the Modal Mardin..</p>
+							  </div>
+							</div>
+
+							<div id="myModal63" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #BA76D5">Plaka:</b> 63</p>
+							    <p><b style="color: #BA76D5">Nüfus:</b> 2.115.256</p>
+							    <p><b style="color: #BA76D5">Yüzölçümü:</b> 18584 km²</p>
+							    <p><b style="color: #BA76D5">İklim:</b> Karasal iklimin hakim olduğu Şanlıurfa ilinde yazlar uzun ve çok sıcak, kışlar da çok soğruk geçer. Yaz ile kıs arasında ve gece ile gündüz arasında ısı farkı fazlar. Türkiye’nin en sıcak ili olmasına rağmen nem oranı düşük olduğu için hava boğucu değildir. </p>
+							    <p><b style="color: #BA76D5">Geçim Kaynağı:</b> Şanlıurfa ilinin ekonomisi genellikle tarıma dayanır. Mercimek, burçak, pamuk ve kenevir başlıca ürünlerinderdir. Sanayi gelişmemiştir.  </p>
+							    <br>
+							    <p><b style="color: #BA76D5">Mutfak:</b></p>
+								<table>
+									<div class="row_gallery">
+									<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/icli.png">
+							    		<img src="images/icli.png" alt="İçliKöfte" width="600" height="400">
+							    	</a>
+							    	<div class="desc">İçli Köfte</div>
+							    	</div>
+							    </div>
+
+									<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/urfa.png">
+							    		<img src="images/urfa.png" alt="UrfaKebabı" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Urfa Kebabı</div>
+							    	</div>
+							    </div>
+
+									<div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/bostana.png">
+							    		<img src="images/bostana.png" alt="BostanaSalatası" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Bostana Salatası</div>
+							    	</div>
+							    </div>
+							</div>
+								</table>
+								<br>
+								<p><b style="color: #BA76D5">Kültürel Yerler:</b></p>
+								<ul>
+									<li>Göbeklitepe</li>
+									<li>Balıklı Göl</li>
+									<li>Ulucamii</li>
+								</ul>
+							  </div>
+							</div> 
+
+               
+                    		<!-- The Modal -->
+							<div id="myModal6" class="modal">
+							  <!-- Modal content ankara -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p><b style="color: #E0D648">Plaka:</b> 06</p>
+                  <p><b style="color: #E0D648">Nüfus:</b> 5.663.322'</p>
+                  <p><b style="color: #E0D648">Yüzölçümü:</b> 16917 km²</p>
+                  <p><b style="color: #E0D648">İklim:</b> Ankara, yer yer farklı iklimlerin görüldüğü bir ilimizdir. Güneyde, step iklimi; kuzeyde ise karadeniz iklimini görülür. ara ikliminin hüküm sürdüğü bu bölgede kış sıcaklıkları düşüktür, yaz ise sıcak geçer. </p>
+                  <p><b style="color: #E0D648">Geçim Kaynağı: </b> Şehrin başlıca geçim kaynağı tarım ve hayvancılıktır. Tarım alanında daha çok buğday, arpa, yulaf, pirinç gibi tahıl ürünleriyle şeker pancarı ve patates üretilir.  </p>
+                  <p><b style="color: #E0D648">Mutfak:</b></p>
+                  <table>
+                  <div class="row_gallery">
+                    <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/ankaratava.jpg">
+                      <img src="images/ankaratava.jpg" alt="AnkaraTava" width="600" height="400">
+                    </a>
+                    <div class="desc">Ankara Tava</div>
+                  </div>
+              </div>
+
+                  <div class="column_gallery">
+                    <div class="gallery">
+                    <a target="_blank" href="images/ankarasimidi.jpg">
+                      <img src="images/ankarasimidi.jpg" alt="AnkaraSimidi" width="600" height="400">
+                    </a>
+                    <div class="desc">Ankara Simidi</div>
+                  </div>
+              </div>
+            </div>
+                </table>
+                <br>
+                <p><b style="color: #29B8AB">Kültürel Yerler:</b></p>
+                <table>
+                  <div class="row_gallery">
+                    <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/anıtkabir.jpg">
+                      <img src="images/anıtkabir.jpg" alt="Anıtkabir" width="600" height="400">
+                    </a>
+                    <div class="desc">Anıtkabir</div>
+                  </div>
+              </div>
+              <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/ankarakalesi.jpg">
+                      <img src="images/ankarakalesi.jpg" alt="Ankara Kalesi" width="600" height="400">
+                    </a>
+                    <div class="desc">Ankara Kalesi</div>
+                  </div>
+              </div>
+              <div class="column_gallery">
+                  <div class="gallery">
+                    <a target="_blank" href="images/hamamonu.jpg">
+                      <img src="images/hamamonu.jpg" alt="Hamamönü" width="600" height="400">
+                    </a>
+                    <div class="desc">Hamamönü</div>
+                  </div>
+              </div>
+              
+            </div>
+                </div>
+              </table>
+              </div>
+            </div>
+
+
+							<div id="myModal38" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #E0D648">Plaka:</b> 38</p>
+							    <p><b style="color: #E0D648">Nüfus:</b> 1.421.455</p>
+							    <p><b style="color: #E0D648">Yüzölçümü:</b> 16917 km²</p>
+							    <p><b style="color: #E0D648">İklim:</b> Kayseri, kışları soğuk ve yağışlı, yazları ise sıcak ve kurak bir iklime sahiptir.</p>
+							    <p><b style="color: #E0D648">Geçim Kaynağı:</b> Kayseri ilinin gelişmesine, ticaret ve zanaatta geçmişten günümüze önemli bir kültürel birikime sahip olması çok büyük katkı sağlamıştır. Tarım ve hayvansal ürün elde etmek için yapılan hayvancılık yaygındır. </p>
+							    <p><b style="color: #E0D648">Mutfak:</b></p>
+							    <table>
+									<div class="row_gallery">
+							    	<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/pastırma.jpg">
+							    		<img src="images/pastırma.jpg" alt="Pastırma" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Pastırma</div>
+							    </div>
+							</div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/mantı.jpg">
+							    		<img src="images/mantı.jpg" alt="Mantı" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Mantı</div>
+							    </div>
+							</div>
+            </div>
+								</table>
+								<br>
+								<p><b style="color: #29B8AB">Kültürel Yerler:</b></p>
+								<table>
+									<div class="row_gallery">
+							    	<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/erciyes.jpg">
+							    		<img src="images/erciyes.jpg" alt="Erciyes" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Erciyes Dağı (Kayak Merkezi)</div>
+							    </div>
+							</div>
+							<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/kapuzbaşı.jpg">
+							    		<img src="images/kapuzbaşı.jpg" alt="Kapuzbaşı" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Kapuzbaşı Şelaleri</div>
+							    </div>
+							</div>
+							<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/sultansazlığı.jpg">
+							    		<img src="images/sultansazlığı.jpg" alt="Sultansazlığı" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Sultan Sazlığı Kuş Cenneti</div>
+							    </div>
+							</div>
+							<div class="row_gallery">
+								<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/yamandede.jpg">
+							    		<img src="images/yamandede.jpg" alt="Yamandede Camii" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Yamandede Camii/Panaya Kilisesi</div>
+							    </div>
+							</div>
+						</div>
+							  </div>
+							</table>
+							</div>
+            </div>
+
+
+							<div id="myModal58" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #E0D648">Plaka:</b> 58</p>
+							    <p><b style="color: #E0D648">Nüfus:</b> 618.617</p>
+							    <p><b style="color: #E0D648">Yüzölçümü:</b> 28488 km²</p>
+							    <p><b style="color: #E0D648">İklim:</b> Sivas ili çevresine göre kendine özgü bir iklim yapısına sahiptir. Yakınındaki illere göre daha yüksekte olması, kuzay rüzgarlarına açık olması ve engebeli yapısı bu iklim farklılığının sebepleri arasında gösterilebilir. Çok kısa süren yaz mevsiminde çok sıcak ve kuraktır fakat uzun kış mevsiminde ise soğuk ve kar yağışlıdır. </p>
+							    <p><b style="color: #E0D648n">Geçim Kaynağı:</b> Sivas ilinin ekonomisi büyük ölçüde tarla tarımına dayanır. Faal nüfûsun % 70’i tarım sektöründe çalışır. Tarımdan sonra hayvancılık ikinci bir gelir kaynağıdır. </p>
+							    <p><b style="color: #E0D648">Mutfak:</b></p>
+								<table>
+									<div class="row_gallery">
+							    	<div class="column_gallery">
+									<div class="gallery">
+							    	<a target="_blank" href="images/baviko.png">
+							    		<img src="images/baviko.jpg" alt="Baviko" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Baviko</div>
+							    </div>
+							</div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/pezik.png">
+							    		<img src="images/pezik.jpg" alt="Pezik" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Pezik, Dal Turşusu</div>
+							    </div>
+								</div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/sivas.png">
+							    		<img src="images/sivas.jpg" alt="SivasKatmeri" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Sivas Katmeri</div>
+							    </div>
+							</div>
+								</div>
+								</table>
+								<br>
+							    <p><b style="color: #E0D648">Atatürk ve Sivas:</b>  Mustafa Kemal Atatürk “Burada bir milletin kurtuluşunu hazırlayan kararlar verildi” ifadesiyle Sivas Kongresi’nin önemini vurgulamıştır. Kongrede alınan kararlar usul ve esas olarak demokratik ve milli devletin habercisidir ve kongre ile vatanın bölünmez bütünlüğü zihinlerde yer etmiştir. </p>							 	
+								<br>
+
+								<p><b style="color: #E0D648">Aşık Veysel: </b> İki gözü de görmeyen âşık zamanını babasının Mustafa Abdal tekkesinde kendisine aldığı üç telli kırık sazla geçirmeye başlamıştır. İlk başlarda başarılı olamasa da babasının ısrarıyla ve kendisinin de yavaş yavaş saza hâkim olmasıyla, ilerleyen zamanda saz çalan bir usta haline gelmiştir. Daha sonradan iyi ustamalı şiir okuyan bir halk sanatçısı olmuştur. Veysel'in hayatınınbir kısmını köy enstitülerinde öğretmenlik yaparak geçirmiştir. Gözünün görmemesi, şiirlerindeki doğal söyleyiş ve ezgilerinin orijinal oluşu, seçtiği konular ve sentezci yapısı Veysel'in tanınmasını sağlayan en önemli faktörlerdir. </p>	
+								<p><b style="color: #E0D648">Kültürel Yerler:</b></p>
+								<ul>
+									<li>Taşhan</li>
+									<li>Alacahan Kervansarayı</li>
+									<li>Sivas Kongre Binası Atatürk Ve Etnografya Müzesi</li>
+								</ul>	
+							  </div>
+							</div>		
+				
+
+
+                    		<!-- The Modal -->
+							<div id="myModal53" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p>Some text in the Modal Rize..</p>
+							  </div>
+							</div>
+
+							<div id="myModal55" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #85C77E">Plaka:</b> 55</p>
+							    <p><b style="color: #85C77E">Nüfus:</b> 1.356.079</p>
+							    <p><b style="color: #85C77E">Yüzölçümü:</b> 9579 km²</p>
+							    <p><b style="color: #85C77E">İklim:</b> Yazları sıcak ve yağışlı kışları ise ılıman ve yağışlıdır (Karadeniz İklimi). </p>
+							    <p><b style="color: #85C77E">Geçim Kaynağı:</b> Samsun’da yaşayan yerli halk geçimlerini meyvecilik, sebzecilik ve balıkçılıkla sağlarlar. Aynı zamanda Samsun ilinin İstanbul, Ankara İzmir gibi ticari merkezlerle yüksek bir ticaret ilişkisi bulunmaktadır.</p>
+							    <p><b style="color: #85C77E#85C77E">Mutfak:</b></p>
+
+							 	<table>
+							 		<div class="row_gallery">
+							    	<div class="column_gallery">
+							 		<div class="gallery">
+							    	<a target="_blank" href="images/bafra.jpg">
+							    		<img src="images/bafra.jpg" alt="BafraPidesi" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Bafra Pidesi</div>
+							    </div>
+							</div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/nokul.jpg">
+							    		<img src="images/nokul.jpg" alt="Nokul" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Nokul</div>
+							    </div>
+							</div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/misir.jpg">
+							    		<img src="images/misir.jpg" alt="MısırÇorbası" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Mısır Çorbası</div>
+							    </div>
+							</div>
+            </div>
+								</table>
+							 	<br>
+							 	<p><b style="color: #85C77E#85C77E">Kültürel Yerler:</b></p>
+								<ul>
+									<li>Şahinkaya Kanyonu</li>
+									<li>Çam Gölü</li>
+									<li>Galeriç Ormanları</li>
+									<li>Asarkale ve Kaya Mezarları</li>
+								</ul>
+							  </div>
+							</div>
+
+							<div id="myModal61" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #85C77E">Plaka:</b> 61</p>
+							    <p><b style="color: #85C77E">Nüfus:</b> 811.901</p>
+							    <p><b style="color: #85C77E">Yüzölçümü:</b> 6685 km²</p>
+							    <p><b style="color: #85C77E">İklim:</b> Trabzon ili yazları sıcak, kışları ise normal soğukluktadır. İlkbahar genellikle yağmurlu ve sisli geçerken sonbahar güzel geçer. </p>
+							    <p><b style="color: #85C77E">Geçim Kaynağı:</b> Tarım, hayvancılık, balıkçılık, arıcılık ve ormancılık Trabzon ilinin ekonomisini oluituran temel geçim kaynaklarıdır. Cay, mısır, fındık, tütün ve fasulye başlıca yetiştirilen ürünler arasında yer alırlar. </p>
+							    <p><b style="color: #85C77E">Mutfak:</b></p>
+							 	<table>
+							 		<div class="row_gallery">
+							    	<div class="column_gallery">
+							 		<div class="gallery">
+							    	<a target="_blank" href="images/akcaabat.jpg">
+							    		<img src="images/akcaabat.jpg" alt="AkçaabatKöfte" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Akçaabat Köfte</div>
+							    </div>
+                </div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/kuymak.jpg">
+							    		<img src="images/kuymak.jpg" alt="Kuymak" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Kuymak</div>
+							    </div>
+                </div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/pazi.jpg">
+							    		<img src="images/pazi.jpg" alt="Pazı" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Pazı Mıhlama</div>
+							    </div>
+                </div>
+							</div>
+								</table>
+							 	<br>
+								<p><b style="color: #85C77E#85C77E">Kültürel Yerler:</b></p>
+								<ul>
+									<li>Sümela Manastırı</li>
+									<li>Trabzon Kalesi</li>
+									<li>Atatürk Köşkü</li>
+								</ul>							 	
+							  </div>
+							</div>
+
+							<div id="myModal67" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #85C77E">Plaka:</b> 67</p>
+							    <p><b style="color: #85C77E">Nüfus:</b> 591.204</p>
+							    <p><b style="color: #85C77E">Yüzölçümü:</b> 4420 km²</p>
+							    <p><b style="color: #85C77E">İklim:</b> Zonguldak ilinde Balkanlar üzerinden gelen soğuk hava akımlarına karşı açık olduğundan Doğu Karadeniz bölgesine göre kışlar daha sert geçer. Her mevsim yağışlı olmasıyla birlikte Karadeniz’in en serin bölgesidir.   </p>
+							    <p><b style="color: #85C77E">Geçim Kaynağı:</b> Zonguldak ilinin ekonomisine madencilik ve sanayi hakimdir. İkinci önemli kaynaklar ise ormancılık, hayvancılık ve tarla tarımıdır. İl sınırları içinde bulunan zengin kömür yataklarına bağlı olarak demir çelik fabrikaları bulunmaktadır.  </p>
+							    <p><b style="color: #85C77E">Mutfak:</b></p>
+							 	<table>
+							 		<div class="row_gallery">
+							    	<div class="column_gallery">
+							 		<div class="gallery">
+							    	<a target="_blank" href="images/tirit.jpg">
+							    		<img src="images/tirit.jpg" alt="Tirit" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Tirit</div>
+							    </div>
+                </div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/pumpum.jpg">
+							    		<img src="images/pumpum.jpg" alt="PumpumÇorbası" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Pumpum Çorbası</div>
+							    </div>
+                </div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/eregli.jpg">
+							    		<img src="images/eregli.jpg" alt="EreğliPidesi" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Ereğli Pidesi</div>
+							    </div>
+                </div>
+							</div>
+								</table>
+							 	<br>
+								<p><b style="color: #85C77E">Kültürel Yerler:</b></p>
+								<ul>
+									<li>Harmankaya Şelalesi</li>
+									<li>Gökgöl Mağarası</li>
+									<li>Filyos Örenyeri</li>
+								</ul>							 	
+							  </div>
+							</div>
+
+
+							<div id="myModal28" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #85C77E">Plaka:</b> 28</p>
+							    <p><b style="color: #85C77E">Nüfus:</b> 448.721</p>
+							    <p><b style="color: #85C77E">Yüzölçümü:</b> 6934 km²</p>
+							    <p><b style="color: #85C77E">İklim:</b> Kıyı kesimlerinde ılıman iklim, iç kesimlerinde ise karasal iklim görülür. Giresun kıyı bölgesi, Türkiye’nin en çok yağış alan bölgelerindendir. </p>
+							    <p><b style="color: #85C77E">Geçim Kaynağı:</b> Giresun ilinin ekonomisi, ilin başlıca tarım ürünü olan fındığa bağlıdır. Fındık dışında, çay ve kivi de ekonomik değer taşıyan tarım ürünleridir. Tarımdan sonra balıkçılık da Giresun ekonomisine katkıda bulunur. </p>
+							    <p><b style="color: #85C77E">Mutfak:</b></p>
+							 	<table>
+							 		<div class="row_gallery">
+							    	<div class="column_gallery">
+							 		<div class="gallery">
+							    	<a target="_blank" href="images/mendekçorbası.jpg">
+							    		<img src="images/mendekçorbası.jpg" alt="MendekÇorbası" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Mendek Çorbası</div>
+							    </div>
+                </div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/hamsiböreği.jpg">
+							    		<img src="images/hamsiböreği.jpg" alt="HamsiBöreği" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Hamsi Böreği</div>
+							    </div>
+                </div>
+
+							    <div class="column_gallery">
+							    	<div class="gallery">
+							    	<a target="_blank" href="images/fındıklıkadayıf.jpg">
+							    		<img src="images/fındıklıkadayıf.jpg" alt="FındıklıKadayıf" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Fındıklı Kadayıf</div>
+							    </div>
+                </div>
+							</div>
+								</table>
+							 	<br>
+								<p><b style="color: #85C77E">Kültürel Yerler:</b></p>
+								<ul>
+									<li>Giresun Adası</li>
+									<li>Zeytinlik Semti</li>
+									<li>Giresun Çocuk Kütüphanesi</li>
+								</ul>							 	
+							  </div>
+							</div>
+
+							<div id="myModal29" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p><b style="color: #85C77E">Plaka:</b> 29</p>
+							    <p><b style="color: #85C77E">Nüfus:</b> 151.449</p>
+							    <p><b style="color: #85C77E">Yüzölçümü:</b> 6575 km²</p>
+							    <p><b style="color: #85C77E">İklim:</b> Gümüşhane ili iklim özellikleri bakımından Doğu Anadolu ile Karadeniz bölümü arasında bir geçiş bölgesidir. </p>
+							    <p><b style="color: #85C77E">Geçim Kaynağı:</b> Tarım ve hayvancılık, halkın genel geçim kaynağıdır. Aynı zamanda, Gümüşhane ili sahip olduğu akarsu, göl ve barajları ile kültür balıkçılığı üretimi için büyük bir potansiyele sahiptir. İl genelinde faaliyette bulunan su ürünleri tesislerinin tamamı gökkuşağı alabalığı yetiştiriciliği yapmaktadır.</p>
+							    <p><b style="color: #85C77E">Mutfak:</b></p>
+							 	<table>
+							 		<div class="row_gallery">
+							    	<div class="column_gallery">
+							 		<div class="gallery">
+							    	<a target="_blank" href="images/lemis.jpg">
+							    		<img src="images/lemis.jpg" alt="Lemis" width="600" height="400">
+							    	</a>
+							    	<div class="desc">Lemis</div>
+							    </div>
+                </div>
+							</div>
+								</table>
+							 	<br>
+								<p><b style="color: #85C77E">Kültürel Yerler:</b></p>
+								<ul>
+									<li>Giresun Adası</li>
+									<li>Zeytinlik Semti</li>
+									<li>Giresun Çocuk Kütüphanesi</li>
+								</ul>							 	
+							  </div>
+							</div>
+            </div>
+          </div>
+        </div>
+                	
+
+                       <div class="mapdiv" style="width: 1200px; height: 600px; margin: auto;">
+                        <svg version="1.2" viewbox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+                            <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M79.7 308.9l-0.2 0.5-1-2.1 0.5-0.2 0.2 0.3-0.2 0.4 0.7 1.1z m74.9 6.2l-6.9-0.9-3.8-2.1-3.2-2.7-3.8-0.8-2.8 1.9-1.9 3.7-2 1.6-6.3 0.5-3.7-0.2-2.2-1.1-2.4 0-2.4 0.6-2.3-0.4-3.7-2.5-4.2-0.6-2-0.8-1.9-1.2-1.7 0.1-1.6 0.9-0.7 1.1-2.8 6.1-0.6 1.1-0.9 0-0.8 0.5-0.5 0.8-0.2 0.9-0.6 0.6-1.2-0.1 0 0.5 0.7 0.5-0.3 0.3-3.1 0.2-0.7 0.3-0.6 0.5-0.7-0.8-0.4 0-0.3 0.3-0.2-0.7-0.6 0.1-0.7-0.3 0.5-0.6 0.4-0.6 0.1-0.7-0.2-0.8 1.1-0.4 0-0.5-0.5-1.2 0.3-3-0.9 0.3-0.3-0.4-0.4 0-0.7 0.8 0.2-1.1 0.3-1 0.1-1-0.3-1 0.2-0.4-0.4-0.7 0.2-0.7 0.8 0.5 0.5-1 0.1-1.5-0.1-0.7-0.8-0.3-3-2-4.6-1.2-1.9-1.1 0.5-1.3 0.9-0.3 3.5 0.3 1.1-0.2 4.5-1.6 0.7-0.5 1.2-1.5 0.4-1 0.2-1.5 0-1.5 0-0.8-0.9-1.2-0.3-0.7 0.1-1.3 0.8-0.8 0.3-0.8 3.6 0 4.2-1.7 6.3-4.2 2.7-0.4 12.8 1 12.1-3.3 10.1-0.1 1.8-0.7 1.8-1.1 2.1-0.6 2.1-0.3 8.2-3 7.1 0.2 0.6 1.5 0.7 1.4 2.9 2 0.6 2-0.1 2.2 0.8 4-0.4 1.4-1.2 0.9-0.1 1.7 1.1 1.5 0.8 1.7 1.1 1.7 3.4 0.7 0.5 1.5-0.2 1.8-1.6 1.2-2 0.1-2.4 3.4-2.8 2.7-4-0.5-3.7 1-1 2.5 0.6 2.5 1.1 0.6 0.4 0.9 0.3 0.9z" id="TUR2229" name="Aydin">
+                            <title>Aydın</title>
+                            </path>
+
+                             <path style="fill:#D26975;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M37.1 251.6l-0.1 0.7-0.5 0-0.8 0.3-0.2-1.3 1.6-0.8 0.3 0.6-0.3 0.5z m20.2-1.8l-0.6 0.4-0.4-0.4-0.1-0.3-1.2-0.6-0.3-0.3 0-2 0.4-1.4-0.1-0.6 0.6 0.1 0.6 0.5 0.4 0.8 0.1 1.8 0.7 0.7 0.1 0.5-0.2 0.8z m94.8 23.8l-8.2 3-2.1 0.3-2.1 0.6-1.8 1.1-1.8 0.7-10.1 0.1-12.1 3.3-12.8-1-2.7 0.4-6.3 4.2-4.2 1.7-3.6 0 0.2-0.8 0-0.6-0.2-0.6 0.7-0.7-0.4-1.4-1.4-2.5-1.4 0.5-1.9 0-1.9-0.3-1.2-0.6-0.8-1.2-1.4-0.3-0.3-0.2-0.2-1.3-0.5-0.4-1.5-0.2-2.7-1.1-1.4-0.1-1.6 0.3-1.5 0.6-0.4 1-0.4 0.2-0.5-0.3-1.1-2.4 0.2-0.8 0-1-0.3-1-0.3-0.9-0.5-0.9-1.2-1.1-0.5-0.7-0.9 0.5-0.2-0.8 0.1-2-0.7-0.6-0.8 0-0.9 0.4-1 0.2-3.3 0-0.5 0.2-0.7 4.3-0.4-0.4-0.3 0 0.2 1 0 0.8-0.3 0.7-0.6 0.3-0.4-0.3-0.6-1.7-0.5-0.8 0 1.4-0.5 0.1-0.7-0.5-1-1.1-0.4-0.6-0.1-0.6 0.2-1-1.4 0.4-1.3-1.1-1.3-1.4-1.3-0.6 0.4 1.4-0.4 0-0.3-0.4-1.1-1.2 0.2-1.3 0-0.6-0.2-0.6-0.4 0-0.4 1.8-1.1 0.4-1.3-0.4-1.7-1.5-0.5-0.3-2.7-0.8-0.1-0.5 0.3-1 1.4 0.6 0.6-0.9 0.5-1.2 1.1-0.3 0-0.5-1-0.7-0.1-1.2 0.4-0.7 0.7 0.8 0.2-0.9 0.5-0.4 0.2 0.8 0 0.7-0.1 0.6-0.5 0.6 0.6 0.3 1.1 0.2 0.2 0.6 0.3 0.2 0.8 0.1 0.7-0.2 0.4-0.4-0.5-0.8 0-0.5 0.9 0.6 0.9-0.1 0.6-0.3 2.5-1.7 0-1.3-0.4-1.4-0.9-0.8 0-0.5 1.3 0.7 0.7 0.7 0.4-0.1 0.8-1.7-0.7-0.5-1.3-1.1-1.1-0.4-0.7-0.7-0.5-0.1-0.4 0.3-0.5 0.9-0.3 0.2-1 0 0-0.3 0.5-0.7 0.3-1.3-0.2-0.8-1.3-1.9-0.1-0.8-0.6-2-0.1-0.9-0.6-2.5 0.2-1.9 0.2-0.8 0.5-0.3 0.8-0.1 1.2-0.6 0.5-0.2 1.4 0.1 1.3 0.4 1.2 0.5 0.9 0.8 1.8 2 0.8 1.2 0.3 1 1.2 1.9 1.3 1.8 1.1 1 0.3 0.8 0.1 0.7 0 1.3 0.3 0.7-0.7 0.4-0.5-0.4-0.5-0.1-0.6 0.2-0.6 0.3 0.9 0.5 0 0.6-0.5 0.8-0.4 0.9 1.3 0.2 0.5 0.7 0.3 1 0.6 1.1 0.9 3 0.8 1.5 1.2-0.4 0.2-0.9-0.3-0.6-0.8-0.6-0.4-2.7 0.3-1.2 0.6-1.1 0.8-0.7 0.8 0.2 0.4-0.4 0.6 0.7 0.6 1.2 0.9 2.7 1.1-0.5 0.4 0.8 0.8-0.1 0.9-0.4 0.9-0.3 4.2-0.4 2.5-1.3 1.1-0.3 1-0.8 0.5 0.1 1 0.3 0.6-0.4 0.4 0 1.4 0.7 1.2-0.8 1.2-1.3 1.5-0.8 0-0.5-0.5-0.4-0.6 0.4-0.3-0.5-1 0.5-1.8-0.2-0.4 0.2-1.4-0.6-1.4 0-3.2 1.4-1.1 0.5 0.3-0.8-0.9-0.7-1.5-2.5-0.8-0.5-1.3-0.4-0.5-0.3-1.1-0.9 0.1-0.4 0.9 0.7 1.4 0.9 0.8 0 0-0.5-0.6-0.7-0.6-0.7-0.8-0.5-0.8-0.4 0.2-0.7 0.3-1.7 0.2-0.8-0.8-0.7-0.4 0.2-0.6 0.5-1.1 0 0.4-0.9-1.1-0.4-0.7-0.1-0.7 0 0.3-1.3-0.6 0-0.5-0.3-1-0.7 0.8-0.7 1-0.2-1-1.6-0.4-0.8-0.4-1.2 1-0.7 2.7-0.6 1.5-1.1 0.7 0.6 1 0.1 1.2 0.5 0.8 0.3 0.8-0.1-0.4-0.9 1-0.8 0.4-0.1 0.4 0.5 0.2-1.1-0.2-1.2-0.3 0.5-1.1-1.9-0.4-0.4 2.1-1 0.4 1.5 0.8 0.1 0.6-0.8-0.7-1.7 0.9-0.3 0.8-0.4 0.7-0.6 0.5-0.5 1 0.7 1.2-0.7 0.4-1.1-1.2-0.3 0.9-1.8 0-0.7-0.9-0.7-0.9 0.8-0.5 0.4-0.6 0.1-1 0-0.3-0.2-0.5-0.9-0.3-0.2-0.6 0.2-0.5 0.3-0.3 0.1-0.5-0.6-0.6 0.5-1.8 1.1-0.7 0.2-0.5-0.3-0.8-1.2-0.8-0.3-1-0.7-0.5-1.6 0.1-1.6 0.8-1.2 0-0.4-1.1 0 0.7-0.8 1.2-0.9 1.3-0.8 1-0.3 0.5-0.6-0.4-1.3-1.2-2-1.5-1.9-0.7-0.5-1.6-0.9 11.2-8.1 1-1.1 0.9-1.6 1-1.4 1.5-0.9 1.6-0.6 9.5-6.2 2.9 0.6 2.3 2.1 1.5 3 2 5.2 1.7 8.1 0.9 2.4 1.9 3.6-0.4 3.6-1.4 1.6-3.4 2.9-3.3 1.3-2.9 2-0.6 2.4-0.3 2.6-0.9 2.2-1.6 1.7-1.5 2.4-0.2 1.4 1.4 1.5 0.8 0.3 1.2 1.6 1.4 4.6 3.1 2.6 3.7 0.4 5.8-0.1 1.1 0.1 1.6 1.6 0.8 3.7 3.7 2.5 4 1.9 0.5 1 0.6 2.1 0.4 1 2.2 2 2.6-0.6 1.3-2.2 0.8-2.1 2.5 0.1 2.5 1.2 1.6 0 1.6-0.5 2.1 2.4 1.4 3.3 5.1-0.8 2-0.6 1.4 0.2 1 1.2 1.8 0.6 1.2 0.1 2.4 0.6 1.4 1.9 2.2 6.8 2.3 3.5z" id="TUR2230" name="Izmir">
+                            <title>İzmir</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M103.8 114.4l0.5 0.5 0.6 0.1 0 0.6-0.6 0.1-0.7-0.4-0.9-0.2-0.9-0.1-0.8-0.5-0.1-0.8 0.6-0.5 0.4-0.9 0.4-0.6 1.8 0.8 0.1 0.5-0.3 0.6-0.1 0.8z m29.9 4.6l-0.3 0.5-2.5 3.8-1.5 1.3-1.4 1.4 0.4 2.3 1.2 0.4 1 2.2-0.5 1.2-0.7 1.1-0.7 2.6 0.3 1.4 0.9 2.5 1.9 3.1 2.9 2 0.9 1.7 1 4.8 0.9 2.1 13.8 10.2 4.1 0.5 1.2-1.1 1.3-0.7 0.8 1.2-0.2 1.4 0.1 1.8 1 1.7 0.3 0.8 0.6 0.4 1 0.1 0.7 0.5 1.3 2 2.1 0.3 2.4-0.5 2.4 0.1 1.6 0.8 1.2 1.3-1 2-0.3 1.3 0 1.3-0.4 0.9-0.6 0.6-0.7 1.9-0.7 4.8-1.2 2-1.2 1.5-0.4 1-1.6 2.9-1.7 1.2-3.8 1.3-2 1-0.5 2.3 0.3 0.8 0.1 1.7-0.3 0.7-4.6-0.7-4.8 2.5-1.9 0.5-2 0.2-2.2-0.2-2.2 0.4-1.4 1.9-1.9 1.2-2.3 0.4-2.2 1-2.4-0.9-2.6-6-4.3-4.7-0.4-1-0.8-0.4-3.9 1.4-2.1-1 0.6-2.3 1.6-2.8-1.3-2.2-0.8 0.1-1.7 0.3-0.8-0.1-2.1-1.1-2.1-0.1-3.7 0.5-3.7-1.1-2.2-1.8-2.4-1.2-4 2.1-1.5-3-2.3-2.1-2.9-0.6-9.5 6.2-1.6 0.6-1.5 0.9-1 1.4-0.9 1.6-1 1.1-11.2 8.1-0.4-0.2-1.1-0.8-0.7-0.8 0.1-0.7-0.4-1.4-0.3-1.3-0.4-1-0.9-0.5-2.5 0.2-1.2-0.1-1.1-0.5 0.5-0.5 0.3-1.4 0.4-0.7 0.7-0.2 0.5 0.3-0.1 0.4-0.9 0.2 0 0.5 0.6-0.1 0.9 0.6 0-0.6 0.3-0.6 1.1-0.6 0.9-1.4 5.5-4.3-0.7-0.4 0.1-1.3-0.1-0.6 1.9-0.1 0.7-0.3 0.6-0.5-0.5-1 0.8-0.6 3-1 0.2-0.1 0.1-1 0.7-2.5 0-1.5-0.4-0.9-0.8-0.5-1.5-0.2-1.2 0.5-0.9 1-1 0.4-1.3-0.9-7.4 1.3-0.1-5.5 1.7-5.3 2.1-0.4 4.7 0.6 2.2-0.8 2-1.6 3.7-1.6 2.2-1.8 2.5 0 1.6 0.2 1.4-0.8 3.9 0.7 3.8 1.3 2.2-0.9 2.1-1.5 2.2-1 2.1-1.5 1.1-2.6 0.9-2.8 0.3-2.7-0.9-0.8-0.9-1.4 0.5-1.2 0.4-0.5 0.6-1.5 0.2-1.9 0.7-2.2 0.3-1.3-0.2-0.4-0.9-0.2-2.1-0.8-1-2.1 0.6-0.5 0.8-0.3 3.6-3.8 2.5-1.5 0.6-3-0.2-0.7 1.3-0.8 0.8-0.2 1.5 0.3 1.3 0.6 1.2 0.3 1.2-0.8 1.1 0.5 1.5 0.2 1.5-0.4 1.2-1.8 2.8-1.5 0.8-1.2-0.9 0-2.6-0.9-0.8 0.4-0.4 0-0.3-1.3-0.7-0.3-0.3-0.2-0.6-0.9-0.1-1.2-0.2-0.5-0.9-0.1-0.4-0.2-1.7-1.7-0.4-0.6 0-0.5 0.6-0.2 0.5-0.4 0.8-1 0.6-0.3 0.9 0.4 0.5-0.8 1 1.2 0.5 0.3 0.3-0.4 0.5-0.2 8.6 1.4 2.4 0.8 1 1.2-0.9 1.6-4.5 2.3-1.4 1.2 0.2 1.7 1.9 0.6 4.4-0.4 4.4-1.7 5-0.2z m-30.1-18.1l1.4 0.7 0.8-0.3 1.5 0.3 1.3 0.7 0.3 1.2-1 0.7-1.9 0.3-1 0.4-1.8 1.5-1 0.4-1.1-0.5-0.6 0-1-0.5-0.9-0.7 0.2-1.5-0.7-1.1 0.3-0.7 0.7-0.7 0.3 0.2 0.2 0.7 1.3-0.7 1.3-0.4 1.4 0z" id="TUR2238" name="Balikesir">
+                              <title>Balıkesir</title>
+                             </path>
+
+                             <path style="fill:#29B8AB;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M20.6 156.8l0.8 0.2 0.3 0.3 0.9-0.4 0.3 0.6-0.1 2.4-0.3 1-0.9-0.1-1.7-1.1-1.5-0.8-0.7-0.5-0.3-0.8 0.4-0.6 1-0.2 1.8 0z m-4-21.2l0.5 0.2 1-0.2 0.8-0.7 0.3 0 0 1.4-1.2 0.7-1.1 0.4-3.5 0.5-2.3 1-4.7 0.8-1.1-0.1-1.3-0.5-0.6-0.3-0.3-0.4-2.1-0.7 0-0.4 1.2-2 1.7-1.8 2.1-1.3 3.5-0.7 4.5-1.7 0.7-0.1 0.6 0.1 1.1 1.3 0.7 0.1 0 0.5-0.2 1.4 0 0.9 0.2 0.5-0.5 1.1z m83.9-10.9l0.2 0.7-0.6 3-2.5 1.5-3.6 3.8-0.8 0.3-0.6 0.5 1 2.1 2.1 0.8 0.9 0.2 0.2 0.4-0.3 1.3-0.7 2.2-0.2 1.9-0.6 1.5-0.4 0.5-0.5 1.2 0.9 1.4 0.9 0.8-0.3 2.7-0.9 2.8-1.1 2.6-2.1 1.5-2.2 1-2.1 1.5-2.2 0.9-3.8-1.3-3.9-0.7-1.4 0.8-1.6-0.2-2.5 0-2.2 1.8-3.7 1.6-2 1.6-2.2 0.8-4.7-0.6-2.1 0.4-1.7 5.3 0.1 5.5-10.9 2-1.2 0.5-0.5 0.6-0.6 0-2.3 1.3-0.4 0.3-0.6 0-2.7-0.5-0.6 0.1-0.7 0.3-0.5 0.1-0.7 1.1-1-0.6-4.1 1-2.1 0-2-1-0.2-1.5 1.3-3.5 0.8-3.4 2-1.9 0.4-1.6 0.4-3.7-0.2-0.7-1-1.9-0.2-0.9 0-0.6 0.5-0.4 0.2-0.4 0-1.6 0.2-1.8-0.1-0.6-0.8-0.2 0.3-0.7 0.7-3.4-0.3-1.8 0-0.6 0.1-0.6 0.5-0.9 0.3-1.2 1.1-1.9 0.5-0.5 2.7 0.9 0.9-0.5 1.7-0.8 0.6-0.3 2.2-2.3 0.4-0.7 0.2-0.6 0-0.9 0.3-0.7-0.1-0.5 0.8-0.1 0.5-0.3 0.3-0.8 0.2-1.3 0-1.3-0.4-1 0.4-1 0.2-0.4 1-0.1 0.8-0.1 1.3-0.7 1.8-0.4 0.9-0.9 2.3-3.1 0.5-0.3 1.2-0.5 0.6-0.5 5.6-6.9 1.1-0.9 2.1-0.1 4.5 0.4 1.8-0.5 0.6 0.2 1.4 0.8 2.9 0.2 1.2-0.2 1.4-1.2 1.3-1.6 1.6-1.3 2.4-0.1 1.8 0.3 2 0.1 1.2-0.3 1.7-1.1 0.8 0 0.9 0.6 0.5 1 0.8 2.1-0.7 0.5-0.6-0.3-0.5 0.3 2.3 2.5 2.9 1.9 3.1 1.4 3.7 0.9 1.4 0 0.6-0.1 0.5-0.4z m-31.7-16.8l-0.7 0.1-2 0.6-3 1.9-0.8 0.8-0.9 0.6-3.3 0.5-0.9 0.6-1.7 1.4-0.7 0.3-0.6 0.5-0.5 2-0.5 0.8-1.7 1-0.4 0.5-0.1 1.1-0.3 1.1-0.8 0.9-2.8 2.7-0.4 0.3-1.5 0.3-0.7 0.6-1.1 1.1-0.3 0.5-1.4 1.7-0.9 0.8-1.2 0.7-1.2 0.6-1.1 0.2-0.7 0.6 0.1 1.2 0.7 1.3 0.7 0.6-2.4 2.4-0.8 0.6-2.1 1.2-1.6 1.5-0.6 0.4-2.8 0.9-0.5 0.1-0.5-0.4 0.1-0.8 0.4-0.8 0.3-0.4 0.9-0.6 0.6-1.5 0.4-1.4 0.2-0.7 2.4-3.3 0.6-2.4-0.2-1.9-1-1.5-1.6-1.2 0.6-0.4 0.1-0.5-0.2-0.3-0.7-0.2-0.2-0.3 0.5-0.6 0.7-0.6 0.3-0.1 0.6-0.6 2.7-1 1-0.1 0.8-1.3 2.6-1.7 2.4-2.1 3.1-1.1 2.3-2 1.5-1 1.6-0.7 1.4-0.4 2.5 0.4 0.7-0.4 0.7-0.7 1.1-1.7 0.8-0.9 1.2 0.6 1.6-0.5 1.5-1.3 0.7-1.4-1.6-3.4-0.4-0.6-0.6 0 0.4-4.3 0-0.2 7.6 0.7-0.1 5.5 1.7 5.1z" id="TUR2239" name="Çanakkale">
+                            <title>Çanakkale</title>
+                             </path>
+
+                             <path style="fill:#29B8AB;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M62.2 9.7l1.4 8.1 1.6 6.7 0.6 6.8-1.1 6.7-2.2 3.2-0.8 5.1-2.5 5.3 1.6 3.1 0.6 1.3 0.4 9.7-0.8 4.1-2.6 3.3-1.6 4.2-0.9 4.8 0.3 5.6 2 4.4 1.4 4.5 0 0.2-0.4 4.3-3.4 0.6-1.2 0.6-0.7 0.2-3.6 0-1.4 0.5-4 2.3-1.5-1-0.8-0.3-0.9-0.1-0.7 0.3-0.8 0.5-0.8 0.2-1.4-0.7-0.9 0.1-2.8 0.8-9.6 0-1.4-0.2-0.7-0.5-0.5-1-0.3-1.3-0.4-1 0.3-1.1-0.1-1.5-0.5-1.5-0.8-1.1 0.5-0.2 2 0.2 1.6-0.8 1.2-1.4 0.4-1.8 0.8-1.3 2.8-2.4-0.4-0.8 0.1-0.4 0.3-0.6 0-0.4 1.1-0.5 0.3 0 0.4-0.4 0.3-0.6 0.4-1.4 0.3 0 0.5 0.7 0.8 0.3 0.7-0.2 0-0.4-0.5-0.8 0.6-0.6 1.5-0.7 0.8-0.6 0.5-0.7-0.7-0.5-0.5-0.7-0.2-0.6 0.2-0.5 0.4-0.2 0.8-0.1 0.4-0.4 0.4-0.8 0-0.8-1.4-0.7-0.5-0.7-0.7-1.6-0.1-1 0.9-1.8-0.4-0.3-0.8-0.2 0-0.6 1-1.5-0.6-1.2-0.2-1.3 0.2-1.3 0.6-1.5-0.8-1.2 0.5-0.6 3.4-0.3 0.8-0.5 1.4-1.2 1.5-1 0.6-0.8 0.6-0.1 2.6-2.9 0.6 0.7 1 0.6 1.1 0.3 0.9-0.1 0.7-0.7 0.5-1.2 0.2-1.4 0-1.5-0.2-1.4-0.8-3.4-0.3-2.6-0.2-1.2-0.6-1 0.3-0.7-0.2-1.8 0.3-0.8-0.4-0.9 0-1-1 1.5-0.5-0.6-2.4-1.2-2.9-2.2 0.4-0.9 0.2-1-0.8-0.2-1-0.4-2-0.6-1.4-1.3-0.9-0.3-1.4 0.2-0.5-0.8-0.4-1.4 0.2-1.5 0.8-1.7 2.1-1.9 5.4 0.2 2.5-0.7 0.7-1 0.4-1.3 0.2-1.2 0.2-1.3 0.2-1.1-0.7-0.6 0.1-0.7 0.7-0.6 1.5-1.7 0.8-0.6 1-0.1 4.9 0.8 1-0.1 0.5-0.4 1.1-1.1 0.6-0.2 0.5 0.3 1 0.8 0.6 0.2 0.9-0.7z" id="TUR2240" name="Edirne">
+                              <title>Edirne</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M133.4 40.1l-2.4 3.4-0.1 0-9.1 1-9 1.1-5.7 1.4-5.1 1.5-2.4 3.7-1.9 3.9-3.1 2.3-3.3 0.9-2.9-1.9-2.3-3.1-2.9-2-6.1 0-8.5 0.7-7.8 1.7-1.6-3.1 2.5-5.3 0.8-5.1 2.2-3.2 1.1-6.7-0.6-6.8-1.6-6.7-1.4-8.1 1.2-0.9 0.6 0 1 0.2 0.5-0.6 0.6-0.2 0.9 0.1 0.5-0.1 0.6-0.7 0.9-1.6 0.7-0.3 1-0.7 1.2-2.1 1.2-0.7 1 0 1 0.3 0.8 0.5 0.8 0.7 1.8 0 1.2 0.3 1.6-2.1 0.7-0.6 1.1-0.1 1.8 0.4 1.7 1 1.4 1.4 2.2 3.4 1.2 1.4 1.2 1.1 3.9 2.2 0.7 0.6 1.3 1.8 0.7 0.5 0.8-0.4-0.7-0.3 0.6-0.5-0.5-0.4 1.1-0.4 0.5-0.4 0.5-0.5 0.4 0.3 0.4-0.4 0.2-0.7 4-1 1.9 0 2.7 1.5 0.8 0.3 0.6-0.1 0.7-0.2 0.1-0.4-0.8-0.5 0.1-0.7 0.1-1 0.1-0.7 0.8 0 1-0.2 0.5 0.1 1.3 0.3 1.4 0.7 0.7 0.2 2.5-0.3 0.8 0.3 1.9 0.4 0.7 3.3 0 0.8 0.6 0.6 0.2 0.6 0 0.5-0.5 0.3-0.5-0.1-1-0.5-0.9 0.1-0.7 0.4-0.4 0.9-0.1 1.7 0.3 1.9 0.7 1.3 1 1.1 0.8 1.2 1 3.2 0.6 0.9 1 0.9 0.4 0.5 0.3 0.8 0.2 0.3 0 0.7-0.6 0 0 0.4 0.4 1.1 0.7 1.3 0.8 1 1.5 0.9 0.8 1 1.1 1.9 1.3 1.2z" id="TUR2241" name="Kirklareli">
+                              <title>Kırklareli</title>
+                             </path>
+
+
+                             <path style="fill:#29B8AB;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M131.9 72l-0.5-0.2-2.5 0.9-0.3 0.3-0.6 0-2.8 1.2-0.8 0.2-0.9 0.4-0.8 0.6-0.6 0.6-1.1 1.9-0.4 0.9 0.1 0.6-0.9 0.2-4.2-0.5-0.8-0.5-0.8-0.6-0.8-0.5-2.1-0.6-1.9-0.1-11.2 1.6-1.6 1-1.1 2.3-1.3 5.5-1.2 2.1-4.9 4.8-2.2 4-4.7 3.5-1 1.4-0.6 0.2-1.3 0.1-1.4 1-2.4-0.1-1.1 0.2-0.9 0.7-1.5 2.2-0.6 0.4-1.4 0.2-1.7-5.1 0.1-5.5-7.6-0.7-1.4-4.5-2-4.4-0.3-5.6 0.9-4.8 1.6-4.2 2.6-3.3 0.8-4.1-0.4-9.7-0.6-1.3 7.8-1.7 8.5-0.7 6.1 0 2.9 2 2.3 3.1 2.9 1.9 3.3-0.9 3.1-2.3 1.9-3.9 2.4-3.7 5.1-1.5 5.7-1.4 9-1.1 9.1-1 1.4 4.9 0.6 4.6-1.6 5.7-0.7 4.2 0.7 5.3 0.6 3.8z" id="TUR2242" name="Tekirdag">
+                              <title>Tekirdağ</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M259.7 123.7l0.7 3 3.2 5.7 2 2.4-5.4 0.3-4.2 3.4-0.9 3.5-0.7 3.5-1.7 3.2-2.7 1.9-2.8 0-2.7 1.2-0.8 1.4-0.9 1.3-1.6 0.9-1.3 1.1-0.6 7-2.2 4-2.9 3.3-2 0.5-3.9 0.5-4.1 1.2-2.2-0.7-5.8-4.1-1.8-0.8-2.1-1.3-0.9-1.1-1.7-3.7-0.3-2.8 0.9-5.8 2.9 0.6 2.6-1-0.7-3.4-1.4-1.1-2.7-3.9-0.1-3.4 1.5-6.9 5-5.3 0.9-1.9-0.2-1.8-1.2-1.5-0.2-2.2 0.6-1.6 0.6-1.9 0.2-2.2 1-1.9 1-1.1 1.1-0.9 2.8-1.5 1.5 3.1 1.8 2.8 2.1 1.7 1.9 2.1 4.6 1.4 7.2-1.9 2.3-0.2 1.9 0.6 2 0 1.6 1 1.3 1.9 0.9 0.8 3.9-0.1 2.7 0.7z" id="TUR2263" name="Bilecik">
+                              <title>Bilecik</title>
+                             </path>
+
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M150.5 111.1l-0.6 0.3-0.2-0.5 0.4-1.9-0.2-1.1 0.9-0.3 0.5 0.3 0.1 0.3-0.3 0.3-0.6 2.6z m73.5-1.3l-2.8 1.5-1.1 0.9-1 1.1-1 1.9-0.2 2.2-0.6 1.9-0.6 1.6 0.2 2.2 1.2 1.5 0.2 1.8-0.9 1.9-5 5.3-1.5 6.9 0.1 3.4 2.7 3.9 1.4 1.1 0.7 3.4-2.6 1-2.9-0.6-1.6 0.2-1.5 0.7-1.7 0.3-1.6-0.2-5.5-2.2-2.6 1.9-1.1 4-0.6 1.6-1 1.1-1.5 5.4-2.4 1.8-1.1 3.1-0.3 4.5-2.9 1.8-3.7 0.1-3.7-0.5-2.3-0.5-2-1.6-1.2-1.3-1.6-0.8-2.4-0.1-2.4 0.5-2.1-0.3-1.3-2-0.7-0.5-1-0.1-0.6-0.4-0.3-0.8-1-1.7-0.1-1.8 0.2-1.4-0.8-1.2-1.3 0.7-1.2 1.1-4.1-0.5-13.8-10.2-0.9-2.1-1-4.8-0.9-1.7-2.9-2-1.9-3.1-0.9-2.5-0.3-1.4 0.7-2.6 0.7-1.1 0.5-1.2-1-2.2-1.2-0.4-0.4-2.3 1.4-1.4 1.5-1.3 2.5-3.8 0.3-0.5 7.3-0.3 2.7 0.4 4.5-0.1-1 0.3-0.3 0.5-0.2 0.6 2.2-0.8 2.4 0 2.4 0.6 2.4 1.1 0.3-0.4 0.7 0.4 0.5-0.2 0.5-0.5 0.4-0.2 3-0.5 0.8-0.7 0.8-0.4 1 0.1 1.8 0.6 1.5 0.1 1.5 0.3 0.7 0.3 1.3 0.8 0.9 0.3 0.9 0.2 4-0.1 0.9-0.2 0.8-0.6 0.4-0.9 0.5-1.8 0.3-0.8 0.7 0.3 0.9-0.1 0.9-0.3 0.8-0.4-1-1.1-1.1-1.1-1.3-0.8-1.1-0.3-2.9 0-0.4 0.3-1.2 0.9-0.1-7.4 3.6 0.9 1.6-0.2 8 3.5 3.3-0.7 3.3-3.5 3.3 0.7 2.9 0.9 3.1-0.2 9.6-3.6 3.6-0.7 7.1 2.6 0.3 1.6 0.5 1.4z" id="TUR2264" name="Bursa">
+                              <title>Bursa</title>
+                             </path>
+
+
+                             <path style="fill:#29B8AB;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M181.3 88.1l-0.2 1.1-0.7-0.5 0-1 0.5-0.9 0.8-0.2-0.1 0.9-0.3 0.6z m38.6-20.9l0.1 0.6 0.5 2.1 0.2 2.2-1.5 3.5-2.8 1.6-3.4 1.3-3 2.1-0.4 1.7-0.9 1.6-1.9 0.2-1.5-1.3-1.6-3.4-2.5-2.1-2.7-0.3-2.3 1.7-2.2 2.2-1.3 0.7-2.7 2.3-1.8 2.3-0.7-0.4-1.1 0.2-1-1-2.9-1.4-1.1-0.9-1.1-1.4-1-0.9-2.9-1.5 0.4-0.5-0.6-0.3-0.3-0.7-0.2-1-0.4-0.9 1-0.5 1.1-1.2 0.8-1.4 0.7-2.7 0.6-1 0.2-0.8-1.1-0.8 1.2-1.9 1.9-2.2 2.1-1.5 1.9 0.3 0.5-0.7 0.8-0.1 9.8 1.8 10.4 2.5 12.7 1.9z m-88 4.8l-0.6-3.8-0.7-5.3 0.7-4.2 1.6-5.7-0.6-4.6-1.4-4.9 0.1 0 2.4-3.4 1.6 1.5 7.9 5 11.2 4.9 16.1 7.7 5.1 1.1 0.6 0.5 0.7-0.1 0.3-0.7 0.4-0.1 1.2 0.2 1.3 0.5 0.8 0.7-0.4 1.8-0.7 1.3-0.9 1.1-0.9 0.6-0.6 0.2 0.1 0.4 0.4 0.6 0.7 1 0.3 0.3-0.4 0.8-0.2 1.4-0.4 1.2-0.5 1.1-0.5 0.8-0.4 0.4-1 0.3-0.4 0.3-0.4 0.6-0.1 0.4 0.3 1.2-0.6 0.4-1.1-0.1-0.5-0.4-0.6 0.2-0.6 0.7-0.6 0.2-0.9 0.6-2.1 0.5-0.5 0.2-0.8 0.7-0.6 0.2-1.3-0.1-0.6-0.2-0.3-0.4-0.5-0.5-1.3-0.1-6.3 0.8-1.6-0.6 0.5-2.2-0.6-0.7-0.9-0.3 0.4-1.6-0.5-1.4-1.1-0.9-1.3-0.3 0.3 1 1.1 1.1 0.4 1.2 0.1 0.7-0.2 1-0.3 1-0.7 0.6-1.5-0.2-2.7-2.8-1.3-0.7-1.7-0.3-3.6-1.4-1.8-0.3-1.8 0-0.4-0.1-0.6-0.7-0.4-0.1-2 0.4-0.9 0.1-0.4-0.3z" id="TUR2265" name="Istanbul">
+                              <title>İstanbul</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M249.5 65.8l-0.3 1.1-1.7 4.2 0.9 3.5 3.9 0.8 0.2 2.2-1.2 2.2-0.3 2.3-0.9 0.2-2.9 0.1-1.7-0.9-2.1-0.4-0.9 0.6 0.4 1.5 0.7 0.2 0.6 0.4-3.4 3.7-2 10.3-2.2 4.2-3 2.1-3.4 0.8-1.6 0.9-1.7 0.7-3.7 0.3-7.1-2.6-3.6 0.7-9.6 3.6-3.1 0.2-2.9-0.9 0.4-2.7 0-6.1 0.5-0.3 1.2-0.6 0.5-1.1 0.4-0.3 1.2-0.3 0.5 0.1 0.9 0.4 0.7 0.8 0.4 1.3 0.5 0 10.1-2.3 6-0.3 1.9 0.8 1 0 0.8-1.3-0.5-1.6-2-0.3-4.3 0.5-1.1 0.5-0.6 0-0.6-0.3-1.1-1-0.3-0.2-0.8-0.1-1.9-0.7-1-0.1-12.4 0.5-1 0.3-0.8 0.7-0.9 0.4-1-0.5-0.5-0.5-0.4-1.2-0.6-0.2 0.8-0.5-0.2-0.7-0.4-0.5-0.9-0.6-0.2 0.4-0.5-0.4-0.5 0.4-0.6 0.2-1.4 0.3 0-0.4 0.5-0.1 0.4-0.3 0.1-0.4 0.1-0.7 0.5 0.3 0.5-0.3-0.6-0.9-1-1.3-0.5-0.4 1.8-2.3 2.7-2.3 1.3-0.7 2.2-2.2 2.3-1.7 2.7 0.3 2.5 2.1 1.6 3.4 1.5 1.3 1.9-0.2 0.9-1.6 0.4-1.7 3-2.1 3.4-1.3 2.8-1.6 1.5-3.5-0.2-2.2-0.5-2.1-0.1-0.6 1.2 0.1 13.1 0.4 1.5-0.2 0.8-0.4 1.2-0.8 0.7-0.2 0.5-0.4 0.7-1.4 0.4 0.4 0.6-0.6 0.6-1.1 0.6-0.3 0.7 0.6 2.1 0.4 1.8 1.4 3.1 0.7z" id="TUR2266" name="Kocaeli">
+                              <title>Kocaeli</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M276.9 71.9l-0.1 0.7 0.3 2 0.1 1.5-3 2.8-1.8 4.1 0.4 2.1 0.9 1.8 0.1 2.1-0.7 2 0.5 1.8 1.1 1.6-1.2 2.1-3.3 2.6 0.2 2.2 0.3 2.2-0.6 2-3.4 1.6-3.6-0.1-2.1 3.2-1.5 4.2-0.8 0.5-0.6 0.7 0.3 1.8 1.1 1.4 1.2 2.4-1 2.5-2.7-0.7-3.9 0.1-0.9-0.8-1.3-1.9-1.6-1-2 0-1.9-0.6-2.3 0.2-7.2 1.9-4.6-1.4-1.9-2.1-2.1-1.7-1.8-2.8-1.5-3.1-0.5-1.4-0.3-1.6 3.7-0.3 1.7-0.7 1.6-0.9 3.4-0.8 3-2.1 2.2-4.2 2-10.3 3.4-3.7-0.6-0.4-0.7-0.2-0.4-1.5 0.9-0.6 2.1 0.4 1.7 0.9 2.9-0.1 0.9-0.2 0.3-2.3 1.2-2.2-0.2-2.2-3.9-0.8-0.9-3.5 1.7-4.2 0.3-1.1 14 3.4 1.8 1.6 0.8 0.5 4.4 0.8 6.4-0.2z" id="TUR2267" name="Sakarya">
+                              <title>Sakarya</title>
+                             </path>
+
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M339.1 76.3l2.6 0.1 4.4 1-0.2 1.9 0 1.9 1.2 0.8 1.5 0.3 2.4 1.5 6 3 2 3.6-0.2 1.8-0.2 2-0.8 3.8-1.9 0.8-1.5 1.4-0.2 3.7 2 5.5-0.9 1.6-1.9 2.1-1.4 2.5-4.2 2.3-7.2-1.1-2.2 0.7-2.2 1.5-6.1 1.5-3.6 1.7-4.5 1-6.5-0.1-2 0.2-4.7 1.9-1.7-0.2-1.6-0.6-1.5-0.2-1.2-0.6-1.7-1.9-8.8 1-4.6-2.8-4.9-1.7-1.3 1.4-0.5 2.6 0.2 4.1-1.6 3.5-4.3 2.5-3.2 4.3-3.4-0.6-3.1-1.2-2-2.4-3.2-5.7-0.7-3 1-2.5-1.2-2.4-1.1-1.4-0.3-1.8 0.6-0.7 0.8-0.5 1.5-4.2 2.1-3.2 3.6 0.1 3.4-1.6 0.6-2-0.3-2.2-0.2-2.2 3.3-2.6 4.3 1.5 8.5-0.2 5.9 2.5 5-0.6 4-3 1.9-5.1 0.2-3.6 2.6-1.9 6.7-1.2 4.8-1.1 2.6-3 0.9-6 3.8 0.3 3.2 0.9 11.2 0.3z" id="TUR2268" name="Bolu">
+                              <title>Bolu</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M272.1 136.6l2.2 2.8 0.6 4.1 0.3 1.4 1.2 0.4 2.1-0.1 5-2.2 3 0.3 1.3 0.9 1.4 0.5 1.5-1.1 1.4-1.2 4.8 0.6 1.3-0.4 1.3-0.2 2.2 2.3 1.5-0.5 1.7 0.6 2-0.5 3.8 0 1.9-0.7 2.1 1.4 2.4-0.3 0 2 0.6 1.2 0.2 1.7 0.8 2.1 1.3 2 1.5 0.9 1.8 0.1 0.4 1 0.7 1.1 0.7 0.5 0.1 1.8-2.2 2.4 0.4 3.4 2.6 7.2 2.6 2.3 0.7 1.4 0.2 2.1 0.8 1.2 0.6 1.4 0 2.1-0.3 2-0.5 2.1 0.3 1.2 0.1 2.6 1.1 1.8 1.6 1.1 0.4 2-1 1.7-1.3 1.2-1.1 0.1-1.1 0.4-1 1.4-2.7 1.3-1.3 0.9-0.2 2-0.3 1.9-0.8 1.1-4.1 0.7-3.1-0.4-2-0.5-4.1-0.1-6.7 0.7-3.9-3-2.6-5.9-3.7-3.9-2.1 0.6-1.8 1.6-1.9 1.3-2 0.5-3.8 2.9-3.8 1.7-2.2-2.6-2.6-1.2-1.9 1.4-3.3 3.3-3.5 2.3-1.8 0.9-2.4 0.4-2.4-1.3-0.8-0.7-0.9-0.5-1.2-1.5-0.8-2.2-1.4-1.4-1.9-0.4-0.9-4.3-5.2-6.9-0.7-5.2-1.4-4.1-5.7-5.5-2-3.3 2.9-3.3 2.2-4 0.6-7 1.3-1.1 1.6-0.9 0.9-1.3 0.8-1.4 2.7-1.2 2.8 0 2.7-1.9 1.7-3.2 0.7-3.5 0.9-3.5 4.2-3.4 5.4-0.3 3.1 1.2 3.4 0.6z" id="TUR2269" name="Eskisehir">
+                              <title>Eskişehir</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M446.9 10.7l0.2 4-1.5 4.1-2.6 3.2-0.1 2.3 3.4 1.3 1.9 0 2.2 0.2 3.2 0.9 6.3 0.3 3.5 1 2.9 3.9-1.8 4.7-1.7 1.2-1.6 1.5-1 2.3-0.5 2.7 0.4 1.3 0.5 1.4-0.4 9.1-2.7 0.6-1.8 2.6-1.5 3.8-1.2 1.5-2.4 2.2-1.8 4.5-1.8 2.2-0.6 1.4 1 2.6 1.1 0.4 1.7 1.9-1.2 3.4-7.4 3.1-4.6 1-2.1-0.1-2.2-0.5-1.7-1.2-1.7-1.6-3-1.1-2-3.3 0.6-2.1 1.4-1.5 1.6-2.2-0.6-2.7-0.8-0.5-1.7 0.6-8.5 4.6-4 0.7-5.5 3.3-2 0.7-2.4-0.8-2-2.3-4.7-3.1-6.7-0.8-0.7-0.6-1.2-1.6-0.5-0.9-1.1-1.6-2.8-1.2-2.9-0.5-1-7.4 0.5-2.4 2.3-3.2 2.8-2.7 5.1-1.1-1.5-3.4-1.5-6.2-3.7-2.8-3.9 1.3-3.1 0.5-1.8-2-0.5-5 3.4-2.4-1.9-5.1-1.5-3.1-0.5-4.2 1.5-0.4 0.9-0.5 0.6 0.3 3.6-1 1.9-0.8 2.4-1.6 8.2-2.8 8.3-4.4 1.9-0.1 3.8 0.7 5.6 0 1.1 0.2 2.7 1 11.1 1.1 0.9-0.3 1.5 0.5 6.8-0.5 11.1 1.5z" id="TUR2270" name="Kastamonu">
+                              <title>Kastamonu</title>
+                             </path>
+
+                             <path style="fill:#68C7E3;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M213.5 403.5l0.2-0.6 0.4-0.5 0.7 0.2-1.3 0.9z m-12-2.1l-0.5 0.3-0.7-0.3 0.4-0.4 0.8 0.4z m2.6 2.2l0.5-2 0.6-0.7 0.4-0.3 0.4 0-0.1 1 0.4 0.2 0.1 0.4-0.9 0.5-0.1 0.3-0.5 0.4-0.8 0.2z m17.3-4l-0.3 0.6-0.4-0.1-1.4 0.3 0.2-0.5 1-0.6 1.8-0.4-0.9 0.7z m133.7-31.9l1.8 4.7 2.2 4.4 1.4 1.8 1.7 1.2 2.1 1.1 1 2.1-0.5 3.8 0.3 7.2-0.8 3.1-0.9 1.6-0.7 1.7-0.2 1.7-0.4 1.5-0.8 1.3-0.1 0.4-0.2-0.1-1.9-0.2-1-0.3-4-2.3-0.5-0.5-0.4-0.8-0.9-0.4-1.1-0.3-0.8-0.5-2.4-3.3-0.5 0-0.2-0.4-1-0.6-0.2-0.4-0.2-1.9-0.2-0.5-1.2-1.8-3.1-2.8-1-2.8-0.6-0.8-0.7-1.3-0.9-0.3-0.9-2-0.6-1.1-0.8-0.4-3.2-3.3-0.4-0.2-1.6-0.2-1-0.8-2.1 0.1-1.1-0.2-0.4-0.6-0.6-0.6-1.3-0.4-1.5-0.3-0.9 0.2-0.5-0.5-2-0.8-1-1.5-0.7-0.6-0.6 0.1-1.1-0.2-4-1.8-0.8-0.7-0.8-0.9-9.8-4.4-1.5-0.3-0.2-1.6-1.8-1.1-20.9-3.1-8.6 0.5-1.4-0.4-1.1-0.7-2.1-1.6-3 2-1.4 1.4-0.8 2-0.9 1.7 0 2-0.3 2.1 0.1 1.2 0.5 1 0 0.4-0.7 1.1-0.2 0.6-0.1 1 0.1 1.1 0.7 1.2 0.2 0.8 0.4-0.4-0.1 1.3-0.7 2.3 0.1 0.8-1.8 1.5-0.8 1-0.6 2.3-1.1 1.8 0 0.5-0.7 1.1 0.1 1.1 0.6 0.9 0.7 0.5-0.4 0.9 1.4 0.5-0.8 0.9-1.4 1.2-0.6 1.4 0.7-0.1 0.4 0.1-0.5 0.5-0.7 0.6-0.7 0.6-0.5 1.4-0.7 0.9-1.5 1.3 0.1-2.8-0.3-1.1-0.6-0.5-1.2 0.3-5.5-2.5-1.1-0.1-4 0.7-0.4 0.5-0.2 1-0.1 1.3-0.3 0-0.4-1.2-0.3 1.2 0 0.5-0.8-0.5 0 1-1.9-0.5-0.8-0.5-0.1 0.5-3.5 1.9-0.8-0.1-0.6 0.4-0.6-0.1-1.3-0.3-0.7 0.2-0.7 0.7-0.9 0.5-1.9 0.4-0.4 0.9-0.5 0-1.3 0.4 0 0.4 1.1 0-0.7 0.7-0.8 0.6-0.8 0.4-0.9 0.1 0-0.4 0.2-0.3 0.5-0.6-0.7 0.1-0.4 0.4-0.6-0.7-0.6-0.2-0.7 0.1-0.6 0.3-0.4 0.7-0.5 0.4-0.9 1.1-0.2-1.3-1.8-0.9-0.5-1.3 0.7 0.3 0.3-0.3-0.1-0.6-0.4-0.3-2.6 0.4 0-0.4 1-0.5 0.5 0-0.6-0.5-4.2 0.1-1.4-0.3-3.2-1.9-0.6 0.6-0.3-0.6-0.2-1.8-0.3 0.5-0.7-0.5-0.8 0.4-0.6 0.8-0.4 0.9-0.4 0.2-0.5-0.4-0.6-1-0.3 0.4-3.2-3 1.4-0.7 1-1.3 0.3-1.7 0-1.7 0.5-0.9 0.3-1.1 1.7-3.6 3.3-1.3 1.6 0.7 1.1-0.6-0.2-1.8 0.4-1.8 2.4-2.1 2.6-1.9 0.9-3.6-0.7-4 5.7-13 1.5-0.2 1.4-0.8 1.2-1.8 1.5-1.4 2-3.8 0.8-4.9 2.9-3.9 9.3-4.9 3.2-0.6 7.8-3.2 3.1 0.4 3.2 3.9 1.3 0.5 7.2-0.3 4.7 0.5 4.1 0 1.9-0.5 3.2-3.5 1-2.8 3.6-3.2 4.6 1.9 5.4-1.9 2.8-0.4 2.5-1.8 2.6-0.9 2.8 0.4 1.1 1.4 1.2 1.3 2.1 1.7 2.2 0.9 5.2 0 13.4 2.8 4.4 2.8 3.3 3.2 3.7 2.5 2.6 2.8 2.3 3.3 1.5 1.4 1.5 1.1 3.5 3.3 2 0.8 1.7 1.1 0.2 2-1.3 1-0.6 2 0.8 1.8 2.2 0.8 2.4 0.2 1.7 0.4 1.1 1.6 0.8 4.3-0.4 4.4z" id="TUR2271" name="Antalya">
+                              <title>Antalya</title>
+                             </path>
+
+                             <path style="fill:#D26975;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M315.6 207.7l-0.7 4.5-0.5 1.7 1.6 1.6 0.9 0.6-0.4 2.7-4 6.6-1.6 3.2-0.8 3.5 0.1 1.4 0.2 1.3-0.2 1.5-4.5 6-4 4.2-9.2 6-1.3-0.4-1.2-0.7-2.3-3.4-1-0.8-1-0.6-1.3-0.2-1 0.9-2.6 2.8-6.5 5.3-3.2 3.7-3.3 3.1-4 1.6-1.1 0-1.1 0.3-3 2.4-2 0.5-1.9 0.8-2.5 2.9-2.8 2.5-2 1.2-4.7 4.6-3.5 2.1-1.1 2.1-0.7 6.8-1.7 3.2-3.7 2-4.1 0.2-4.7-0.3-4.2 1.5-2.3-4.1-0.6-0.5-0.8-0.2-1.4-0.7-0.7-0.3-2.4 0-1.2-0.5 0-6.7 0.8-1.9 1.7-0.7 1.6-0.8 14.1-10.6 1.4-1.7-0.8-4.4-1.4-1.7-5.6-9.4-7.2-1.7-0.1-1.8 1.2-1.5 1-2.8 0.7-2.6 3.2-3.1 0.8-2.5 0.3-2.8 10.8-6.5 1.5-1.9 2.1-3.6 1.4-4.5 1.4-2.8 0.8-3.1 1-2.7 6.2-2.8 3.6-5.6 1.9 0.4 1.4 1.4 0.8 2.2 1.2 1.5 0.9 0.5 0.8 0.7 2.4 1.3 2.4-0.4 1.8-0.9 3.5-2.3 3.3-3.3 1.9-1.4 2.6 1.2 2.2 2.6 3.8-1.7 3.8-2.9 2-0.5 1.9-1.3 1.8-1.6 2.1-0.6 3.7 3.9 2.6 5.9 3.9 3 6.7-0.7 4.1 0.1 2 0.5z" id="TUR2272" name="Afyonkarahisar">
+                              <title>Afyonkarahisar</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M275.8 321.5l-3.6 3.2-1 2.8-3.2 3.5-1.9 0.5-4.1 0-4.7-0.5-7.2 0.3-1.3-0.5-3.2-3.9-3.1-0.4-7.8 3.2-3.2 0.6-9.3 4.9-2.9 3.9-0.8 4.9-2 3.8-1.5 1.4-1.2 1.8-1.4 0.8-1.5 0.2-4.5-6.1-6.2 0.8-2.6 3.2-2-0.8 0.9-3.8-1.2-3.3 0.4-3.6 0.9-3.4 1.4-3.1 5.1-7.7 2.3-4.6 0.2-0.6-0.2-0.9-0.3-0.6-0.4-0.3-0.7 0.1-0.6-2.5 0.1-2.6-0.5-1.8 0-1.8 6.7-3.5 0.5-1.5 0.7-1.4 1.5-0.9 0.8-0.4 2.1-1.2 3.7-3.1 4.2-1.5 4.7 0.3 0.7 2.2 1 2 2 0.7 1.9-0.9 5.8-4.3 1.5-0.8 1.4-1 2.4-2.5 2.6 1.9 2.3 3.3 2.1 2.1 2.2 1.8 3.7 0.6 3.3 0 3.1 1.9 1.7 5.3 1.4 3.2 3.2 4.8 0.5 1.2 0.9 1.1 0.8-0.1 1.6 0.2 1.1 1.5 0.7 1.9z" id="TUR2273" name="Burdur">
+                              <title>Burdur</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M219 296.6l-3.7 3.1-2.1 1.2-0.8 0.4-1.5 0.9-0.7 1.4-0.5 1.5-6.7 3.5 0 1.8 0.5 1.8-0.1 2.6 0.6 2.5 0.7-0.1 0.4 0.3 0.3 0.6 0.2 0.9-0.2 0.6-2.3 4.6-5.1 7.7-1.4 3.1-0.9 3.4-0.4 3.6-2.5 2-0.3 4.2-0.6 1.7-1.1 1.4-1.8 0.9-5.2-2.8-2.9-0.2-1.2-1.3-0.2-1-0.2-2.2-0.4-2.5-0.7-2.5-3.2-3-3.8-1.8-0.6-0.7-1-1.8-0.6-0.7-3.9-0.5-1.7-2.6-0.7-3-1.5-2.7-2.5-1-1.8 0-1.4-0.5-0.5-1.9 0-1.9 0.2-1.3-0.6-1.2-0.3-0.9-0.4-0.9-1.1-0.6-0.6-2.5 1-2.5 3.7-1 4 0.5 2.8-2.7 2.4-3.4 2-0.1 1.6-1.2 0.2-1.8-0.5-1.5-3.4-0.7-1.1-1.7-0.8-1.7-1.1-1.5 0.1-1.7 1.2-0.9 0.4-1.4-0.8-4 0.1-2.2-0.6-2-2.9-2-0.7-1.4-0.6-1.5 2.4-0.1 2.1-1 0.7-1.6-0.2-1.8 2.3-4.5 4.9-1.1 3.1 0.7 2.8 1.7 2.9 0 2.7-1.8 1.8 0.3 1.7 1.9 1.7 0.1 1.7-0.6 1.4-0.7 1.3 0.9 0.6-0.1 0.7-1.3 0-0.9 2.6-2 3.7 0.4 4-0.1 1.9-0.6 1.7-1.5-0.4-3.9 0.4-4 6.5-1.5 7.2 1.7 5.6 9.4 1.4 1.7 0.8 4.4-1.4 1.7-14.1 10.6-1.6 0.8-1.7 0.7-0.8 1.9 0 6.7 1.2 0.5 2.4 0 0.7 0.3 1.4 0.7 0.8 0.2 0.6 0.5 2.3 4.1z" id="TUR2274" name="Denizli">
+                              <title>Denizli</title>
+                             </path>
+
+                             <path style="fill:#68C7E3;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M292.5 252.5l1.5 4.9 4.1 3.3 3.1 4.2 3.6 3 1.8 0.7 1.2 1.8 3.8 3.3-0.4 2.2-3.3 2.1-3.7 1.4-1.7 1.1-1.1 4.3 1.2 5.2 0.1 5.1-2.1 3.5-0.3 3.1-1.7 2.1-2.2 0.7 0 2.3 1.3 2 0.7 2.4-0.5 3.9-1.4 3.7-2.8-0.4-2.6 0.9-2.5 1.8-2.8 0.4-5.4 1.9-4.6-1.9-0.7-1.9-1.1-1.5-1.6-0.2-0.8 0.1-0.9-1.1-0.5-1.2-3.2-4.8-1.4-3.2-1.7-5.3-3.1-1.9-3.3 0-3.7-0.6-2.2-1.8-2.1-2.1-2.3-3.3-2.6-1.9-2.4 2.5-1.4 1-1.5 0.8-5.8 4.3-1.9 0.9-2-0.7-1-2-0.7-2.2 4.1-0.2 3.7-2 1.7-3.2 0.7-6.8 1.1-2.1 3.5-2.1 4.7-4.6 2-1.2 2.8-2.5 2.5-2.9 1.9-0.8 2-0.5 3-2.4 1.1-0.3 1.1 0 4-1.6 3.3-3.1 3.2-3.7 6.5-5.3 2.6-2.8 1-0.9 1.3 0.2 1 0.6 1 0.8 2.3 3.4 1.2 0.7 1.3 0.4z" id="TUR2275" name="Isparta">
+                              <title>Isparta</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M210.3 152.7l-0.9 5.8 0.3 2.8 1.7 3.7 0.9 1.1 2.1 1.3 1.8 0.8 5.8 4.1 2.2 0.7 4.1-1.2 3.9-0.5 2-0.5 2 3.3 5.7 5.5 1.4 4.1 0.7 5.2 5.2 6.9 0.9 4.3-3.6 5.6-6.2 2.8-1 2.7-0.8 3.1-1.4 2.8-1.4 4.5-2.1 3.6-1.5 1.9-10.8 6.5 0-6.9-2.5-2.9-1.5-0.6-6.5-1.5-3.3 0-1.4 0.5-1.4 0.8-0.9 3.7-1.3 3.1-3 0.3-6.5 1.8-3.8 0.2-3.5-0.5-3.2-2-3 0-2.9 2.4 0.2-4.2-1.1-3.1-1.7-3.2 0.5-4.1-0.4-1.1-0.5-1.1-3.3-5.3-1.6-1-7.8-1.7-1.1-0.9-2.6-2.9 0.3-0.7-0.1-1.7-0.3-0.8 0.5-2.3 2-1 3.8-1.3 1.7-1.2 1.6-2.9 0.4-1 1.2-1.5 1.2-2 0.7-4.8 0.7-1.9 0.6-0.6 0.4-0.9 0-1.3 0.3-1.3 1-2 2 1.6 2.3 0.5 3.7 0.5 3.7-0.1 2.9-1.8 0.3-4.5 1.1-3.1 2.4-1.8 1.5-5.4 1-1.1 0.6-1.6 1.1-4 2.6-1.9 5.5 2.2 1.6 0.2 1.7-0.3 1.5-0.7 1.6-0.2z" id="TUR2276" name="Kütahya">
+                              <title>Kütahya</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M157.2 203.4l2.6 2.9 1.1 0.9 7.8 1.7 1.6 1 3.3 5.3 0.5 1.1 0.4 1.1-0.5 4.1 1.7 3.2 1.1 3.1-0.2 4.2-1.9 2-4 3.1-0.6 1.4-1.6 1.7-1.5 0.5 0.2 2.4 1.5 0.5 1.2 1.5 0.2 1.4 0.1 1.6 0.3 3.3-0.3 3.1-0.7 2-1.1 1.7-1.4 1.3-0.5 1 1.4 1 1.5 0.1 2 2.1-4.9 1.1-2.3 4.5 0.2 1.8-0.7 1.6-2.1 1-2.4 0.1-7.1-0.2-2.3-3.5-2.2-6.8-1.4-1.9-2.4-0.6-1.2-0.1-1.8-0.6-1-1.2-1.4-0.2-2 0.6-5.1 0.8-1.4-3.3-2.1-2.4-1.6 0.5-1.6 0-2.5-1.2-2.5-0.1-0.8 2.1-1.3 2.2-2.6 0.6-2.2-2-0.4-1-0.6-2.1-0.5-1-4-1.9-3.7-2.5-0.8-3.7-1.6-1.6-1.1-0.1-5.8 0.1-3.7-0.4-3.1-2.6-1.4-4.6-1.2-1.6-0.8-0.3-1.4-1.5 0.2-1.4 1.5-2.4 1.6-1.7 0.9-2.2 0.3-2.6 0.6-2.4 2.9-2 3.3-1.3 3.4-2.9 1.4-1.6 0.4-3.6-1.9-3.6-0.9-2.4-1.7-8.1-2-5.2 4-2.1 2.4 1.2 2.2 1.8 3.7 1.1 3.7-0.5 2.1 0.1 2.1 1.1 0.8 0.1 1.7-0.3 0.8-0.1 1.3 2.2-1.6 2.8-0.6 2.3 2.1 1 3.9-1.4 0.8 0.4 0.4 1 4.3 4.7 2.6 6 2.4 0.9 2.2-1 2.3-0.4 1.9-1.2 1.4-1.9 2.2-0.4 2.2 0.2 2-0.2 1.9-0.5 4.8-2.5 4.6 0.7z" id="TUR2277" name="Manisa">
+                              <title>Manisa</title>
+                             </path>
+
+                             <path style="fill:#D26975;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M170.6 367.1l1.1 0.5-0.5 0.4-0.7 0.9-0.3-0.7 0.1-0.9 0.3-0.2z m-74.8-18.2l-0.4 0.2-0.4-0.3-1.1-0.4-0.2-0.6-0.3-0.4-0.6-0.4 0.4-0.3 1.6 0.8 1 0.3 0.5 0.4-0.1 0.5-0.4 0.2z m99.5-6.9l1.2 3.3-0.9 3.8 2 0.8 2.6-3.2 6.2-0.8 4.5 6.1-5.7 13 0.7 4-0.9 3.6-2.6 1.9-2.4 2.1-0.4 1.8 0.2 1.8-1.1 0.6-1.6-0.7-3.3 1.3-1.7 3.6-0.3 1.1-0.5 0.9 0 1.7-0.3 1.7-1 1.3-1.4 0.7-0.3-0.2-0.4-1-0.7-0.8-3.1-1-0.9-1.1-0.7 0.5-0.2-0.9 0.2-0.4 0-0.5-1.5 0 0.4-0.4-0.6-0.4-0.8-0.1 0.2-0.6 0.4-0.4 0.5-0.2 0.6-0.1-0.3-0.5 0.3-1.2-0.3-1.1-0.6-0.8-0.8-0.5 0-0.4 0.7-0.5 0.7-0.3 0-0.5-0.2-2.3-0.3-1.1-0.5 0.3-0.4 0-0.7-0.8-2.5 1-1.1-0.2 1-0.2 0.2-0.7-0.3-0.8-0.6-1 0.3-0.4 0.5-1.2 0.3-0.7 0.8 0.7 0.6-0.6 0.7-1 0.8-0.3 0 0.4-0.3 0.7 0.4 0.2 0.6-0.2 0.3-0.5-0.4-1.2-0.6-0.8-3.3-2.3-4-1.8-0.6-0.6-0.3-0.9-0.9 0.6-0.9 1.2-0.7 0.7 0.3 0.4 0 0.5-1 0-0.8 0.4-0.1 0.5 0.1 1.1-0.7 0.2 0.3 0.5 0.4 0.4-0.3 0.5 0.7 0.8 0.3 0 0.6-1.1 0.1-0.6-0.3-0.9 0.9 0.8-0.3 1.1-0.9 1-0.8 0.6 0.4 0.7-0.6 0.3-0.9 0.1-0.7-0.1-0.5-0.6 0-0.6 0.4-0.5 0.8-0.2 0-0.4-0.8-0.5-0.6-0.4-0.5-0.3-0.9 0.3-0.3-1.7-1.9-1.3-2.3-0.5-1.6 0.8-0.3 0-0.3-1.2-0.5-0.5-0.7 0.3-0.7 1-0.4-0.5-0.6-1.8 0.5-0.9 0.2-1.2-0.2-1.2-0.5-0.7 0.3-0.4-0.3-0.9-0.3 0.8-0.4 0.3-0.1-0.6-0.7-0.8-1.5-0.2-1.1 0.6 0.1 1.6-0.5-0.4-1-0.2-0.6-0.2 0.7-0.5 0-0.4-1.2 0-0.7-0.2-0.4-0.7-0.2-1.3 0.6-0.1 0.1-0.6-0.3-0.3-0.2-0.9-0.5-0.3-0.1 0.6-0.4 0.6-1.1 0.3-1.5 0.2-0.5 0.2 0 0.3 0.7 0.9 1.2-0.1 0.6 0.5-0.6 0.9-0.4 1-0.5 0.7-1 0-2.7-1.4-0.6-0.3-0.3 0 0.3 1.3-1.3 0.1-0.6-0.2-0.2-0.5 0.2-0.6 0.6-0.3 1.3-0.3 0-0.4-0.6-0.4-0.7-0.7-0.8-0.4-0.9 0.4-0.7 1.1-0.3 1 0.1 1 0.7 0.6-0.2 1.5 2.1 1.5 0.3 1.5-0.6-0.4-0.8-0.3-0.8 0.2-0.3 1-0.7-0.5-0.1 1 0.1 0.4-2.7 0.9-1 0.8-1 1.4-0.7 1.4-1 1.6-1.2 1-1.4-0.4-0.3 0.6-0.7 0.2 0.3 0.9-0.6 0.3-0.5 0.1-0.4-0.2-0.3-0.6-0.5 0.9-0.7 0.1-0.6-0.4-0.6-0.6 0.3-0.9-0.7-0.8 3.9 0 1-0.5 0.6-0.6 0.5-0.8 0.8-0.8-0.7-0.9-1 0.9-0.5 0 0.5-0.6 0.2-0.8-0.2-0.8-0.5-0.5-0.6-0.2-0.1 0.8-0.2 0.3-0.6 0-1-0.5-0.4 0.2-0.6 0-0.5-0.3-0.2-0.6 0.2-0.2 1.9-0.4-0.4-0.5 1.1 0.1 0.4-0.1 0.5-0.5 0.2-0.4 2-0.1 0.5-0.3-0.2 1 0.8 0.1 0.8-0.6 0-1-0.5-0.3-1-0.1-0.3-0.5 0.1-0.4 1-0.9 0.4-0.5 0.3 0.8 0.7 0.6-0.3-1.1 0-1.4-0.3-0.5-0.6-0.2-0.6 0.1-0.5 0.3-0.9 1.4-1.1 0.8-0.4-0.1-0.3-0.7-0.8 0.8-2 0.6-0.7 0.4-0.4 0-0.3-0.8-0.5 0.3-0.6 0.6-0.8 0.4-0.2-0.9-0.4 0.1-0.8 0.8-0.7-0.7-0.3-0.1-0.4 0.8-0.4 0-0.6-0.6-0.9-0.5-1.1-0.2-0.9 0.4 0-0.4-0.7 0.3-0.6-0.1-1.4-0.2-0.9 0.3-1.1 1.4-0.7 0.5 0.1 1-0.7 2-0.1 1.5-1.8-0.9-0.9-0.4-0.9-0.1-0.9 0.1-0.8 0.2-0.5 0-0.3-0.7-3.6 1.3-0.4 0.7-0.5 0.1-0.7-0.7-0.3-0.1-1.7-0.3-0.6 0.3-0.2-0.8-0.4-0.5-0.5 0-0.7 0.4-0.1-1.2-0.7-0.6 0-0.4 0.7 0.3 0.8 0.2 0.9 0 0.7-0.3 0.4-0.7 0.3-1 0.5-0.8 0.6-0.4 0.5-0.1 1.3 0.1 3.8-0.6 1.9 0.2 1-0.3 0.2-0.7 0.1-0.9 0.3-0.8 1.1-0.3 2.4 1.4 0.8-0.3 0.8 0.5 1.4-0.2 0.6 0.2 1.3-1.3 0.7-0.3 4.6-0.2 0.6-0.2 0.3 0.4 0.8 0.4 1.1 0.3 1 0 1.8-0.2 0.9 0.3 0.9 0.8 0.1-0.7 0.3-0.3 1-0.8-0.3-0.7-0.5-0.4-0.7-0.2-1 0 0.3-0.4 0.5 0.1 0.1-0.3-0.7-1.3 0.5-0.3 0.4 0.2 1.4-0.7 0-0.4-1-1.1-0.8-1.2 0.7 0.5 0.4-0.5-0.3-0.2-0.4-0.7 1.7 0 0-0.4-1 0 0-0.5 1.2 0 0.5 0.1 0.4 0.4 0.6-0.4 0.5 0.4 0.4 0 0.5-0.4 1.1 0.6 0.8-0.2 0.1 0.5 0.3-0.1 0.2-0.5-0.6-0.4 0-0.4 0.9 0 0.6 0.4 1-1.8 0.4-0.4 0-0.5-0.7 0 0.4-0.6 0.3-0.7 0.8 0.7 0.9 0.1 0.4-0.3-0.3-1 2.8-1.1 1.5-0.3 0-0.5-0.8-0.7-0.5-0.2-6.8 1-2.5 0-1 0.2 0.2 1.2-0.9-0.5-5.6-0.9-0.6 0.2-0.6 0.6-0.6 0.1-0.6 0-1.5-0.4-1.3 0.1-4.3 1.4-0.8-0.2-0.4 1-0.9-0.3-0.6 0-0.7 0.3-1-0.8-1.7 0-1.6 0.6-1 1-1-0.6-1.4-0.5-1.2 0.1-0.3 1.5-1.2-0.9-0.6-0.3-0.7-0.1-1.6 0.1-0.6-0.1-0.5-0.5-0.9-1.4-0.4-0.4-0.7 0.1-0.8 0.6-0.6-0.7-0.1 0.6-0.6 1.7-0.2-0.4 0.2-0.6-0.4-0.4 0.3-0.3-0.3-0.6-0.5 0.4-1.3 0.2-0.7 0.3 0.2 1.1-0.3 0.8-0.6 0.5-0.7 0.3 0.3 0.9-0.7-0.1-0.4 0.1-0.3-0.5-0.9 0.2-0.5-0.9-0.3-1.5-0.1-1.1-0.2-1.1-0.5-0.8-0.2-1 0.6-1.4 0.4 0 0.9-0.4 0.9-0.6 0.6-0.8-0.8-0.4-0.4 0.1-0.5-0.2 0.5-0.7 1.7 0.6 1-0.3-0.1-0.4 0.2-1.1-0.1-0.7 0.5 0.1 0.4 0.4 0.2 0.6-0.1 0.7 0.4 0 0.3-0.7 0.3-0.5 0.4-0.1 0.4 0.4 0.4-0.5 0 1.1 0.1 0.3 1 0 0.7 0.6 0.7 0.2 0.7 1.4 0.8 0.5 0.8-0.2 1.3-1 1.1-0.5 1-0.7 1.2 0 0.6-0.3 0-0.5-0.7 0.2-0.4 0.3-0.4-2-0.4-1.1-0.6-0.5 0-0.5 2.4-0.5 0.7 0.1-0.6 1.4 1-0.5 0.8-0.9-0.8-0.3-0.3-0.5 0-1.3 0.1-0.2 0.7-0.5 0.4-0.8 0.2-1.3-0.7-0.5-0.4-0.1-0.3 0.6-1.3-0.1-0.6 0.2-0.2 0.5-0.3 1-0.7 0.9-0.8 0.4-0.7-0.3 0.9-0.8 0.1-0.8-0.6-0.6-1.2 0-0.6 0.8-0.5 0.2-0.3-0.3 0.1-0.7 0.4-0.6 0.9-1.2 0-0.5 0.2-0.7 0.1-0.9-0.6-1.1-0.4 0-0.2 1.9-1.2 0.6-1.4-0.2-1.1-0.9-0.5-1.5 0.5-1.3 0.9-1.1 1.2-0.6-0.6-1-1-0.4-0.2 0 0.6-1.1 2.8-6.1 0.7-1.1 1.6-0.9 1.7-0.1 1.9 1.2 2 0.8 4.2 0.6 3.7 2.5 2.3 0.4 2.4-0.6 2.4 0 2.2 1.1 3.7 0.2 6.3-0.5 2-1.6 1.9-3.7 2.8-1.9 3.8 0.8 3.2 2.7 3.8 2.1 6.9 0.9 0.6 1.2-0.2 1.3 0 1.9 0.5 1.9 1.4 0.5 1.8 0 2.5 1 1.5 2.7 0.7 3 1.7 2.6 3.9 0.5 0.6 0.7 1 1.8 0.6 0.7 3.8 1.8 3.2 3 0.7 2.5 0.4 2.5 0.2 2.2 0.2 1 1.2 1.3 2.9 0.2 5.2 2.8 1.8-0.9 1.1-1.4 0.6-1.7 0.3-4.2 2.5-2z" id="TUR2278" name="Mugla">
+                              <title>Muğla</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M702.3 267.9l1.3 0.9 4.2-1.8 1.6 1.7 0.2 1.8-0.4 1.5-1.2 2.7 0.5 0.9-0.5 0.8-1.9 1.4-2 1.5-3.2 0.9-0.9 0.5-0.6 0.8-0.2 0.9-0.3 2.2-0.5 1-0.7 0.5-2.6 0.8 0.6 1 0 0.8-0.3 0.9-0.6 0.9 0.4 0.8-0.1 0.6-0.3 0.5-1.4-0.4-0.4-0.1-0.8 0.3-0.7 0.6-0.6 0.8-0.4 1 0.7-0.2 1.5-1 0.6-0.1 0.6 0.5-0.1 1.7 0.6 0.9-1 0.3-1.2 0.1-1 0.2-0.7 0.8 0.4 0.3 1.4 1.5-0.8 0.5-0.5 0-0.9-0.6-0.3 0.3-0.6 0.7-0.8 0.4-0.7-0.1-0.8-0.8-1 0.7 0.9 1 2.6 2-11.6 1.8-2.5 2.7-0.5 0.2-0.7 1.2-3.1 3.3-1.1 0.7-6.4 1.1-1.6-0.7-3 1.2-0.6 0-0.3 1.5-0.8 0.3-2.3-0.3-0.4 0.4-0.1 1.6-0.6 0.7-0.5-0.1 0-0.6-0.3-0.1-2.3-0.6-0.9-0.5-0.7-0.8-1.5 1.1-0.6 0-0.8-0.6-4.1-3.6-6.1-2.3-5.7-0.1-5.7 1.2-5.7-3.5-3.1-1.1-1.8-3 0-3.9 2.1-2.6 2.9-2.6 2.5-3.2 7.4-1.4 4.6-1.9 4.8-0.7 2.2 0.7 2.3 0.3 1.8-0.6 1.9-0.9 4.3-1.1 3.2-2.8 0.1-3.5 1.4-2.6 4-2.2 3.3-5 3.8-4.4 3.7 0 3.1-0.9 3 0.6 0.2 2.2-2 1.9-1.1 0.7 0.4 1.4 0.9 0.4 0.8 0.6 3.1 0.8 3.7 0 3.6 0.6 3.8-0.8 1.5-0.1 1.4-0.3 2.1-1 2.3-0.5 2.8-1.4 2.4-2.7z" id="TUR2281" name="Adiyaman">
+                              <title>Adıyaman</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M764.1 248.9l-17.5 0.6-0.8-0.4-1.8-1.4-1.2-0.6-2.4 0.5-0.8 2.1-1.1 2.2-1.3 2-1.6 1.1-1.8 0.6-4-0.3-3.9 0.4-1.5 0.8-4 0.6-2.2 1-4.5-0.4-4.3-1.1-7.1 1.2-2.2-0.3-4.2 1.5-1.9-0.3-1.5-1.4-0.9-0.6-1.3-0.2-0.1-0.4-1.2-1.9-0.4-0.4-1.4-1 0.4-0.5-1.2-0.9-1.7 0.2-3.1 1.2-1.5-0.1-4.3-2.2-1 0.3-1.1-1-1.4-0.4-3-0.4-0.7-0.2-0.7-0.4-0.7-0.6-0.9-1.2-0.6-0.3-0.6 0.6-0.8-0.7-0.7-1.2-0.5-1.4-0.1-1.1-0.2-0.6-0.3-0.4-0.2-0.5 0.8-1.4 0.6-1.9 0.6-1 0.8-0.9 1-0.6 1.3-0.2 0.7-0.4 0.7-1 0.3-1.2-0.4-1.1 0.6-0.8 1.4-0.2 5.7 0.5 0.7-0.2 0-0.7 0-0.9 0.2-0.4-0.6-2.1 0-1.4-0.3-4.2-0.6-1.9-0.9-1.7 0-2.8 1.4-1.9 3.7-0.2 1.4-0.7 1.6-0.3 2 3 0.1 2-0.8 1.7 0 1.9 2.2 2.2 1.5 0 4.1-1.1 4.1-0.3 2.2 1 1.6-0.3 0.5 0 1.6 1 1.7 0.1 2.1 0.7 2.1 0.2 2.4 1.1 2.3 1.6 2.3 0.7 1 0.7 1.2 1.5 1.3-0.3 1.3 0.6 1.3 0.4 1.6-1.1 1.3-1.7 1.8-0.4 1.9 0.1 5-0.3 4.9-1.9 3.2-3.6 1.4-2.8 0.7-3.2-0.2-2.3-0.6-2.6 0.7-1.1 1-0.7 2.6-0.6 2.8-0.2 11.9-6.4 1.8-0.6 4.3-1.9 1.6 3.2-2.2 4.3-2.6 3.7-1 4.7 1.2 5.2 3.2 3.9 0.9 2.2-0.3 2.4-0.7 2.6-1 1.8-1.7-0.6-1.6-0.3-2.4 7.1 2.8 4.2 0.5 2.9 0.2 3.1z" id="TUR2282" name="Elazig">
+                              <title>Elazığ</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M606.8 240.5l-3 5.2 0.6 3.9 0.9 0 1.9-0.4 1-0.1 7.8 1.7 6.6 3.9 3.6 1.1 4.1 1.9 2.5 4.5-0.3 2.7-2.9 7.6-0.3 2-1 1.6-0.8 0.8-1.2 2-2.7 9.7-2.1 3.9-2.5 3.2-2.9 2.6-2.1 2.6 0 3.9 1.8 3 3.1 1.1 5.7 3.5-0.1 2 0.4 1.9-0.7 3-2.2 1.5-3.3-0.1-3.3 0.4-7 2.5-6.5 1.1-2.9 1.5-4.7 5-4-1.3-1.5-5.9-2.6-1.6-2.4 3.4-6.3 2.9-2.3-3.4-2.8-2.6-1.8-1.3-2-0.5-5.7 1.1-2 0.8-1.7 0.3-0.9-1-1.3 0.5-0.5 0.3-0.3 0.6-0.5 0.1-2.2-2.6-0.2-4.4-0.6-0.8-0.7-0.7-0.6-1.9 0.4-2 1.5-1.6 1.1-1.9 0.1-5.2 1.4-1.9 1-0.5 1.7-1.7 0.2-2.7-1.7-4.1-0.3-3.1 0.1-2 0.6-4.4 1.6-4.2 2.6-11.8 1.6-4.1 2.9-2.8 1.9-2 1.7-2.4 4-4.7 1.6-2.7 0.7-3.5 1-2 1.7-1.1 6.9-1.7 6.8 0.9 1.3 0.9 1.3 0.6 11.7-1z" id="TUR2283" name="K. Maras">
+                              <title>Kahramanmaraş</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M680 212.4l-3.7 0.2-1.4 1.9 0 2.8 0.9 1.7 0.6 1.9 0.3 4.2 0 1.4 0.6 2.1-0.2 0.4 0 0.9 0 0.7-0.7 0.2-5.7-0.5-1.4 0.2-0.6 0.8 0.4 1.1-0.3 1.2-0.7 1-0.7 0.4-1.3 0.2-1 0.6-0.8 0.9-0.6 1-0.6 1.9-0.8 1.4 0.2 0.5 0.3 0.4 0.2 0.6 0.1 1.1 0.5 1.4 0.7 1.2 0.8 0.7 0.6-0.6 0.6 0.3 0.9 1.2 0.7 0.6 0.7 0.4 0.7 0.2 3 0.4 1.4 0.4 1.1 1 1-0.3 4.3 2.2 1.5 0.1 3.1-1.2 1.7-0.2 1.2 0.9-0.4 0.5 1.4 1 0.4 0.4 1.2 1.9 0.1 0.4 1.3 0.2 0.9 0.6 1.5 1.4 1.9 0.3 4.2-1.5 2.2 0.3 0.9 1 0.6 1.4 0.2 1.6-1.7 6.1-2.4 2.7-2.8 1.4-2.3 0.5-2.1 1-1.4 0.3-1.5 0.1-3.8 0.8-3.6-0.6-3.7 0-3.1-0.8-0.8-0.6-0.9-0.4-0.4-1.4 1.1-0.7 2-1.9-0.2-2.2-3-0.6-3.1 0.9-3.7 0-3.8 4.4-3.3 5-4 2.2-1.4 2.6-0.1 3.5-3.2 2.8-4.3 1.1-1.9 0.9-1.8 0.6-2.3-0.3-2.2-0.7-4.8 0.7-4.6 1.9-7.4 1.4 2.1-3.9 2.7-9.7 1.2-2 0.8-0.8 1-1.6 0.3-2 2.9-7.6 0.3-2.7-2.5-4.5-4.1-1.9-3.6-1.1-6.6-3.9-7.8-1.7-1 0.1-1.9 0.4-0.9 0-0.6-3.9 3-5.2 3.1-1.4 2.6-2.5 2.7-3.1 1.1-0.4 2.3-1.5 3.7-4 0.8-2.5-0.3-1.5-0.6-1.4-0.9-3-0.5-3.2 1.1-2.6 2.3-0.6 4.4 2.2 4.4-0.9 1.8-1.3 2-0.8 1.9-1.3 1.9-0.9 4.1-0.1 1.7-0.8 1.9-0.3 3.5 0.5 3.4-1 3.7-2.9 4.1-1.4 4.1 2.1 5 0.3 2.3 0.9 2.2 1.3 3.4 4z" id="TUR2284" name="Malatya">
+                              <title>Malatya</title>
+                             </path>
+
+                             <path style="fill:#68C7E3;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M476.9 321l1.7 3.9 1.9 3.7 2.5 1.9 0.2 6.7 1.2 3.8 2.4 1.8 3.2-0.1 2 2-1.5 4.1 0 3.7 0.7 3.7 0.2 1.8-0.2 1.8-1.9 1.8-2.2 0.6-2.8 1.9 0 0.1-1 0.2-0.7 0.3 0.3-1.3-0.7-0.4-2.1-2.3-4.3-2.2-0.3 0.4-1.5-0.8-2.3 0.5-3.4 1.6-1.6 0.3-0.6 0.2-1.6 0.9-0.3 0.3-0.5 1.2-0.3 0.3-1.6 0.9-4.5 4.1-5.7 3.6-1.6 1.4-4.5 5.7-0.4 1-0.2 0.6-0.5 0.5-1.1 0.5-1.9 1.9-1.8 1-0.1 1.7 0.3 2.1-0.1 1.7-1.1 0.9-1.6 0.3-1.4 0.5-0.5 1.4 0.3 0.1-1 1.3-0.4 0.8-0.2 1 0 0.7-0.3 0.5-0.9 0 0-0.4 0.5-1.2-0.3-1.8-0.8-1.6-1.1-0.7-0.7-0.3-0.7-0.4-0.6-0.2-0.8 0.7-1 1.6-0.9 0.9 0.3 0.4-0.6 0.5-0.8 1.4-1.1 0.3-1.8 0.8-0.4 0.3-1.6 1.7-0.2 0.7-0.3 1.8-0.5 0-1.3-2-0.2-0.9-0.5-0.3-0.7 0.2-0.7 0.3-1.2 1.1-1.2 1.5-1.1 1.1-1.2-0.2 0.7-0.4 0-0.4-1.2-0.2-2.2-0.6-1-0.1-1.2 0.2-1.8 1-0.8 0.1-2-0.7-1.1-0.1-0.9 1.1-1.2 0.2-2.3-0.1-1.5 0.5-0.6 0-0.7-0.1-1.1-0.6-0.5-0.2-1.2 0.4-0.7 0.8-0.5 1-0.7 0.9-0.5 0.4-0.9-0.4-0.7-0.1-1.6 0.1-3.5-0.8-1-0.1-3.3 1.8-0.6 0.2-0.5 0.7-2.8 2.2-2.2-0.1-4.7-1.1-2-1-3.1-2.1 0.1-0.4 0.8-1.3 0.4-1.5 0.2-1.7 0.7-1.7 0.9-1.6 0.8-3.1-0.3-7.2 0.5-3.8 3.4-0.4 3.4 0.9 3.2-0.1 2.9-1.3 3.1-0.8 3.2 0.2 1.7-0.3 1.2-1.2 0.7-2.4 0.7-2.1 0.7-0.3 0.8-0.2 1.9 1 2 0.8 1.3-1.7-1.2-2-2.4-1.8-2.8-0.7-1.1-0.9-1-1.3-1.3-0.6-0.7-1.7-0.5-1.9-0.9-1.5-1.1-1.3-0.1-2.1 2-0.4 0.8-0.3 2.4-1.5 1.5-0.6 0.7 0.4 0.5 1.2 1.9 0.5 1.1-1.9 0.6-2.9 1.7-2 2-0.6 1.7-1.3 1.7-1.5 1.9-1.2 2.1-0.6 6.6-0.6 4.2-1.6 4.3-0.4 1.8 0.6 1.3-0.2 1.9-1 3.8-0.7 5-3.9 1.9-0.8 3.9-0.3 3.7-1.4 1.8-2.2 1.4-0.8 4.5-1.6 3-1.5 2.3-2.2 1.6-0.9 2.7-0.9 1-0.7 0.6-2.1 3.9-0.1 1.8-0.6 1.6-1 3.6-1.6 3.7 0.9z" id="TUR2285" name="Mersin">
+                              <title>Mersin</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M474 187l-2.9 0.5-3.4-0.8-1.1 0.7-0.2 1.5 0.4 2.4 1.2 2 0.6 3.5-0.7 4.4 1.5 2.7 1.2 2.6-2.2 2.8-3.2 1.4-2.8 1.8-6.3 2.6-1.2 3.6 0.7 3 0.2 1.5-2.1 0.6-5.8-4.9-1.1 0.2-2.3-0.3-1.1 0.3-2.6 1.6-2-1.9-0.8-2.6-2-1-1.2 0.1-2.1-0.4-0.7-1 0.3-2.3-3.2-1.2-0.7-0.7-1.7-0.8-2.8-0.2-1-0.8-0.9-1.3-0.7-0.6-0.9-0.3-2.6-2.2-5.9-3.7-1.1-3.8 5.9-10.3 8.4-6.8 3.6-5.7 2.4-7 8.3-8 1.1 1 1 1 2.9 0 2.7 2.6 2.6 3 2.4 0.8 4.1 0 1 1.5 0.5 1.5 0.6 1.4 7.2 8.9 2.3 1.5 2.6 0.5 2.3 1.9 1.3 3.2z" id="TUR2286" name="Kirsehir">
+                              <title>Kırşehir</title>
+                             </path>
+
+                             <path style="fill:#E0D648;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M578.8 240.8l-1.7 1.1-1 2-0.7 3.5-1.6 2.7-4 4.7-1.7 2.4-1.9 2-2.2-2.3-1.3-3.5-2-3.1-2.7-1.2-4.2 1.1-4 2.3-2.3 1.9-2.2 5.5-1.5 2-2.2 4.6-2.8 3.9-19.4 13.3 1.2 12.1-2.8 1.3-6.4-2.5-4.7-1.2-9-0.7 0.9-4.1 0.2-3.4 2.4-1.5-0.5-2.4-1.1-2.3-0.2-2.8 0.5-2.8-1.4-4.5-8.5-0.1-3-3.2-3.7-10.2 1.4-2.7 2.1-2.3 4.6-7.4 0.3-3.1-0.6-3.1 0.2-3.1-3.6-4.7-2.4-4.9 1.4-3.4 1.1-3.6 0-1.6 0.1-1.7 0.6-1.4 0.7-1.2 11.8 1.9 5.9-3.8 2.3-0.8 16.9-11 4.4-6.1 2.7 0.2 2.6 1.3 0.4 0.7 0.7 1.4 0.4 0.5 1.7 0.7 1.7 0.3 5 3.6 5.1 0.7 4-1.4 8.6 1.2 2.6 2 2.6 0.9 4.7-1.6 4.9 0 4.4 0.9 4.2 2.2 1.9 6-2.2 6.3-1.2 2.5-1 2.5-1.4 5.3-2.1 6.1-0.2 1.1-0.4 1-1.2 2.2-0.2 2.8z" id="TUR2287" name="Kayseri">
+                              <title>Kayseri</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M474 187l0.9 0.2 1.5 0.7 0.4 0.8 0.2 1.5 0.5 1.3 1.3 1.6 1.7 0.9 1 2 0.7 2.7 4.2 2.6 1.1 2-0.4 1.6 0.2 1.6 0.4 1.4 0.8 1.6 0.7 1.7-0.7 1.2-0.6 1.4-0.1 1.7 0 1.6-1.1 3.6-1.4 3.4 2.4 4.9 3.6 4.7-0.2 3.1 0.6 3.1-0.3 3.1-4.6 7.4-2.1 2.3-1.4 2.7-5.4 2.1-2.7-0.7-2.2-2.2-1.4-0.8-3.1 0.1-4.4 1.4-3-0.5-1.9-1.2-1.8-1.8-2.1-1.7-0.9-0.9-0.1-3.2 1.6-3.4-0.4-3-1.1-0.4-2.3 0.5-2.6-0.8-2.4-1.6-0.7-3.3 1.8-3.1 0.8-3.3-1.7-6 0.6-2.7 5.8 4.9 2.1-0.6-0.2-1.5-0.7-3 1.2-3.6 6.3-2.6 2.8-1.8 3.2-1.4 2.2-2.8-1.2-2.6-1.5-2.7 0.7-4.4-0.6-3.5-1.2-2-0.4-2.4 0.2-1.5 1.1-0.7 3.4 0.8 2.9-0.5z" id="TUR2288" name="Nevsehir">
+                              <title>Nevşehir</title>
+                             </path>
+
+                             <path style="fill:#68C7E3;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M543.1 345.8l2.3-0.4 2.1 0.6 2.2 0.1 2.4-0.7 2.4 0.8 1.7 1.8 2 1.3 2.6 0 2.6-0.3 3.4 3.4 4.2 1.9 0.9 0.8 0.4 1.4 0.7 0.5 0.8 0.1 0.5 0.6-1.1 0 0.2 1.6-0.6 1.2-0.8 1.2-0.7 1.3-0.2 1.4 0 1.3-0.2 1.2-0.6 1.6-0.7 2.7 0 2.9-0.3 2.8-1.5 2.5-0.2 1 0.1 1.1 1 3.5 0.6 0.8 1.1 0.5 0.4 0.9 0.1 1.1-0.7 1.5 0.3 0.6 1.7 0.2 0.9 0.3 0.6 0.7 0.5 1 0.4 1.1 0.2 0.9 0 1.4-0.3 0.6-3.7 0.7-1 0-3.9-0.6-1 0.1-0.6 0.2-0.2 0.9-0.3 0.4-0.4 0.2-2.1-0.3-0.7-0.3-0.6-0.4-0.7-0.8-0.6 0.6 0.8 0.9-0.1 0.5-0.7 0.9-0.1 1-0.2 9.3 0.1 1.9-1.1 0.3-2-0.8-1.1 0.5-0.4 2.2-0.8 0.2-1.3-0.3-1.7 0.6-1.1 1.9-0.3 4.5-0.6 1.9-1 0.2-3-2.2-1.6-0.7-1.6-0.1-0.8-0.2-0.6-0.5-0.1-0.8 0.1-0.8 0-0.9-0.7-0.7-1 0.2-1 0.3-1.1 0.3-0.4-0.2 0.5-0.9 2.3-4 0.6-0.5-0.1-1.1-1.4-4.5-3.7-6.1-0.7-0.9-0.6-1.1-0.6-2-0.7-0.9-0.9-0.7-0.6-0.8-0.6-1.5 0.1-1 1.4-2.1 0.4-0.6 0.5-0.3 1.2-0.2 0.3-0.3 0.6-1.5 0.4-0.5 0.9-0.5 0.5-0.4 0.3-0.6 0.2-1.3 0.7-0.4 0.6-0.7 2-0.7 0.5-0.3 2.4-3 0.4-0.7 0.6-0.1 5.6-3.6 0.8-0.1 0.5-0.5 0.7-1.2 0.5-1.3 0.2-1 0-0.9-0.5-1.1-0.2-1.2 0-4.1-0.2-1-0.5-1.1-3.1-4.4-1.7-1.8-2-1.4-2-0.5-1.8 0.7-1.8 1.6-0.9 1.1-0.9-1.3 0-2.7 4.3-4.9 1-0.7 1.1 0.3 1.2 0.4z" id="TUR2289" name="Hatay">
+                              <title>Hatay</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M563 86.6l-1.5 0.8 0 0.5 0.4 0 0 0.5-0.7 0.9 0.6 1.2 1.1 1 0.8 0.6 0.9 0.4 1 2.7-1.8 2.7-0.9 2.3 0 2.5-2.3 3.3-4.2 0.9-0.4 3.5-0.8 0.5-0.7 0.7-4.3 2.8-3.2 1.6-1-0.1-0.9-0.7-1-0.5-1.1-0.3-1.5-0.8-1.3-1.1-4.2-1.1-4.3 0.3-1.4 1.7-2.3 5.2-1.6 2.7-1.3 2-1.6 1.8-1.8 0.8-1 0.3-2.8 1.2-1.5 1.6-2.1 4.4-2.6-0.8-2.7 0.2-2.3-0.2-1-0.7-0.4-1.4-0.5-0.2 0.6-4.7 0-1.8 0.5-1.6 4.5-6.9 1.2-4.9 0-2.6-1.3-3.1-0.9-0.4-1.8-0.3-3.9-2.4-8.7-1.5-1.6-1-1.4-2.5-2.1-4.5-0.5-1.9 0.8-4.5 0.1-6.9 0.7-2.1 1.1-1.4 0.8-1.7-0.5-2 16.2 4.6 3.2-0.6 1.7 1 7.5 5.8 1.8 3.1 1.8 0.5 3.9-0.3 2 0.4 6.9 0.1 4.1 2 2.2-0.5 1.9-1.7 2.3-1.5 1.6-2.9 1-3.1 2-1.3 1.9 0.7 1.5 1.6 0.6 1.6 0.9 1.4 5.6 4.1z" id="TUR2290" name="Amasya">
+                              <title>Amasya</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M481.9 58.9l2.7 4.9 0.7 2.5 0.3 2.7 0.8 2.6 4-0.5 2 0.5 0.5 2-0.8 1.7-1.1 1.4-0.7 2.1-0.1 6.9-0.8 4.5 0.5 1.9 2.1 4.5 1.4 2.5 1.6 1 8.7 1.5 3.9 2.4 1.8 0.3 0.9 0.4 1.3 3.1 0 2.6-1.2 4.9-4.5 6.9-0.5 1.6 0 1.8-0.6 4.7-2.1 0.8-5 0.4-0.5 3 0.7 0.8-0.2 1.2-0.6 1.5-0.1 1.3-1.4 1.9-4.1 2.4-2.4 0.3-4.4-1.3-7.8 3.8-4.2 0.3-2.1-0.2-3.1 1.2-8-1.5-5.1 1.7-4.9 2.3-8.2 1-3 1.4 0-3.5 1.4-2.8 1-1.7 0.2-2.2-0.7-2-0.2-1.5-1-1.1-1.2-0.2-1.3-1.3-2.2-4.9-0.6-3.2 4.2-2.4 1-0.2 1-0.5 1.5-2.6 1.2-2.8 0.7-0.5 0.1-1.8-0.3-1.8-0.6-1.8-0.8-1.7-1.3-2.1-0.7-2.6 0.2-2.5-0.4-2.4-1.3-2.5-0.3-3 1.1-2.7 0.6-2.7-2.6-4.3 4.6-1 7.4-3.1 1.2-3.4-1.7-1.9-1.1-0.4-1-2.6 0.6-1.4 1.8-2.2 1.8-4.5 2.4-2.2 1.2-1.5 1.5-3.8 1.8-2.6 2.7-0.6 1.4 1.7 1.9-0.1 1.2 0.2 0.8 1 1.8 0.3 1.7-0.4 1.6 0.4 1.3 1 0.5 1 0.9 0.6 6 1.9 1.1-1.4 0.9-0.8 0.4-0.9 0.1-1.2 0.1-0.5z" id="TUR2291" name="Çorum">
+                             <title>Çorum</title>
+                             </path>
+
+                             <path style="fill:#85C77E;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M703.8 93.4l-6.3 0.8-0.4 0.8-0.2 1-1 0.5-1.3 0.4-1.5 1.3-1.6 1.1-0.7 1.7 0.7 2.2-1 1.8-1.6 1.6-0.5 0.8-0.1 0.5-0.4 3.1 0.1 2.5 1.5 1.7 6.1 1.5 1.5 1.2 1.4 1.5 1.2 0.4-0.3 2.5-1.6 1.2-5.2 3-1.2 1.4 0 2.2 0.2 2.3-0.2 2.5 0.4 2.4 1.5 1.8-0.5 2.3-2.1 1-4.6 0.3-2.3-0.2-5.2-2.6-5.5-1.7-5.3 1.3-3.2-2-3.2-2.4-2.9-1.5-1.9-2.9 0.1-3.9-4.3-16.3-5-5.6 0.2-1.9 0.7-1.3 0.2-2.3-0.2-2.3 0.3-2.4-0.3-2.3-0.9-1.9 0-2.2 0.9-1.7 1.1-1.3 0.8-2.1-0.2-2.4 0.1-0.3 2.4 0.5 2.1 0.7 1.2 0 2.3-0.6 1 0.2 2.3 2 1 0 2-0.6 2 0.6 1.3 0.1 0.6-0.5 4-0.2 0.8-0.6 1.9-1.9 0.7-0.4 1.6-0.5 0.7 0.1 0.3 0.2 1.2 1.6 0.5-0.3 1 0 0.5-0.1 1.4-1.3 0.6-0.1 1.5-1.9 1.2-0.4 3.6-0.8 0.9-0.5 0.8-0.8 1-0.3 5.9-0.1 4.2-0.9 1.4-1.1-1.5 8.4-0.1 3.5 0.4 6.3 1 2.6z" id="TUR2292" name="Giresun">
+                              <title>Giresun</title>
+                             </path>
+
+                             <path style="fill:#85C77E;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M650.1 80.5l-0.1 0.3 0.2 2.4-0.8 2.1-1.1 1.3-0.9 1.7 0 2.2 0.9 1.9 0.3 2.3-0.3 2.4 0.2 2.3-0.2 2.3-0.7 1.3-0.2 1.9 5 5.6-1.5 1.3-1.8 0.8-2.4 0.3-2.1 0.5-0.6 0.8-0.1 2 0.5 0.8-0.2 1.2-1.1 0.7-4.3-0.2-1.9 1.4-1.6 2.1-1.5 1.2-1.8 0.2-4-3.2-2.9-5.6-0.9-4.2-1.7-3.3-7.1-0.4-11.9-8.4-3.5-0.3-3.6 0.5-3.7-0.3-3.5-1.4-2.6-1.7-4.4-1.5-2.9-1.8-2.3-0.5-0.7-0.5-0.6-2 0.9-1.9 1.1-0.3 1.1-0.5 2.2-0.2 2.1-0.7 1.9-1.1 0.8-0.6 2-2.3 4.2-2.3 2.2-4.3 2.9-3.2 2.8-3.7 0-0.4 5.8-0.1 1.9 0.5 1.2 1.2 0.6 0.3 1.1 0.3 1.2 0.2 0.9 0.2 1.3 1.5 0.9 0.7 2.1 0.7 0.2 0.3 1.2 1.4 1.1 0.4 2-0.3 0.9 0.3 0.3-0.4 0.7-0.3 0.4-0.2 0.4-0.6 0.7-1.8 0.6-1.2 0.8-1.1 0.8-0.9 1-0.7 0.4 1.2 0.9 0.6 1 0 0.9-0.8 0.3 0.5 1.4-0.2 0 4.3 1 1.2 2.6 1.3 0.8 0.6 0.5 0.7 0.9 1.6 2-0.9 2.5 0.3 6.3 2.1 0.6 0.1z" id="TUR2293" name="Ordu">
+                              <title>Ordu</title>
+                             </path>
+
+                             <path style="fill:#85C77E;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M513.8 33l-2 4.8-0.3 3.5 0.9 3.3 0.1 2.1-0.2 2 0.3 1.6 0.7 1.4 0.3 2.1 0.5 4.1-1.1 0.8-2.6-0.7-1.1 0.5-1.6 1.1-2.2 0.4-2.3-0.3-1.6-0.9-0.9-1-0.5-0.2-2.3-0.3-0.5-0.4 0.6-0.8-1.8-0.9-0.8-0.6-0.3-0.6-0.1-1.3-0.3-1.2-0.5-1-0.5-0.6-0.6 1-1.4 0.8-2.7 1.1-1.7 1.6-0.6 0.3-1.4 0.1-0.5 0.2-0.5 0.6 0.4 1.3-0.8 0.8-1.2 0.6-0.8 0.6-0.1 0.5-0.1 1.2-0.4 0.9-0.9 0.8-1.1 1.4-6-1.9-0.9-0.6-0.5-1-1.3-1-1.6-0.4-1.7 0.4-1.8-0.3-0.8-1-1.2-0.2-1.9 0.1-1.4-1.7 0.4-9.1-0.5-1.4-0.4-1.3 0.5-2.7 1-2.3 1.6-1.5 1.7-1.2 1.8-4.7-2.9-3.9-3.5-1-6.3-0.3-3.2-0.9-2.2-0.2-1.9 0-3.4-1.3 0.1-2.3 2.6-3.2 1.5-4.1-0.2-4 6 0.9 5.9-1.7 2-0.2 0.8 0.2 1.5 0.8 1.8 0.6 6.9 0.4 2.7-0.3 2.7-0.8 0.9-0.5 2-1.6 1.9-1.1 1.5-2 1.2-2.3 0.3-2.1 0.8 0.3 1.5 0.2 0.6 0.5 0.1-0.5 1-0.1 0.4 0.9 0.9 1.1-0.2 0.5 0 0.4 1.9 1.6 1.2 0.5 1.5-0.1 0.6-0.4 0.8-0.9 0.6-0.2 0.7 0.2 0.6 0.3 1 1 0 0.5-2.8-0.4-1.3 0.2-1.1 0.9-0.5 1-0.4 1.6-0.3 1.6-0.1 1.3 0.4 1.1 1.4 2.6 1.6 2.1 2.8 2.4 0 0.5-0.7 0 0.3 0.9 0.5 1.1 0.7 0.9 1.5 0.8 1.5 1.9 0.8 0.6 3.1 1.3 2.3 0.4 0.8 0.5 1.7 1.6 1.9 1.1 0.7 0.2z" id="TUR2294" name="Sinop">
+                              <title>Sinop</title>
+                             </path>
+
+                             <path style="fill:#E0D648;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M683.8 142.5l-0.1 3.5-1.1 2.6-2.4 0-2.4-0.4-2.7 0.6-2.5 1.8-2.5-0.4-2.4-1.9-2.4 1.3-1.9 5.7 0.4 2.1 3.6-0.1 3.8-0.9 1.1 1.3-0.5 1.8-1.1 0.3-1-0.1-2 1.1-1.3 2.2-2.5 3.5-0.6 7-1.2 2.4 0.6 2.5 1.8 1.8 1.7 1.1 1.2 1.7-0.4 1-1.9 1.2-1.5 1.7-0.6 0.1 0.3 0.8 0 1.1 0.1 2.3 0.6 1.9 0.3 2.1-0.2 1.1-0.1 1.3 0.6 2.2-0.4 2.2-1.2 1.8-4.1 1.4-3.7 2.9-3.4 1-3.5-0.5-1.9 0.3-1.7 0.8-4.1 0.1-1.9 0.9-1.9 1.3-2 0.8-1.8 1.3-4.4 0.9-4.4-2.2-2.3 0.6-1.1 2.6 0.5 3.2 0.9 3 0.6 1.4 0.3 1.5-0.8 2.5-3.7 4-2.3 1.5-1.1 0.4-2.7 3.1-2.6 2.5-3.1 1.4-11.7 1-1.3-0.6-1.3-0.9-6.8-0.9-6.9 1.7 0.2-2.8 1.2-2.2 0.4-1 0.2-1.1 2.1-6.1 1.4-5.3 1-2.5 1.2-2.5 2.2-6.3-1.9-6-4.2-2.2-4.4-0.9-4.9 0-4.7 1.6-2.6-0.9-2.6-2-8.6-1.2-4 1.4-5.1-0.7-5-3.6-1.7-0.3-1.7-0.7-0.4-0.5-0.7-1.4-0.4-0.7-2.6-1.3-2.7-0.2 1.9-2.3 2.4-1.8 1.7-2.2 1.2-2.5 1.6-2.5 1.8-2.2 4.5-3.5 3.8-3.8 1.6-5.6-0.2-1.6-0.5-1.4-1.8-1-2.5-4.5-1.5-5 12.2-2.5 8.6-0.4 7.7-3 1.6-1.7 1.1-2.6 1-4.1 1.4-4 1.9-1.1 2-0.6 6 0.8 1.9-0.8 6.8-1.8 4.8-0.7 4.4 0.3 4.4-0.7 1.9-1 1.8-1.5 0.7-0.2 0.8 0 2-0.5 1.8-0.8 3.2-4.4 2.6-5.4 2.9 5.6 4 3.2 1.8-0.2 1.5-1.2 1.6-2.1 1.9-1.4 4.3 0.2 1.1-0.7 0.2-1.2-0.5-0.8 0.1-2 0.6-0.8 2.1-0.5 2.4-0.3 1.8-0.8 1.5-1.3 4.3 16.3-0.1 3.9 1.9 2.9 2.9 1.5 3.2 2.4 3.2 2 5.3-1.3 5.5 1.7 5.2 2.6z" id="TUR2295" name="Sivas">
+                              <title>Sivas</title>
+                             </path>
+
+                             <path style="fill:#85C77E;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M599.9 67.5l0 0.4-2.8 3.7-2.9 3.2-2.2 4.3-4.2 2.3-2 2.3-0.8 0.6-1.9 1.1-2.1 0.7-2.2 0.2-1.1 0.5-1.1 0.3-0.9-1.6-1.8-1.3-2.7-0.1-0.4-0.2-0.3 0.5-1.8 0.8-5.7 1.4-5.6-4.1-0.9-1.4-0.6-1.6-1.5-1.6-1.9-0.7-2 1.3-1 3.1-1.6 2.9-2.3 1.5-1.9 1.7-2.2 0.5-4.1-2-6.9-0.1-2-0.4-3.9 0.3-1.8-0.5-1.8-3.1-7.5-5.8-1.7-1-3.2 0.6-16.2-4.6-2-0.5-4 0.5-0.8-2.6-0.3-2.7-0.7-2.5-2.7-4.9 0.8-0.6 1.2-0.6 0.8-0.8-0.4-1.3 0.5-0.6 0.5-0.2 1.4-0.1 0.6-0.3 1.7-1.6 2.7-1.1 1.4-0.8 0.6-1 0.5 0.6 0.5 1 0.3 1.2 0.1 1.3 0.3 0.6 0.8 0.6 1.8 0.9-0.6 0.8 0.5 0.4 2.3 0.3 0.5 0.2 0.9 1 1.6 0.9 2.3 0.3 2.2-0.4 1.6-1.1 1.1-0.5 2.6 0.7 1.1-0.8-0.5-4.1-0.3-2.1-0.7-1.4-0.3-1.6 0.2-2-0.1-2.1-0.9-3.3 0.3-3.5 2-4.8 1.6 0.6 2.4 0.3 2.3-0.2 1.1-0.5 1.9-1.2 3.2-0.6 5.6-2.3 1.2-0.2 1.2-0.5 2.2-1.7 1.1-0.3 0 0.5-0.5 0.9-0.4 0.3-0.5 0.2 0.1 1.1-1 2.2 0.2 1.1 0.3 0 0.2-1.7 0.5-1.5 0.7-1.2 0.7-0.9 0.8-0.5 3.2 2.9 0-0.9 0.3 0 4 5.1 0.7 2 0 2.9-0.2 0.7-0.5 1.4-0.1 2.3 0.2 1.1 0.6 1.2 2.3 2.9 1.3 0.9 1.7 3.4 0.9 0.7 2.6 1.4 1.5 0.3 0.3 0.4 0.3 2 0.4 0.4 1.2 0.4 1.1 1.5 0.5 0.2 1 0.1 0.4 0.4 1 0.4 1.3-0.3 2.2-1.3 2.7-2.4 0.5-0.7 0.1-0.6 1.1-1.9 0.3-1.5 0.6-0.7 0.7 0.1 0.9 0.3 1.1 0.2 4.5 0 4.1 1.1 7.7 3.9 1.6 1.4 0.9 2.2 0.1 3.1 0.3 1.2 0.8 0.5 1.1 0.2 2 1.2 1.1 0.5 0.8 0z" id="TUR2296" name="Samsun">
+                              <title>Samsun</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M576.6 87.1l-0.9 1.9 0.6 2 0.7 0.5 2.3 0.5 2.9 1.8 4.4 1.5 2.6 1.7 3.5 1.4 3.7 0.3 3.6-0.5 3.5 0.3 11.9 8.4 7.1 0.4 1.7 3.3 0.9 4.2-2.6 5.4-3.2 4.4-1.8 0.8-2 0.5-0.8 0-0.7 0.2-1.8 1.5-1.9 1-4.4 0.7-4.4-0.3-4.8 0.7-6.8 1.8-1.9 0.8-6-0.8-2 0.6-1.9 1.1-1.4 4-1 4.1-1.1 2.6-1.6 1.7-7.7 3-8.6 0.4-12.2 2.5-0.6-1.5-1-0.9-1-2 0.1-2.6 0.4-3.8-2.2-2.2-2.2 0.6-2.2 1-2.4 0.5-2.4 0.2-4.1-0.8-4.9 0.4-4.1-2.9-3.6-4.1 2.1-4.4 1.5-1.6 2.8-1.2 1-0.3 1.8-0.8 1.6-1.8 1.3-2 1.6-2.7 2.3-5.2 1.4-1.7 4.3-0.3 4.2 1.1 1.3 1.1 1.5 0.8 1.1 0.3 1 0.5 0.9 0.7 1 0.1 3.2-1.6 4.3-2.8 0.7-0.7 0.8-0.5 0.4-3.5 4.2-0.9 2.3-3.3 0-2.5 0.9-2.3 1.8-2.7-1-2.7-0.9-0.4-0.8-0.6-1.1-1-0.6-1.2 0.7-0.9 0-0.5-0.4 0 0-0.5 1.5-0.8 5.7-1.4 1.8-0.8 0.3-0.5 0.4 0.2 2.7 0.1 1.8 1.3 0.9 1.6z" id="TUR2297" name="Tokat">
+                              <title>Tokat</title>
+                             </path>
+
+                             <path style="fill:#85C77E;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M876.2 47.7l0.7 4 0.4 3 0.6 1.7 0.4 0.7 1 2.5 1.5 4.8-1.4 4.7-4.4 2.2-4.5 5-3.3 6.5-3 0.3-3.1 0.7-3.6-0.4-3.6 0.3-1.8 1-1.6 1.4-0.6 2.7 0.3 3-1.3 2.8-2.1 2.1-1 2.7-0.1 3.1-2.4 3.6-4.5-2.5-4-1.2-4.1 1.2-4.4 2.9-4.8 1.8-3.6-3.1 0.7-5.9 1.4-2.5-0.4-2.2-1.9-0.7-6.5-1-4-2.3 0.7-2.8 5-5.8 1.2-0.6 1-1 0.5-1.5 0.8-1.4 2.8-1.8 1.4-3.3-1.5-1.7-2.1-1-0.5-1.2-0.6-1.2-1.1-0.7-1-0.9-1-2.4-0.4-2.7-1.5-3.8 4.5-3.7 1.3-0.5 1.1-0.6 0.6-0.2 1.8-0.2 0.7-0.3 1-0.7 0.7-1.3 0.6-1.4 0.2-1.6 0.5-0.3 3.1-2.8 0.7-1.3 5.5 2.4 0.7 0.1 1.6-0.1 1.3-0.6 0.4 0.3 0 1.1 0.2 0.4 0.6 0.2 1.5 0.2 0.7 0.3 2.1 1.9 0.6 0.3 0.5-0.3 2.1-1.8 1.6-2.4 0.8-0.5 2.1-0.9 3.7 1.5 1.8-0.6 0.8-0.4 0.7-0.1 0.7 0.1 0.8 0.4 1.6-0.5 0.8 0 0.8 0.5 0.8 0.8 1.3 0.1 2.5-0.1 9.2 3.5 0.7 0z" id="TUR2298" name="Artvin">
+                              <title>Artvin</title>
+                             </path>
+
+                             <path style="fill:#DEAB42;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M880.7 105.3l-0.4 2.4-0.8 2.3 1.2 6.9-2 1.3-2.2 0.9-1.8 1.2-1.7 1.4-3.3 1.9-7.6 2.6-1.6 3.7 1.8 2.2 1.1 1.8 1.3 1.4 4.5 0.8 1.7 0.6 1.5 1.1 0.9 1.2 0.7 1.4 0.8 0.7 1.1 0.3 2 0.9 1.4 2.1 1.2 2.7 1.6 2.5-1.5 1.6-1.7 1-1.4 0-0.7 0.1-1.2 0.6-1.1 1.6-1.9 0.6-3.9-0.7-1.9 0.8 4.3 5.2 7.4 3-0.7 0.5-0.6 1.8 0.1 9.2-0.5 3.2-1.6 2.7-1.1 0.4-2 0.3-1.9 0.1-7.2 3.6-1 3 0.3 3.1-1.5 2.5-3.6 2.2-1 1.2-1.6 1.5-6.4 1.1-2.1 1.2-2.1 1.6-4.5-0.2-4.4-1.8-1.3-1.1-3-4.3-5.1-5-1.9-1.3-4.2-1-8.4 1.4-2.2-3.9-2.3-2.7-3.2-0.4-3.8-1.8-5.1-4.8-1.6-0.9-1.5 0.8-1.5 1.1-4.7 2-4.6-0.7 0.1-4.1 1.9-3.6 1.2-2.8-1.7-1.9-2.2-1-2-1.4-1-1.2-0.7-1.4-0.2-1.9 0.1-1.9-3.5-4.6-8.9-0.2-2.8-1.4 0.5-3.9 1.6-3.6 8.5 1 1.9-0.3 2.3-1.8 2.2-2.2 2.9-1.4 6.5-2.3 1.5-1.8 1.2-2.5-0.1-1.4-3.5-0.3-1.5-0.6-3.4-0.8-3.2-1.8-1.3-4.2-1.5-9.3-1.7-4.2 8.5-4.3 2-0.5 2.2-0.3 3.1-0.9 1.6-3.9 1.8-0.8 2.3 0 2.2-0.8 5.6-4.8 4-2.3 4 2.3 6.5 1 1.9 0.7 0.4 2.2-1.4 2.5-0.7 5.9 3.6 3.1 4.8-1.8 4.4-2.9 4.1-1.2 4 1.2 4.5 2.5 2.4-3.6 0.1-3.1 1-2.7 2.1-2.1 1.3-2.8-0.3-3 0.6-2.7 1.6-1.4 1.8-1 3.6-0.3 3.6 0.4 3.1-0.7 3-0.3 1.1 5.3 2.7 4.1 1.9 1.3 1.5 1.9 1.1 2.7 1.5 2.3 2.1 2.1 1.6 2.8z" id="TUR2299" name="Erzurum">
+                              <title>Erzurum</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M763.1 143.1l-1.6 3.6-0.5 3.9 2.8 1.4 8.9 0.2 3.5 4.6-0.1 1.9 0.2 1.9 0.7 1.4 1 1.2 2 1.4 2.2 1 1.7 1.9-1.2 2.8-1.9 3.6-0.1 4.1-3.4-1.1-4.2-0.1-4.3-0.7-7.7-0.2-1-0.6-2-0.7-0.6-0.1-0.1 0.2-1.7 0.6-2 0.9-1.1 0.2-4.8 1.6-4.1-1-2.8-1.6-1.9 0.6-2.4 3-3.6 1.2-8 1.2-4.1 0-4-0.9-4-0.3-2.1 1.1-2.2 0.6-2.7-0.5-2.7 0.5-5.2 2-1.4 1.1-1 1.8-1.3 0.7-1.5-0.1-0.7 1.1-0.6 1.2-0.6 0.3-3.1 1.1-0.9 2.2 0.7 2 0.7 1.3-1.4 0.9-1.4 0.3-1.2 0.7-0.8 3.8-1.8 1-0.2 1.6 0.2 1.6 0.9 0.7 0.4 4.2-1.6 0.3-1.4 0.7-3.4-4-2.2-1.3-2.3-0.9-5-0.3-4.1-2.1 1.2-1.8 0.4-2.2-0.6-2.2 0.1-1.3 0.2-1.1-0.3-2.1-0.6-1.9-0.1-2.3 0-1.1-0.3-0.8 0.6-0.1 1.5-1.7 1.9-1.2 0.4-1-1.2-1.7-1.7-1.1-1.8-1.8-0.6-2.5 1.2-2.4 0.6-7 2.5-3.5 1.3-2.2 2-1.1 1 0.1 1.1-0.3 0.5-1.8-1.1-1.3-3.8 0.9-3.6 0.1-0.4-2.1 1.9-5.7 2.4-1.3 2.4 1.9 2.5 0.4 2.5-1.8 2.7-0.6 2.4 0.4 2.4 0 1.1-2.6 0.1-3.5 2.3 0.2 4.6-0.3 2.1-1 1.4 0.9 1.5 0.7 1.6 0.2 1.6 0.4 5.6 3.4 2 0.8 1.9 1.2 0.8 1.1 1 0.9 3.1 1 3.1 1.6 3.2 0.3 3-0.3 3.1 0.2 3-0.3 2.8-1.4 5.8-1.4 2.3-2.4 2-3 2.8-1 3 0.2 2.6-0.3 2.1-1.9 2.4-1 8.6 1.8z" id="TUR2300" name="Erzincan">
+                              <title>Erzincan</title>
+                             </path>
+
+                             <path style="fill:#85C77E;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M807.2 90.6l-4 2.3-5.6 4.8-2.2 0.8-2.3 0-1.8 0.8-1.6 3.9-3.1 0.9-2.2 0.3-2 0.5-8.5 4.3-0.7-4.4 0.6-4.6-3.3-8.4-0.6-4.8-1.3-4.6-1.8-4.3 5.8-3.9 1.9 0.8 1.5 0.1 1.5-0.4 1.6-1 1.9-1.7 0.7-0.2 1.7-0.2 0.8-0.3 0.6-0.4 3.1-4.2 3.6-2.8 0.6-0.2 0.8 0.1 2.3 0.9 1.3-0.3 1.9-1.3 0.9-0.4 1.1-0.1 1.2-0.5 1.2-0.6 0.9-0.7 2.1-2.2 1.1-0.7 1.3-0.4 1.3 0 1-0.4 0.4-0.3 1.5 3.8 0.4 2.7 1 2.4 1 0.9 1.1 0.7 0.6 1.2 0.5 1.2 2.1 1 1.5 1.7-1.4 3.3-2.8 1.8-0.8 1.4-0.5 1.5-1 1-1.2 0.6-5 5.8-0.7 2.8z" id="TUR2301" name="Rize">
+                              <title>Rize</title>
+                             </path>
+
+                             <path style="fill:#85C77E;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M766.8 78.1l1.8 4.3 1.3 4.6 0.6 4.8 3.3 8.4-0.6 4.6 0.7 4.4-1 0.2-2.1 0.7-5.4-0.1-2.6 0.5-2.5 0.8-2.3 0.1-4.3-1.4-4.5-0.1-2.1-1.3-3.2-3.6-1.6-0.6-1 0.9 0.3 1.6-0.8 1-1.1 0-2.5-4.2-3.5-2.4-1.7 1.2-0.6 2.8-0.8 0.9-1 0.3-3.2-0.4-12.1-5-3.5-3.6-0.8-4.1-2.2-1.2-0.9 1.2-1 0.9-1.1-0.1-1-0.8-1-2.6-0.4-6.3 0.1-3.5 1.5-8.4 0.4-0.3 0.6-0.2 1.8 0.2 0.9 0.3 1.6 1.4 1.2 0.2 0.9-0.3 1.4-1 1.1-0.2 0.6-0.2 2.8-1.6 0.8-0.9 0.6-0.1 3.3 0.8 0.7 0.7 1.3 1.8 3.1 2.7 2 1.2 2.1 0.4 1-0.4 1.1-0.5 1-0.1 1.4 1 0.6 0 1.2 0 0.4 0.1 3.1 2.5 1 0.5 1 0.2 0.8-0.7 3.3-1.1 1.3-0.1 3 2.8 1.5 1 2.1 0.4 0.8-0.1 1.6-0.7 1.2-0.3 1.9-0.7 1.2-0.8 2.4-0.7 2.7-1.7z" id="TUR2302" name="Trabzon">
+                              <title>Trabzon</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M921.4 148.4l1.2 3.8-0.3 3.3 0 1.6 0.7 2.5 0.9 0.8 1.8 0.7 3.3-2.4 3.5-1.4 1.7 0.3 0.7 0.6 1.7 0.8 1.1 0 1.7 1.2 1.1 2.5 1.6 2.1 4.7 2.2 3.3 0.8 0.3 0.9 0.3 1.1 4.8 0.7 5.2-0.6 3.9 1.2 4 0.5 9.3-2.2 2.1 0.5 0.8 0.7-0.3 1.1-1.7 3.5-0.3 0.9-0.1 1.1 0.3 1.9 0 0.8-0.6 0.8-0.2 1.5 0.2 1.3-0.1 1.2-0.8 1.3-1 0.8-2.7 1.2-1.2 0.3-1.3-0.1-3.6-1.8-1.3-0.2-2.8 0.8-1.2 0.1-1.2-0.1-0.8 0-0.8 0.3-1 0.6-0.6 0.9 0.3 0.8 1.4 1.6-7.4 2-1.9-0.4-0.9-0.3-3.1-0.3-2.5-0.9-2-0.3-2 0.3-1.5 1.1-1.3 1.4-1.8-0.1-4.5-0.8-2.4-1.5-3-3.2-3.6-1.6-4-0.3-2.3 1.8-1.9 2.5-1.8 0.6-3.1 0.6-1.2 0.5-0.4 2 1.9 1.2 2.1 0.8 0.3 2.1-0.3 2.3-0.1 2.4-1.3 1.4-6.1 2.4-9.6 2.2-1.7 1.4-1.9 1.1-2.4 0.8-2.3 1.4-0.2-3.5 0.4-3.3 0.6-2.6-0.1-1-0.3-1 0.3-4.3-1.9-2.8-1.3-1.2-0.9-1.9-1.6-1.9-1.6-1.5-2.2-3.7-1.4-4.3 1.6-2.7 0.5-3.2-0.1-9.2 0.6-1.8 0.7-0.5-7.4-3-4.3-5.2 1.9-0.8 3.9 0.7 1.9-0.6 1.1-1.6 1.2-0.6 0.7-0.1 1.4 0 1.7-1 1.5-1.6 10 2 16.1-4.6 5.6 0.1 2.4 0.6 2.4-0.5 2.8 1.2z" id="TUR2307" name="Agri">
+                              <title>Ağrı</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M811.2 189.3l-1.4 2.6-0.3 1.5 0.8 2 0.3 0.6 0.5 1.3 0 1-0.1 2.1 1.2 2.1 1 1 1.4 2.6 0.4 3-0.7 2.7-3.6 4.5-1.6 5.2 1.1 3.8 1.1 1.6 0.6 0.2 1.2 1 0.6 1.6 0.4 1.7-2.6 1.8-6.3 2.5-6.5 4-3.4 1-8.9-0.4-2.6-0.7-1.8-0.2-5.1 0.8-2.9 1.5-0.3 1.8-0.1 2-1.3 2.2-2.1 1-6.1 0.2-0.2-3.1-0.5-2.9-2.8-4.2 2.4-7.1 1.6 0.3 1.7 0.6 1-1.8 0.7-2.6 0.3-2.4-0.9-2.2-3.2-3.9-1.2-5.2 1-4.7 2.6-3.7 2.2-4.3-1.6-3.2-4.3 1.9-1.8 0.6-11.9 6.4 0.9-2.1 0.4-2.2-1.1-5.1 0.3-1.8 0.6-1.7 0.3-3.3 0.7-1.4 2.6-0.8 3.7 0.2 0.7-0.3 0.5-1.1 0.4-1.3 2.4-1 2.5 0.1 2.5-1.8 1.4-3 0.9-0.7 2.4 0.4 1.4 0.1 2.6-1.2 2-2.5 3.4 1.1 4.6 0.7 4.7-2 1.5-1.1 1.5-0.8 1.6 0.9 5.1 4.8 3.8 1.8 3.2 0.4 2.3 2.7 2.2 3.9z" id="TUR2308" name="Bingöl">
+                              <title>Bingöl</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M822.5 245.1l0.3 2.3-2 1.1-1.7 0.2-1.7 0.5-2.7 1.3-1.2 1.7-0.4 2.4-1.1 3.6-0.6 3.9 0.7 7.2-0.4 3.7-0.8 1.6-1 1.4-2.4 8-2.1 2.4-2.5 1.8-0.5 1.6 0.5 1.9 0.4 2.5 1.2 2-3.4 1.5-18.2-0.4-5.7 1.2-0.7 1.5-2.4 3.3-4.2 0.3-5.8 4.5-2.6 1-5.7 4-2.3 2.1-5.1 6.6-2.4-2.7-1.8-3.4-1.8-5.3-0.2-1-0.5-1.9-0.8-5 0.4-7.1-0.8-1.6-0.9-0.3-1-0.5-1.3-1.3-1.5-0.6-1 1.6-2.5-1.1-2-1.8-1.7-0.6-1.6-0.8-3.4-2.9-3.2-3.3-2.9-1.4-3.1-0.1-4.2-0.7-4.1-2.2 1.9-1.4 0.5-0.8-0.5-0.9 1.2-2.7 0.4-1.5-0.2-1.8-1.6-1.7-4.2 1.8-1.3-0.9 1.7-6.1-0.2-1.6-0.6-1.4-0.9-1 7.1-1.2 4.3 1.1 4.5 0.4 2.2-1 4-0.6 1.5-0.8 3.9-0.4 4 0.3 1.8-0.6 1.6-1.1 1.3-2 1.1-2.2 0.8-2.1 2.4-0.5 1.2 0.6 1.8 1.4 0.8 0.4 17.5-0.6 6.1-0.2 2.1-1 1.3-2.2 0.1-2 0.3-1.8 2.9-1.5 5.1-0.8 1.8 0.2 2.6 0.7 8.9 0.4 3.4-1 6.5-4 6.3-2.5 2.6-1.8 2.7 3.5 3.5 2.6 0.5 2.6-0.6 2.7 0.7 1.8 1.6 0.5z" id="TUR2309" name="Diyarbakir">
+                              <title>Diyarbakır</title>
+                             </path>
+
+                             <path style="fill:#DEAB42;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M885.4 213.8l-3.8 3.1-4.3 1.6-8.5-0.9-1.8 0.6-1.7 1.2-2.1 0.9-2.2 0.2-1.1 0.8-0.6 3.1-1.1 1-4.6-0.2-1 2.5 1.7 2.6 0.3 2.9-2.2 1.8-3 3.5-3.7 2.1-8.9-0.7-8 3-0.6 0.9-2.9 0.4-2.8 0.9-1.6-0.5-0.7-1.8 0.6-2.7-0.5-2.6-3.5-2.6-2.7-3.5-0.4-1.7-0.6-1.6-1.2-1-0.6-0.2-1.1-1.6-1.1-3.8 1.6-5.2 3.6-4.5 0.7-2.7-0.4-3-1.4-2.6-1-1-1.2-2.1 0.1-2.1 0-1-0.5-1.3-0.3-0.6-0.8-2 0.3-1.5 1.4-2.6 8.4-1.4 4.2 1 1.9 1.3 5.1 5 3 4.3 1.3 1.1 4.4 1.8 4.5 0.2 2.1-1.6 2.1-1.2 6.4-1.1 1.6-1.5 1-1.2 3.6-2.2 1.5-2.5-0.3-3.1 1-3 7.2-3.6 1.9-0.1 2-0.3 1.1-0.4 1.4 4.3 2.2 3.7 1.6 1.5 1.6 1.9 0.9 1.9 1.3 1.2 1.9 2.8-0.3 4.3 0.3 1 0.1 1-0.6 2.6-0.4 3.3 0.2 3.5z" id="TUR2310" name="Mus">
+                              <title>Muş</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M893.7 268.6l-1.5 4.4-0.6 0.8-0.6 0.9 0 2 0.3 2.1-0.2 3-1.6 2.4-2 0.1-3.5-2.5-5.3-3-3.2-2.4-2.4-1-3.6-0.9-3.8-1.6-3.3-2.6-3.1-3.1-3.5-1.6-4.5 1.7-4.5 1.2-5.6-0.5-5.4-2-0.1-1.5 0.2-1.5 0-2.5-0.2-2.4-1.2-3.6-1.8-9-4.5-1.7 0.6-0.9 8-3 8.9 0.7 3.7-2.1 3-3.5 2.2-1.8-0.3-2.9-1.7-2.6 1-2.5 4.6 0.2 1.1-1 0.6-3.1 1.1-0.8 2.2-0.2 2.1-0.9 1.7-1.2 1.8-0.6 8.5 0.9 4.3-1.6 3.8-3.1 2.3-1.4 2.4-0.8 1.9-1.1 1.7-1.4 9.6-2.2 0.1 5.2 1.6 3.4 6.1 3.7 2.1 3.3-1.5 4.9-3.8 3-2.8 3-4.8 7.2-0.9 2-1.1 1.9-3.3 2.3-5.6 3.2-0.9 0.9-0.5 2.9 0.3 1.4 1.9 4.2 0.2 0.9 0.1 1.7-0.5 2.3 0.9 3.4 2.8 0.9z" id="TUR2311" name="Bitlis">
+                              <title>Bitlis</title>
+                             </path>
+
+                             <path style="fill:#E0D648;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M414.5 123.1l-0.7 5.6-0.7 3.9 0 4.6 0.4 4.1-0.7 3.9-6 0.7-3.9 1.6-2.3 5.8-1.3 5.8-1.6 5.7 1.3 5.8 4.2 5 1.4 2.6 2.1 9.7 4.1 8.1 1.1 3.8 5.9 3.7 2.6 2.2 0.9 0.3 0.7 0.6 0.9 1.3 1 0.8 2.8 0.2 1.7 0.8 0.7 0.7 3.2 1.2-0.3 2.3-1.8 4.4 2.1 5.7-0.2 3.9-4.3 4.1-2 1-4.7-0.1-4.5 1.2-4.3 2.5-4.5 1.2-1.1-2.7-1.7-2.4-1.3-2.5-1.1-2.8-0.2-3.8 0.6-3.9 0.3-3.7-0.3-3.6-2.8-6.5-5.1-3.7-3-1-0.9-0.5-2.3-1.7-2.2 0-1 1.4-0.5 1.7-0.5 3.5-0.7 1.3-2.3-0.4-3-2.3-2.5-0.8-5.3 4.4-1.9 2.5-2.4 1.4-3.9-1.7-3.3 1.6-3.1 2.5-2.2-0.2-1.9-1.8-1.7-0.9-4.4-1.5-2.7 0.3-5.4 1.6-1.9-0.6-7.5-6.2-2.2-1.4-2.3-1 1.3-0.9 2.7-1.3 1-1.4 1.1-0.4 1.1-0.1 1.3-1.2 1-1.7-0.4-2-1.6-1.1-1.1-1.8-0.1-2.6-0.3-1.2 0.5-2.1 0.3-2 0-2.1-0.6-1.4-0.8-1.2-0.2-2.1-0.7-1.4-2.6-2.3-2.6-7.2-0.4-3.4 2.2-2.4-0.1-1.8-0.7-0.5-0.7-1.1-0.4-1-1.8-0.1-1.5-0.9-1.3-2-0.8-2.1-0.2-1.7-0.6-1.2 0-2-2.4 0.3-2.1-1.4-1.9 0.7-3.8 0-2 0.5-1.7-0.6-1.5 0.5-2.2-2.3-1.3 0.2-1.3 0.4-4.8-0.6-1.4 1.2-1.5 1.1-1.4-0.5-1.3-0.9-3-0.3-5 2.2-2.1 0.1-1.2-0.4-0.3-1.4-0.6-4.1-2.2-2.8 3.2-4.3 4.3-2.5 1.6-3.5-0.2-4.1 0.5-2.6 1.3-1.4 4.9 1.7 4.6 2.8 8.8-1 1.7 1.9 1.2 0.6 1.5 0.2 1.6 0.6 1.7 0.2 4.7-1.9 2-0.2 6.5 0.1 4.5-1 3.6-1.7 6.1-1.5 2.2-1.5 2.2-0.7 7.2 1.1 4.2-2.3 1.4-2.5 1.9-2.1 0.9-1.6-2-5.5 0.2-3.7 1.5-1.4 1.9-0.8 4.1-0.2 4.1 0.7 15.3 7.1 1.5 2.1 1.2 2.3 1.7 2 2 1.5 0.9 0.4 2.2 2 1.7 1 1.1 1.7 0.6 2.4 3.4 2.7 3.8-0.5 0.3-1.7 0.5-1.9 1-0.5 1 0.1 1.7 0.6 1.5 1 7.1 2.3z" id="TUR3008" name="Ankara">
+                              <title>Ankara</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M437 87.3l2.6 4.3-0.6 2.7-1.1 2.7 0.3 3 1.3 2.5 0.4 2.4-0.2 2.5 0.7 2.6 1.3 2.1 0.8 1.7 0.6 1.8 0.3 1.8-0.1 1.8-0.7 0.5-1.2 2.8-1.5 2.6-1 0.5-1 0.2-4.2 2.4-4.8-0.5-14.4-4.6-7.1-2.3-1.5-1-1.7-0.6-1-0.1-1 0.5-0.5 1.9-0.3 1.7-3.8 0.5-3.4-2.7-0.6-2.4-1.1-1.7-1.7-1-2.2-2-0.9-0.4-2-1.5-1.7-2-1.2-2.3-1.5-2.1-15.3-7.1-4.1-0.7-4.1 0.2 0.8-3.8 0.2-2 5.4-2.5 6.2-5 2.5-4.5 1.8-1.1 5.1 0.5 5.1-2.8 2.2-5.6 1.2 1.6 0.7 0.6 6.7 0.8 4.7 3.1 2 2.3 2.4 0.8 2-0.7 5.5-3.3 4-0.7 8.5-4.6 1.7-0.6 0.8 0.5 0.6 2.7-1.6 2.2-1.4 1.5-0.6 2.1 2 3.3 3 1.1 1.7 1.6 1.7 1.2 2.2 0.5 2.1 0.1z" id="TUR3009" name="Çankiri">
+                              <title>Çankırı</title>
+                             </path>
+
+                             <path style="fill:#85C77E;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M346.3 54.7l-2.7 3.9-1.9 2.3-0.9 3.6-1.7 5.6 0 6.2-11.2-0.3-3.2-0.9-3.8-0.3-12.7-1.3-8.9-4.4-2-1.9 1.7-1.6 0.7-1 0.4-1 0.2-1.1 0.1-1.4 0.1-0.7 0.5-1.4 0.1-0.8-0.2-0.4-1-0.6-0.2-0.6 0.6-0.9 1.1-0.4 2.4-0.2 0.3-0.3 0.8-1.3 0.3-0.3 0.5-0.1 7.9-3.1 11.1-7.4 6.3-3.1 1.9-1.5 0.5-0.3 4.9-1.7 3 3 3.1 1.4 1.1 3.6 1.9 4.8-1.1 5.9z" id="TUR3010" name="Zinguldak">
+                              <title>Zonguldak</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M407.8 237.8l-1 1.9-3 3.4-1.2 2.2-0.7 5.3-1.9 2.8-1.2 3.5-0.3 2.5-0.8 2.3-0.4 5.4 1.9 5.1 0.7 0.5 0.5 0.7 0.4 2.8 0.8 2.5 3.5 4.3 2.2 2.1 2.2 0.1 6.2-1.4 8.2-0.6 4.1 0.2 4.1-1 4-1.6 3.9-0.9 3.9 0.6 0.7 3.4 1.8 2.7 2.5 1 2.4 1.3 2 2.9 1.8 3.2 2 2 1.7 2.3 0.6 3.8-1.2 3.4-1.2 1.4-0.8 1.7-0.3 3 0 1.9 2 2.9 1.3 1 1.9 2.2 1.2 2.8-0.6 2.1-1 0.7-2.7 0.9-1.6 0.9-2.3 2.2-3 1.5-4.5 1.6-1.4 0.8-1.8 2.2-1.3-2.6-3.5-5.9-7.3-7.9-5.9-6.5-1.1-4.2 0.1-1-0.3-3.2-2.2-0.8-5.1-0.2-2.4 1.5-1.5 2-2.6 3.4-5.3 2-8.1 0.5-7.8 1-4.9 2-8.9 9.9-6.3 8.6-4.9 6.5-1.3 4.3 0.3 2.3 3.2 1.5 3.1 0.2 0.8 1.8-0.2 1.9-1.6 2.5-7.4 7.4-5.9 4.4 0.4-4.4-0.8-4.3-1.1-1.6-1.7-0.4-2.4-0.2-2.2-0.8-0.8-1.8 0.6-2 1.3-1-0.2-2-1.7-1.1-2-0.8-3.5-3.3-1.5-1.1-1.5-1.4-2.3-3.3-2.6-2.8-3.7-2.5-3.3-3.2-4.4-2.8-13.4-2.8-5.2 0-2.2-0.9-2.1-1.7-1.2-1.3-1.1-1.4 1.4-3.7 0.5-3.9-0.7-2.4-1.3-2 0-2.3 2.2-0.7 1.7-2.1 0.3-3.1 2.1-3.5-0.1-5.1-1.2-5.2 1.1-4.3 1.7-1.1 3.7-1.4 3.3-2.1 0.4-2.2-3.8-3.3-1.2-1.8-1.8-0.7-3.6-3-3.1-4.2-4.1-3.3-1.5-4.9 9.2-6 4-4.2 4.5-6 0.2-1.5-0.2-1.3-0.1-1.4 0.8-3.5 1.6-3.2 4-6.6 0.4-2.7-0.9-0.6-1.6-1.6 0.5-1.7 0.7-4.5 3.1 0.4 4.1-0.7 0.8-1.1 0.3-1.9 0.2-2 2.3 1 2.2 1.4 7.5 6.2 1.9 0.6 5.4-1.6 2.7-0.3 4.4 1.5 1.7 0.9 1.9 1.8 2.2 0.2 3.1-2.5 3.3-1.6 3.9 1.7 2.4-1.4 1.9-2.5 5.3-4.4 2.5 0.8 3 2.3 2.3 0.4 0.7-1.3 0.5-3.5 0.5-1.7 1-1.4 2.2 0 2.3 1.7 0.9 0.5 3 1 5.1 3.7 2.8 6.5 0.3 3.6-0.3 3.7-0.6 3.9 0.2 3.8 1.1 2.8 1.3 2.5 1.7 2.4 1.1 2.7z" id="TUR3011" name="Konya">
+                              <title>Konya</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M443.4 336.3l-3.7 1.4-3.9 0.3-1.9 0.8-5 3.9-3.8 0.7-1.9 1-1.3 0.2-1.8-0.6-4.3 0.4-4.2 1.6-6.6 0.6-2.1 0.6-1.9 1.2-1.7 1.5-1.7 1.3-2 0.6-1.7 2-0.6 2.9-1.1 1.9-1.9-0.5-0.5-1.2-0.7-0.4-1.5 0.6-2.4 1.5-0.8 0.3-2 0.4 0.1 2.1 1.1 1.3 0.9 1.5 0.5 1.9 0.7 1.7 1.3 0.6 1 1.3 1.1 0.9 2.8 0.7 2.4 1.8 1.2 2-1.3 1.7-2-0.8-1.9-1-0.8 0.2-0.7 0.3-0.7 2.1-0.7 2.4-1.2 1.2-1.7 0.3-3.2-0.2-3.1 0.8-2.9 1.3-3.2 0.1-3.4-0.9-3.4 0.4-1-2.1-2.1-1.1-1.7-1.2-1.4-1.8-2.2-4.4-1.8-4.7 5.9-4.4 7.4-7.4 1.6-2.5 0.2-1.9-0.8-1.8-3.1-0.2-3.2-1.5-0.3-2.3 1.3-4.3 4.9-6.5 6.3-8.6 8.9-9.9 4.9-2 7.8-1 8.1-0.5 5.3-2 2.6-3.4 1.5-2 2.4-1.5 5.1 0.2 2.2 0.8 0.3 3.2-0.1 1 1.1 4.2 5.9 6.5 7.3 7.9 3.5 5.9 1.3 2.6z" id="TUR3012" name="Karaman">
+                              <title>Karaman</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M221.3 233.6l-0.3 2.8-0.8 2.5-3.2 3.1-0.7 2.6-1 2.8-1.2 1.5 0.1 1.8-6.5 1.5-0.4 4 0.4 3.9-1.7 1.5-1.9 0.6-4 0.1-3.7-0.4-2.6 2 0 0.9-0.7 1.3-0.6 0.1-1.3-0.9-1.4 0.7-1.7 0.6-1.7-0.1-1.7-1.9-1.8-0.3-2.7 1.8-2.9 0-2.8-1.7-3.1-0.7-2-2.1-1.5-0.1-1.4-1 0.5-1 1.4-1.3 1.1-1.7 0.7-2 0.3-3.1-0.3-3.3-0.1-1.6-0.2-1.4-1.2-1.5-1.5-0.5-0.2-2.4 1.5-0.5 1.6-1.7 0.6-1.4 4-3.1 1.9-2 2.9-2.4 3 0 3.2 2 3.5 0.5 3.8-0.2 6.5-1.8 3-0.3 1.3-3.1 0.9-3.7 1.4-0.8 1.4-0.5 3.3 0 6.5 1.5 1.5 0.6 2.5 2.9 0 6.9z" id="TUR3014" name="Usak">
+                              <title>Uşak</title>
+                             </path>
+
+                             <path style="fill:#BA76D5;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M646.2 317.2l-0.9 0.2-0.8-0.1-0.9 0-0.8 0.6-2.3 2.9-1.8 1.8-0.5 0.9-0.4 1.6-1.1 0.9-0.3 0.5-0.6 2.4 0.8 0.5 0.6 0.7 0.4 1 0 1.4-0.3 0-0.4-0.8-0.5-0.1-0.4 0.5-0.2 1.1 0.2 1 0.4 0.9 0.9 1.4 0.3 0.8 0.1 0.6-0.1 1.6-0.3 1.9 0 0.8 0.7 0.7 0.6-0.4 0.5 0.3 0.5 0.6 0.5 0.3 0.4-0.1 1.3-0.6 0.6-0.1 0.6 0.3-0.1 0.7-0.6 1.6 0 1 0.1 0.6 0.8 0.9 1.4 1.3 0.2 0.5 0 1.6 0.3 1.3 0.9 1 0.3 0.6-0.6 0.2-0.5 0.4-0.1 0.8 0.1 0.9 0.3 0.6-0.9 0.6-1.5 0.4-8.4 3.9-8.6 1.8-3.2 1.4-3.7 2.4-4.4-3.9-4.8-2.7-3.8-2.1-1.6 1.1-2.2-2.7-4.3-4.4-4-2.7-3.5-0.7-1.6-3.7-1.9-1-1.6 1.3-0.6 4.4-3.5 2.4-4.3 2-2.8 2.7-0.5-0.6-0.8-0.1-0.7-0.5-0.4-1.4-0.9-0.8-4.2-1.9-3.4-3.4 1.3-2.4 1.9-1.8 3.7-4.7 2.8-5.6 2-3.1 2.4-2.7 6.3-2.9 2.4-3.4 2.6 1.6 1.5 5.9 4 1.3 4.7-5 2.9-1.5 6.5-1.1 7-2.5 3.3-0.4 3.3 0.1 2.2-1.5 0.7-3-0.4-1.9 0.1-2 5.7-1.2 5.7 0.1 6.1 2.3 4.1 3.6z" id="TUR3016" name="Gaziantep">
+                              <title>Gaziantep</title>
+                             </path>
+
+                             <path style="fill:#BA76D5;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M748.4 321.8l0.7 7.8 1.5 1.6 1.7 1.4 2.6 2.7 0.7 1.4-0.6 5.2 4.8 8.4 2.2 1.2-3.7 2.5-1.9 0.9-2 0.4-1.9 0.6-5.2 3.1-11.1 4.3-27.4 5.2-2.8 0.1-8.1-2.7-2.7 0.2-1.1 0.4-8.5 0.4-3.7-0.5-3.1-1.7-7.1-7.4-2.5-1.4-9.9-3-3.5-0.5-1.8 0.2-3.5 1.4-5 3.2-0.3-0.6-0.1-0.9 0.1-0.8 0.5-0.4 0.6-0.2-0.3-0.6-0.9-1-0.3-1.3 0-1.6-0.2-0.5-1.4-1.3-0.8-0.9-0.1-0.6 0-1 0.6-1.6 0.1-0.7-0.6-0.3-0.6 0.1-1.3 0.6-0.4 0.1-0.5-0.3-0.5-0.6-0.5-0.3-0.6 0.4-0.7-0.7 0-0.8 0.3-1.9 0.1-1.6-0.1-0.6-0.3-0.8-0.9-1.4-0.4-0.9-0.2-1 0.2-1.1 0.4-0.5 0.5 0.1 0.4 0.8 0.3 0 0-1.4-0.4-1-0.6-0.7-0.8-0.5 0.6-2.4 0.3-0.5 1.1-0.9 0.4-1.6 0.5-0.9 1.8-1.8 2.3-2.9 0.8-0.6 0.9 0 0.8 0.1 0.9-0.2 0.8 0.6 0.6 0 1.5-1.1 0.7 0.8 0.9 0.5 2.3 0.6 0.3 0.1 0 0.6 0.5 0.1 0.6-0.7 0.1-1.6 0.4-0.4 2.3 0.3 0.8-0.3 0.3-1.5 0.6 0 3-1.2 1.6 0.7 6.4-1.1 1.1-0.7 3.1-3.3 0.7-1.2 0.5-0.2 2.5-2.7 11.6-1.8-2.6-2-0.9-1 1-0.7 0.8 0.8 0.7 0.1 0.8-0.4 0.6-0.7 0.3-0.3 0.9 0.6 0.5 0 0.8-0.5-1.4-1.5-0.4-0.3 0.7-0.8 1-0.2 1.2-0.1 1-0.3-0.6-0.9 0.1-1.7-0.6-0.5-0.6 0.1-1.5 1-0.7 0.2 0.4-1 0.6-0.8 0.7-0.6 0.8-0.3 0.4 0.1 1.4 0.4 0.3-0.5 0.1-0.6-0.4-0.8 0.6-0.9 0.3-0.9 0-0.8-0.6-1 2.6-0.8 0.7-0.5 0.5-1 0.3-2.2 0.2-0.9 0.6-0.8 0.9-0.5 3.2-0.9 2-1.5 4.1 2.2 4.2 0.7 3.1 0.1 2.9 1.4 3.2 3.3 3.4 2.9 1.6 0.8 1.7 0.6 2 1.8 2.5 1.1 1-1.6 1.5 0.6 1.3 1.3 1 0.5 0.9 0.3 0.8 1.6-0.4 7.1 0.8 5 0.5 1.9 0.2 1 1.8 5.3 1.8 3.4 2.4 2.7z" id="TUR3017" name="Sanliurfa">
+                              <title>Şanlıurfa</title>
+                             </path>
+
+                             <path style="fill:#68C7E3;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M566.2 259.2l-2.9 2.8-1.6 4.1-2.6 11.8-1.6 4.2-0.6 4.4-0.1 2 0.3 3.1 1.7 4.1-0.2 2.7-1.7 1.7-1 0.5-1.4 1.9-4 0-4.9 0.3-2.4 4.1-3 6.8-3.5 8.5 0 5.1 1.6 4.8 1.1-0.1 3.4 0.7 1.5 1.2 0.4 0.9 0.6 3.7-0.8 3.3-1.4 4-1.2-0.4-1.1-0.3-1 0.7-4.3 4.9 0 2.7 0.9 1.3-2.1 2.5-0.7 0.6-0.8 0.2-0.5 0.5-1.8 2-0.8 0.6-2 0.5-4.3 0.2-1.9 0.7-0.6 0.6-0.6 1.2-0.4 0-0.1-0.6-0.4-0.3-0.5 1-0.8 0.8-0.5 0.8 0.3 1 0.8-1.1 1.2 0.4 0.2-1.1 0.4 0.3 0.3 0.6 0.3-1-0.3-0.8 0.7-0.4 0.3 0.3 0.2 0.7 0.4 0.3 0.6-0.2 1-0.5 0.7 0.2-3.1 1.5-1.4 1.1-0.8 1.5 0.1 0.7 0.7-0.5 2.3-2.7 0.7-0.5 0.8-0.2-2 2-0.3 0.6-0.4 1.1-0.3 0.6-0.3 0.6 0 1.6-0.5 0.3-0.5 0.1-0.7 0.6-0.5 0.1-1.7 0.1-0.7-0.1-1.6-1.5-0.5-0.3-0.7 0.2-0.5 0.5-0.1 0.5 0.5 0.1 2.2 0.9-2.2-0.6-2.2-0.2-0.5 0.1-1.2 0.7-0.5 0.7-0.4 0.3-1.2 0.4-1.3 1.1-0.7 0-0.8-1.3-1.3-0.5-13.2-8-1.4-0.5-1.7-1.1-1-0.4-1.5-0.1 0-0.1 2.8-1.9 2.2-0.6 1.9-1.8 0.2-1.8-0.2-1.8-0.7-3.7 0-3.7 1.5-4.1-2-2-3.2 0.1-2.4-1.8-1.2-3.8-0.2-6.7-2.5-1.9-1.9-3.7-1.7-3.9-0.1-3.1 0.2-1.4 1.3-2.1 0.9-0.6 0.7-0.8 0.8-2.8-0.4-1.8-1.3-3.3-0.2-3.3 1.6-2.4 2.7 0.2 2.7 0.8 5.1-0.8 6.8-6.9 9 0.7 4.7 1.2 6.4 2.5 2.8-1.3-1.2-12.1 19.4-13.3 2.8-3.9 2.2-4.6 1.5-2 2.2-5.5 2.3-1.9 4-2.3 4.2-1.1 2.7 1.2 2 3.1 1.3 3.5 2.2 2.3z" id="TUR3018" name="Adana">
+                              <title>Adana</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M433.7 128.2l0.6 3.2 2.2 4.9 1.3 1.3 1.2 0.2 1 1.1 0.2 1.5 0.7 2-0.2 2.2-1 1.7-1.4 2.8 0 3.5 0.5 1.3 0.3 1.5-0.2 1.4 0.5 1.4-8.3 8-2.4 7-3.6 5.7-8.4 6.8-5.9 10.3-4.1-8.1-2.1-9.7-1.4-2.6-4.2-5-1.3-5.8 1.6-5.7 1.3-5.8 2.3-5.8 3.9-1.6 6-0.7 0.7-3.9-0.4-4.1 0-4.6 0.7-3.9 0.7-5.6 14.4 4.6 4.8 0.5z" id="TUR3019" name="Kirikkale">
+                              <title>Kırıkkale</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M483.3 255.4l3.7 10.2 3 3.2 8.5 0.1 1.4 4.5-0.5 2.8 0.2 2.8 1.1 2.3 0.5 2.4-2.4 1.5-0.2 3.4-0.9 4.1-6.8 6.9-5.1 0.8-2.7-0.8-2.7-0.2-1.6 2.4 0.2 3.3 1.3 3.3 0.4 1.8-0.8 2.8-0.7 0.8-0.9 0.6-1.3 2.1-0.2 1.4 0.1 3.1-3.7-0.9-3.6 1.6-1.6 1-1.8 0.6-3.9 0.1-1.2-2.8-1.9-2.2-1.3-1-2-2.9 0-1.9 0.3-3 0.8-1.7 1.2-1.4 1.2-3.4-0.6-3.8-1.7-2.3-2-2-1.8-3.2-2-2.9-2.4-1.3-2.5-1-1.8-2.7-0.7-3.4 17.2-25.7 3 0.5 4.4-1.4 3.1-0.1 1.4 0.8 2.2 2.2 2.7 0.7 5.4-2.1z" id="TUR3020" name="Nigde">
+                              <title>Niğde</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M447.9 218.9l-0.6 2.7 1.7 6-0.8 3.3-1.8 3.1 0.7 3.3 2.4 1.6 2.6 0.8 2.3-0.5 1.1 0.4 0.4 3-1.6 3.4 0.1 3.2 0.9 0.9 2.1 1.7 1.8 1.8 1.9 1.2-17.2 25.7-3.9-0.6-3.9 0.9-4 1.6-4.1 1-4.1-0.2-8.2 0.6-6.2 1.4-2.2-0.1-2.2-2.1-3.5-4.3-0.8-2.5-0.4-2.8-0.5-0.7-0.7-0.5-1.9-5.1 0.4-5.4 0.8-2.3 0.3-2.5 1.2-3.5 1.9-2.8 0.7-5.3 1.2-2.2 3-3.4 1-1.9 4.5-1.2 4.3-2.5 4.5-1.2 4.7 0.1 2-1 4.3-4.1 0.2-3.9-2.1-5.7 1.8-4.4 0.7 1 2.1 0.4 1.2-0.1 2 1 0.8 2.6 2 1.9 2.6-1.6 1.1-0.3 2.3 0.3 1.1-0.2z" id="TUR3021" name="Aksaray">
+                              <title>Aksaray</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M514.3 133.4l3.6 4.1 4.1 2.9 4.9-0.4 4.1 0.8 2.4-0.2 2.4-0.5 2.2-1 2.2-0.6 2.2 2.2-0.4 3.8-0.1 2.6 1 2 1 0.9 0.6 1.5 1.5 5 2.5 4.5 1.8 1 0.5 1.4 0.2 1.6-1.6 5.6-3.8 3.8-4.5 3.5-1.8 2.2-1.6 2.5-1.2 2.5-1.7 2.2-2.4 1.8-1.9 2.3-4.4 6.1-16.9 11-2.3 0.8-5.9 3.8-11.8-1.9-0.7-1.7-0.8-1.6-0.4-1.4-0.2-1.6 0.4-1.6-1.1-2-4.2-2.6-0.7-2.7-1-2-1.7-0.9-1.3-1.6-0.5-1.3-0.2-1.5-0.4-0.8-1.5-0.7-0.9-0.2-1.3-3.2-2.3-1.9-2.6-0.5-2.3-1.5-7.2-8.9-0.6-1.4-0.5-1.5-1-1.5-4.1 0-2.4-0.8-2.6-3-2.7-2.6-2.9 0-1-1-1.1-1-0.5-1.4 0.2-1.4-0.3-1.5-0.5-1.3 3-1.4 8.2-1 4.9-2.3 5.1-1.7 8 1.5 3.1-1.2 2.1 0.2 4.2-0.3 7.8-3.8 4.4 1.3 2.4-0.3 4.1-2.4 1.4-1.9 0.1-1.3 0.6-1.5 0.2-1.2-0.7-0.8 0.5-3 5-0.4 2.1-0.8 0.5 0.2 0.4 1.4 1 0.7 2.3 0.2 2.7-0.2 2.6 0.8z" id="TUR3026" name="Yozgat">
+                              <title>Yozgat</title>
+                             </path>
+
+                             <path style="fill:#85C77E;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M739.7 107.9l1.8 10.1-0.4 10.1-1.7 3.9-0.6 2.2-0.2 2.3 1.1 4.6 1.9 4.2-2 3-2.3 2.4-5.8 1.4-2.8 1.4-3 0.3-3.1-0.2-3 0.3-3.2-0.3-3.1-1.6-3.1-1-1-0.9-0.8-1.1-1.9-1.2-2-0.8-5.6-3.4-1.6-0.4-1.6-0.2-1.5-0.7-1.4-0.9 0.5-2.3-1.5-1.8-0.4-2.4 0.2-2.5-0.2-2.3 0-2.2 1.2-1.4 5.2-3 1.6-1.2 0.3-2.5-1.2-0.4-1.4-1.5-1.5-1.2-6.1-1.5-1.5-1.7-0.1-2.5 0.4-3.1 0.1-0.5 0.5-0.8 1.6-1.6 1-1.8-0.7-2.2 0.7-1.7 1.6-1.1 1.5-1.3 1.3-0.4 1-0.5 0.2-1 0.4-0.8 6.3-0.8 1 0.8 1.1 0.1 1-0.9 0.9-1.2 2.2 1.2 0.8 4.1 3.5 3.6 12.1 5 3.2 0.4 1-0.3 0.8-0.9 0.6-2.8 1.7-1.2 3.5 2.4 2.5 4.2z" id="TUR3031" name="Gümüshane">
+                              <title>Gümüşhane</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M773.9 109.2l1.7 4.2 1.5 9.3 1.3 4.2 3.2 1.8 3.4 0.8 1.5 0.6 3.5 0.3 0.1 1.4-1.2 2.5-1.5 1.8-6.5 2.3-2.9 1.4-2.2 2.2-2.3 1.8-1.9 0.3-8.5-1-8.6-1.8-2.4 1-2.1 1.9-2.6 0.3-3-0.2-2.8 1-1.9-4.2-1.1-4.6 0.2-2.3 0.6-2.2 1.7-3.9 0.4-10.1-1.8-10.1 1.1 0 0.8-1-0.3-1.6 1-0.9 1.6 0.6 3.2 3.6 2.1 1.3 4.5 0.1 4.3 1.4 2.3-0.1 2.5-0.8 2.6-0.5 5.4 0.1 2.1-0.7 1-0.2z" id="TUR3032" name="Bayburt">
+                              <title>Bayburt</title>
+                             </path>
+
+                             <path style="fill:#DEAB42;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M939.5 138.8l-6.9 2.4-6.5 1-2.7 1.3 0 2.6-2 2.3-2.8-1.2-2.4 0.5-2.4-0.6-5.6-0.1-16.1 4.6-10-2-1.6-2.5-1.2-2.7-1.4-2.1-2-0.9-1.1-0.3-0.8-0.7-0.7-1.4-0.9-1.2-1.5-1.1-1.7-0.6-4.5-0.8-1.3-1.4-1.1-1.8-1.8-2.2 1.6-3.7 7.6-2.6 3.3-1.9 1.7-1.4 1.8-1.2 2.2-0.9 2-1.3-1.2-6.9 0.8-2.3 0.4-2.4 6-1.2 6.2-0.6 1-5 0.8-8.2 1.2-5.3 6.2-3.3 17-7.3 5.3-3 3.4-1.1-0.3 1.6 0.5 2.2 0.8 2 1 0.9 2.2 0.3 2.3 1.2 2 1.7 1.7 2 0.6 1.4 0.2 1.3 0.1 1.4 0.3 1.6 0.5 1.3 2.2 3.5 0.5 1.3 0.1 1.2 0.3 4.7-0.1 0.6-1.1 1.9-0.3 0.4 0.4 1.6-2.2 2.6-0.7 1.4 0 1.7-0.3-0.3-0.8-0.2 0.4 0.9-1.2 0.2-1.2 0.8-1.7 2.1 0.2 0.9 1.1 1.3 2.1 1.8 0 0.4-0.8 2.8-0.5 0.8-0.3 1.1 0.5 1.1 1.4 1.3 2.3 3 0.8 1.9-0.9 0.8 0.5 1.2 1.7 2 0.3 0.7-0.5 0.9-2.4 0.5-0.7 0.7 0.7 2z" id="TUR3040" name="Kars">
+                              <title>Kars</title>
+                             </path>
+
+                             <path style="fill:#BA76D5;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M843.1 299.6l3.1 8.2 1.5 5.7-0.6 4.4-3.9 1.9-5 2.7-2.1 2.4 0.8 2.7 6.1 1.9 3.2 2.8 1.1 4.1-21.8 5.1-14.5 0.7-1.1-0.3-2.3-1-12.5-2.5-9.7 1.5-2.6 1-7 3.9-2.4 0.7-1.2 0-1.1 0.3-1.1 0.4-1.1 0.6-6.9 4.7-2.2-1.2-4.8-8.4 0.6-5.2-0.7-1.4-2.6-2.7-1.7-1.4-1.5-1.6-0.7-7.8 5.1-6.6 2.3-2.1 5.7-4 2.6-1 5.8-4.5 4.2-0.3 2.4-3.3 0.7-1.5 5.7-1.2 18.2 0.4 3.4-1.5 1.3-0.1 1 0.5 3.6 4.7 3.7 7.6 5.6 3.5 8-1.6 5.8-4.3 9.6-6.9z" id="TUR3041" name="Mardin">
+                              <title>Mardin</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M835.8 266l-2.3 2.7-1.1 3.6-2.6 3-6 1.7-1.7 3 0.4 4.3 5.6 5.2 9.5 3.9 5.5 6.2-9.6 6.9-5.8 4.3-8 1.6-5.6-3.5-3.7-7.6-3.6-4.7-1-0.5-1.3 0.1-1.2-2-0.4-2.5-0.5-1.9 0.5-1.6 2.5-1.8 2.1-2.4 2.4-8 1-1.4 0.8-1.6 0.4-3.7-0.7-7.2 0.6-3.9 1.1-3.6 0.4-2.4 1.2-1.7 2.7-1.3 1.7-0.5 1.7-0.2 2-1.1-0.3-2.3 2.8-0.9 2.9-0.4 4.5 1.7 1.8 9 1.2 3.6 0.2 2.4 0 2.5-0.2 1.5 0.1 1.5z" id="TUR3042" name="Batman">
+                              <title>Batman</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M893.7 268.6l4.1-0.2 4.2 0.8 3.6 1.4 0.5 4.7-0.1 2.7 0.3 2.7-0.2 2.8-0.7 2.7-0.2 3.8-0.7 1.6-0.6 1.9 2.1 4.9-0.6 3.7-3.2 3.3-8.8-0.9-11-1.6-10.6-2.7-6.9-0.3-4 4.1-10.4-0.8-7.4-3.6-5.5-6.2-9.5-3.9-5.6-5.2-0.4-4.3 1.7-3 6-1.7 2.6-3 1.1-3.6 2.3-2.7 5.4 2 5.6 0.5 4.5-1.2 4.5-1.7 3.5 1.6 3.1 3.1 3.3 2.6 3.8 1.6 3.6 0.9 2.4 1 3.2 2.4 5.3 3 3.5 2.5 2-0.1 1.6-2.4 0.2-3-0.3-2.1 0-2 0.6-0.9 0.6-0.8 1.5-4.4z" id="TUR3043" name="Siirt">
+                              <title>Siirt</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M925 298.3l-0.4 6-1.1 3.8 0.9 3.5 1.7 4.4-0.4 5.7-1.3 3.5-0.7 1.3-1.4-1-0.6-0.2-1 0.2-0.4 0.2-0.5 0.5-0.5 0.1-0.8-0.2-6.8-3.7-0.9-0.3-1.6 0.2-2.1 0.5-2 0.9-1.4 1-2.2 0.8-2.1-0.3-4.3-1.5-0.4-0.3-0.3-1.1-0.4-0.4-1.1 0-2.6 1-0.3 0.3-0.3 0.5-0.2 0.9-0.2 0.5-6.6 9.6-0.8 2.2-0.8 0.3-4.5 0.8-3 1-2.3 0.3 0-1.9-0.2-0.9-0.4-0.4-0.6-0.9 1-3.6-0.4-0.9-0.3-0.1-1.8-1.5-0.7-1.3-0.3-0.1-1 0.8-1.6-0.8-0.7-0.1 0-1.7-0.6-0.7-1 0.7-0.7 0.5-2.6 3.5-4 3.7-2.3 1.4-5.8 1.4-1.1-4.1-3.2-2.8-6.1-1.9-0.8-2.7 2.1-2.4 5-2.7 3.9-1.9 0.6-4.4-1.5-5.7-3.1-8.2 7.4 3.6 10.4 0.8 4-4.1 6.9 0.3 10.6 2.7 11 1.6 8.8 0.9 3.2-3.3 0.6-3.7 4.2-2.3 4.4 0.6 4 1.7 1.3 0.3 2.5-0.1 2.6-0.3z" id="TUR3044" name="Sirnak">
+                              <title>Şırnak</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M777.3 176.9l-2 2.5-2.6 1.2-1.4-0.1-2.4-0.4-0.9 0.7-1.4 3-2.5 1.8-2.5-0.1-2.4 1-0.4 1.3-0.5 1.1-0.7 0.3-3.7-0.2-2.6 0.8-0.7 1.4-0.3 3.3-0.6 1.7-0.3 1.8 1.1 5.1-0.4 2.2-0.9 2.1-2.8 0.2-2.6 0.6-1 0.7-0.7 1.1 0.6 2.6 0.2 2.3-0.7 3.2-1.4 2.8-3.2 3.6-4.9 1.9-5 0.3-1.9-0.1-1.8 0.4-1.3 1.7-1.6 1.1-1.3-0.4-1.3-0.6-1.3 0.3-1.2-1.5-1-0.7-2.3-0.7-2.3-1.6-2.4-1.1-2.1-0.2-2.1-0.7-1.7-0.1-1.6-1-0.5 0-1.6 0.3-2.2-1-4.1 0.3-4.1 1.1-1.5 0-2.2-2.2 0-1.9 0.8-1.7-0.1-2-2-3-0.4-4.2-0.9-0.7-0.2-1.6 0.2-1.6 1.8-1 0.8-3.8 1.2-0.7 1.4-0.3 1.4-0.9-0.7-1.3-0.7-2 0.9-2.2 3.1-1.1 0.6-0.3 0.6-1.2 0.7-1.1 1.5 0.1 1.3-0.7 1-1.8 1.4-1.1 5.2-2 2.7-0.5 2.7 0.5 2.2-0.6 2.1-1.1 4 0.3 4 0.9 4.1 0 8-1.2 3.6-1.2 2.4-3 1.9-0.6 2.8 1.6 4.1 1 4.8-1.6 1.1-0.2 2-0.9 1.7-0.6 0.1-0.2 0.6 0.1 2 0.7 1 0.6 7.7 0.2 4.3 0.7 4.2 0.1z" id="TUR3045" name="Tunceli">
+                              <title>Tunceli</title>
+                             </path>
+
+                             <path style="fill:#DEAB42;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M967.6 287l-0.1 0.5 0.9 1.4 1.8 0.3 3.4-0.4 0.6 0.2 1.9 0.9 0.5 0.4 0.3 0.6 0.5 1.6 0.6 0.7 0.4 0.2 0.7-0.2 0.4 0.3 0 0.3-0.2 1.5 0.4 0.7 0.7 0.1 0.9-0.3 0.6-0.4 1.4-0.2 1.5 0.7 1.3 1.1 1.9 2.4 0.1 0.6-0.5 0.9-1.8 1.4-0.4 0.6-0.3 2 1.1 1.2 1.1 0.9 0.3 1.1-0.5 1.3-0.4 1.7-0.1 1.6 0.5 2.5-0.7 1.9 0.4 1.1 0.7 0.4 1.9 0.2 0.8 0.6 0.7 1.9 0.5 0.5 1.9-0.3 0.5 0.6 0.3 1 0.4 0.9 3 1.9 1.2 1.4-0.1 2.1-0.7 0.8-0.7 0.4-0.6 0.6-0.4 1.2 0.2 1.3 0.5 1.1 0.3 1.1-0.3 1.3-0.7-1.2-1-0.5-5.5-0.8-1 0.1-1.6 0.8-2.1 1.4-1.8 1.8-1.3 1.6-1.3 1.1-1.4 0.7-4.4 1.5-0.4 0.7-0.2 1-0.8 1.4-0.5 1.1-0.5 0.5-0.6 0.1-2.2-0.6-0.5-0.4-0.3-0.7-2.1-4.7-0.4-1.4 0-1.4 0.5-1.3 0.9-1.1 0.6-0.4 1.1-0.4 0.5-0.8 0-1.4-0.3-1.5-0.4-1.5-0.6-1.1-0.9-0.9-1.2-0.7-5-2.1-2.7-0.5-2.4 0.4-1.9 1.6-1.5 2.3-1.6 1.8-2.8 0.5-0.9 1-0.7 0.2-0.4-0.3-1.1-1.1-0.5-0.3-1.3-0.4-1.3-0.1-5.4 0.4-1.2-0.2-1.3-0.5-1.4-1-0.7-0.1-0.6 0.1-1.3 0.5-0.7 0.1-0.9-0.3-2.4-2-2.1-1.1-0.7-0.6 0.7-1.3 1.3-3.5 0.4-5.7-1.7-4.4-0.9-3.5 1.1-3.8 0.4-6 7-0.1 6.9-1.1 1.5-0.8 1.5-0.6 2.2 0.3 2.1 0.9 3.4 0 3.3-0.7 2.9-1.7 1.3-3.6 2.1-3.7 3.8-0.8 4.6 0.6z" id="TUR3047" name="Hakkari">
+                              <title>Hakkari</title>
+                             </path>
+
+                             <path style="fill:#DEAB42;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M959.4 191.2l0.2 0.7 0.3 1.4 0.6 1.3-0.1 1 0 0.6 0.2 0.6 0.6 1.3 0.1 0.6-0.4 1.2 0.1 0.6 1.3 1 2.3 1.3 2.1 1.4 0.4 1.6-1 2.1-0.3 1 0.5 2.7-0.5 0.8-0.9 0.7-0.7 1.3 0.4 0.9 0.3 1 0.3 0.5 0.8 0.8 0 1.2 0.9 2.5 0.8 1 0.8 0.8 2.8 1.3 0.2 2-1.4 4.9-0.2 1.3 0.1 0.8 0.2 0.8 0.3 1.2-0.2 0.5-0.5 0.5-0.1 0.4 0.6 0.3 1 0.3 0.7 0.7 0.4 1.1 0 1.4-0.2 2.7 0.4 3.4 0 1.1-0.7 2.7 0 0.8 0.2 1.7-0.2 1.7 0.1 0.6 1.3 0.7 2.6 0.4 1.7-1 0.7-0.1 0.8 0.3 0.7 0.6 0.6 0.9 0.4 1.1 0.1 1-1.2 1.7-1.9 1.5-1.5 1.7 0.3 3.2-0.2 1.3-0.3 1.3-0.4 0.9-0.4 0.6-0.9 0.4-0.4 0.3-0.1 0.6 0.4 1.3-0.3 0.4-1 0.5-0.6 0.5-0.5 0.9-0.5 1.3-0.4 1.1-1.3 1.4-0.9 1.8-0.3 0.8-0.1 0.9 0.2 0.9 0.1 0.8-1 1.4-0.1 0.3-4.6-0.6-3.8 0.8-2.1 3.7-1.3 3.6-2.9 1.7-3.3 0.7-3.4 0-2.1-0.9-2.2-0.3-1.5 0.6-1.5 0.8-6.9 1.1-7 0.1-2.6 0.3-2.5 0.1-1.3-0.3-4-1.7-4.4-0.6-4.2 2.3-2.1-4.9 0.6-1.9 0.7-1.6 0.2-3.8 0.7-2.7 0.2-2.8-0.3-2.7 0.1-2.7-0.5-4.7-3.6-1.4-4.2-0.8-4.1 0.2-2.8-0.9-0.9-3.4 0.5-2.3-0.1-1.7-0.2-0.9-1.9-4.2-0.3-1.4 0.5-2.9 0.9-0.9 5.6-3.2 3.3-2.3 1.1-1.9 0.9-2 4.8-7.2 2.8-3 3.8-3 1.5-4.9-2.1-3.3-6.1-3.7-1.6-3.4-0.1-5.2 6.1-2.4 1.3-1.4 0.1-2.4 0.3-2.3-0.3-2.1-2.1-0.8-1.9-1.2 0.4-2 1.2-0.5 3.1-0.6 1.8-0.6 1.9-2.5 2.3-1.8 4 0.3 3.6 1.6 3 3.2 2.4 1.5 4.5 0.8 1.8 0.1 1.3-1.4 1.5-1.1 2-0.3 2 0.3 2.5 0.9 3.1 0.3 0.9 0.3 1.9 0.4 7.4-2z" id="TUR3048" name="Van">
+                              <title>Van</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M927.8 70.3l-3.4 1.1-5.3 3-17 7.3-6.2 3.3-1.2 5.3-0.8 8.2-1 5-6.2 0.6-6 1.2-1.6-2.8-2.1-2.1-1.5-2.3-1.1-2.7-1.5-1.9-1.9-1.3-2.7-4.1-1.1-5.3 3.3-6.5 4.5-5 4.4-2.2 1.4-4.7-1.5-4.8-1-2.5-0.4-0.7-0.6-1.7-0.4-3-0.7-4 0.6 0 1.1-0.7 1.6-2.4 1.1-1.2 0.5-1.1 0.5-2.9 0.5-1.2 1.1-0.8 1.3-0.4 2.6-0.2 7.3 0.6 1 0.5-0.4 0.6-0.3 1.4-0.2 0.7-0.4 0.5-1 0.8-0.5 0.7 1.4 0.8 1 1.1 0.9 0.3 1.3-1.4 0.7-0.5 0.4 0.5 0.3 0.8 0.4 0.8 0.4 0.3 1.5 0.5 0.8 0.9 0.5 0.2 0.4 0.4 1.6 3 0.7 0.8 3.8 2.6 2.6 2.2 1.6 0.8 1.5 0.2 0.1 0.4-0.7 1-0.8 0.7-2.8 1.4 1.4 0.5 1.1-0.2 1.1 0.2 1 1.2 1.3 3 0.7 0.6 4.8-1.4 1.5-0.1 1.7 0.5 1.4 0.8 1.4 1.3 0.8 1.7-0.6 1.8z" id="TUR4839" name="Ardahan">
+                              <title>Ardahan</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M980.8 170.6l-0.8-0.7-2.1-0.5-9.3 2.2-4-0.5-3.9-1.2-5.2 0.6-4.8-0.7-0.3-1.1-0.3-0.9-3.3-0.8-4.7-2.2-1.6-2.1-1.1-2.5-1.7-1.2-1.1 0-1.7-0.8-0.7-0.6-1.7-0.3-3.5 1.4-3.3 2.4-1.8-0.7-0.9-0.8-0.7-2.5 0-1.6 0.3-3.3-1.2-3.8 2-2.3 0-2.6 2.7-1.3 6.5-1 6.9-2.4 2.4 1.3 4.7 1.4 5.7 3.1 6.3 1.1 0.9-0.3 1.8-1.3 1.1-0.3 0.5 0.2 0.7 0.6 0.4 0.2 0.5-0.1 1.1-0.3 1.5-0.2 3.1-0.9 1.8 0 1.9 0.6 7.2 4.3 3.1 2.6 1.3 1.5 0.6 1 0.4 1.6 0.5 0.5 0.7 0.6 0.2 0.6 0 0.8 0.2 0.4 0.7-0.4 1.9 2.2 1 0.5 0.8 0 0.5 0.3 0.3 0.5 3.2 4.2 1.3 2.3 0.6 2.5 0.6 0.9-4.2-3.1-1-0.9-3.2-1.4-0.7-0.9-1.4-2.1-0.8-0.6-1.3 0.4-5.5 4.6-0.2 0.8 0.2 2.2-0.1 0.8z" id="TUR4840" name="Iğdir">
+                              <title>Iğdır</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M619.2 367.7l-3.9 2.6-2.2 0-8.5-1.6-1.1 0.1-3.4 0.9-0.9-0.2-0.9-0.2-0.8-0.1-1 0.4-0.8 0.9-0.4 0.6-0.5 0.1-1.1-0.5-0.9-0.9-0.2-0.8 0.4-2.1 0-1.3-0.4-0.9-2.4-2.2-1-0.6-1.1-0.4-1-0.2-3.2-0.2-9.6-3.4 2.8-2.7 4.3-2 3.5-2.4 0.6-4.4 1.6-1.3 1.9 1 1.6 3.7 3.5 0.7 4 2.7 4.3 4.4 2.2 2.7 1.6-1.1 3.8 2.1 4.8 2.7 4.4 3.9z" id="TUR4841" name="Kilis">
+                             <title>Kilis</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M554.5 302.5l-0.1 5.2-1.1 1.9-1.5 1.6-0.4 2 0.6 1.9 0.7 0.7 0.6 0.8 0.2 4.4 2.2 2.6 0.5-0.1 0.3-0.6 0.5-0.3 1.3-0.5 0.9 1 1.7-0.3 2-0.8 5.7-1.1 2 0.5 1.8 1.3 2.8 2.6 2.3 3.4-2.4 2.7-2 3.1-2.8 5.6-3.7 4.7-1.9 1.8-1.3 2.4-2.6 0.3-2.6 0-2-1.3-1.7-1.8-2.4-0.8-2.4 0.7-2.2-0.1-2.1-0.6-2.3 0.4 1.4-4 0.8-3.3-0.6-3.7-0.4-0.9-1.5-1.2-3.4-0.7-1.1 0.1-1.6-4.8 0-5.1 3.5-8.5 3-6.8 2.4-4.1 4.9-0.3 4 0z" id="TUR4842" name="Osmaniye">
+                              <title>Osmaniye</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M197.3 99l0 6.1-0.4 2.7-3.3-0.7-3.3 3.5-3.3 0.7-8-3.5-1.6 0.2-3.6-0.9 0.1 7.4-0.5 0.2-2.8-0.6-4.6-2.9-2.8-0.7 0.9-2.1 1.8-1.2 3.7-1.4 1.6-1 2.2-2.3 0.8-0.4 15.4-1.4 2.2-0.8 2.1-1.2 1.1-0.8 0.4-0.1 0.4 0.4 0.4 0.6 0.5 0.5 0.6-0.3z" id="TUR5518" name="Yalova">
+                              <title>Yalova</title>
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M320.9 74.8l-0.9 6-2.6 3-4.8 1.1-6.7 1.2-2.6 1.9-0.2 3.6-1.9 5.1-4 3-5 0.6-5.9-2.5-8.5 0.2-4.3-1.5 1.2-2.1-1.1-1.6-0.5-1.8 0.7-2-0.1-2.1-0.9-1.8-0.4-2.1 1.8-4.1 3-2.8-0.1-1.5-0.3-2 0.1-0.7 7-0.1 1.3-0.8 0.5-0.1 0.7 0 1.1 0.3 0.5 0.1 2.2-0.4 1.1 0.4 0.4-0.1 0.2-0.6 0.3-0.3 2.1-0.8 1.8-1.1 1.2-1.2 2 1.9 8.9 4.4 12.7 1.3z" id="TUR5519" name="Düzce">
+                             <title>Düzce</title>>	
+                             </path>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M387.1 71.2l-2.2 5.6-5.1 2.8-5.1-0.5-1.8 1.1-2.5 4.5-6.2 5-5.4 2.5 0.2-1.8-2-3.6-6-3-2.4-1.5-1.5-0.3-1.2-0.8 0-1.9 0.2-1.9-4.4-1-2.6-0.1 0-6.2 1.7-5.6 0.9-3.6 1.9-2.3 2.7-3.9 5.7 0.3 5.5-1.4 6.3-5.4 2.3-5 3-0.9 4.9-4.7 1.8 2 3.1-0.5 3.9-1.3 3.7 2.8 1.5 6.2 1.5 3.4-5.1 1.1-2.8 2.7-2.3 3.2-0.5 2.4 1 7.4 2.9 0.5 2.8 1.2 1.1 1.6 0.5 0.9z" id="TUR5520" name="Karabük">
+                              <title>Karabük</title>
+                             </path>
+                            </a>
+
+                             <path style="fill:grey;stroke:white; stroke-width: 2px; transition: fill 0.3s; margin: all;" d="M374 37.6l-4.9 4.7-3 0.9-2.3 5-6.3 5.4-5.5 1.4-5.7-0.3 1.1-5.9-1.9-4.8-1.1-3.6-3.1-1.4-3-3 1.5-0.9 0.8-1.7 3.4-3.9 0.3-0.4 0.8-1.5 1.7-0.5 2.9-0.2 0.1-0.4 1-0.5 0.2-0.8 0.5 0 0.7 0.8 0.9-0.5 1.2-1.3 0.7-0.6 3.6-1.9 0.6-0.5 0.7-0.3 0.8-0.1 0.8 0.4 0.6-1.1 1.2-0.9 1.4-0.3 1.2 0.6 0.9-0.1 3.1-1.2 0.8-0.4 0.8 0.1 1.5-0.1 0.5 4.2 1.5 3.1 1.9 5.1-3.4 2.4 0.5 5z" id="TUR5521" name="Bartın">
+                              <title>Bartın</title>
+                             </path>
+
+                             <circle cx="401.7" cy="111.5" id="0">
+                             </circle>
+                             <circle cx="403.7" cy="112.1" id="1">
+                             </circle>
+                             <circle cx="280.5" cy="129.9" id="2">
+                             </circle>
+                             </g>
+                            </svg>
+
+                            </div>
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Kapsül Harita -->
+
+
+    
+    <!-- Services -->
+    <div id="services" class="cards-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">HighLife+</div>
+                    <h2>Karşınızda HighLife+!<br> Biz kimiz?</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                    <!-- Aysut -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/aysut.jpeg" alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Aysu Köseoğlu</h3>
+                            <p>Lisans yıllarında web tasarımla ilgilenen üyemiz, şu an yüksek lisans için hazırlık yapıyor. Hobileri arasında kanun çalmak ve karikatür okumak yer alıyor. Kişisel olarak ulaşmak için: </p>
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">aysu.koseoglu.98@gmail.com</div>
+                                </li>
+                   
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end of Aysut -->
+
+                    <!-- Calli -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/calli.jpeg" alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Çağla Gül Yanık</h3>
+                            <p>Lisans yıllarında instructional design ile ilgilenen üyemiz, şu an bir şirkette içerik üretiyor ve yüksek lisans için hazırlık yapıyor. Boş zamanlarını Uzak Doğu kültürü ve Klasik Türk Müziği ile ilgilenerek geçiriyor. Kişisel olarak ulaşmak için: </p>
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">cagla.gy61@gmail.com</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end of Calli -->
+
+                    <!-- Ezgi -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/ezgi.jpeg" alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ezgi Küçük</h3>
+                            <p>Lisans yıllarında web tasarım ve instructional design ile ilgilenen üyemiz, şu an bir şirkette içerik üretiyor. Boş zamanlarında kısa yazılar yazmaktan hoşlanıyor. Kişisel olarak ulaşmak için: </p>
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">ezgikucuk4@gmail.com</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end of Ezgi -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of services -->
+
+    
+    <!-- Projects -->
+	<div id="projects" class="filter">
+		<div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">PROJELER</div>
+                    <h2>Diğer Çalışmalarımız</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Filter -->
+                    <div class="grid">
+                        <div class="element-item development">
+                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Gagne'nin Dokuz Adımı</span></div><img src="images/gagne.png" alt="alternative"></a>
+                        </div>
+                        <div class="element-item development">
+                            <a class="popup-with-move-anim" href="#project-2"><div class="element-item-overlay"><span>Kişisel Verileri Koruma ve Çocuklarımız</span></div><img src="images/kvkk.png" alt="alternative"></a>
+                        </div>
+                        <div class="element-item design development marketing">
+                            <a class="popup-with-move-anim" href="#project-3"><div class="element-item-overlay"><span>Bilgisayar ve Telefon Meturoam'a Nasıl Bağlanır?</span></div><img src="images/meturoam.png" alt="alternative"></a>
+                        </div>
+                        <div class="element-item design development marketing">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Portföyler</span></div><img src="images/portfolio.png" alt="alternative"></a>
+                        </div>
+                        <!--
+                        <div class="element-item design development marketing seo">
+                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Joy Moments</span></div><img src="images/project-5.jpg" alt="alternative"></a>
+                        </div>
+                    </div> <!-- end of grid -->
+                    <!-- end of filter -->
+                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+		</div> <!-- end of container -->
+    </div> <!-- end of filter -->
+    <!-- end of projects -->
+
+<!-- Nasıl kullanılır -->
+  <div id="nasıl" class="filter">
+    <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">NASIL KULLANILIR?</div>
+                    <h2>Nasıl Kullanılır?
+                      <p> Türkiye haritasına ulaşmak için anasayfada bulunan "Haritaya git" butonunu veya üst menüde bulunan "Kapsül Haita" butonunu kullanabilirsiniz. Bilgi erişiminizin olduğu iller haritada renklendirilmiştir. Bilgiye ulaşmak istediğiniz ilin coğrafi bölgesini seçerek o ilin adına tıklamanız bilgiye erişebilmenizde yeterli olacaktır.
+                      	<br>İyi Eğlenceler!</p>
+                    </h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Filter -->
+                    <div class="grid">
+                        
+                    </div> <!-- end of grid -->
+                    <!-- end of filter -->
+                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    </div> <!-- end of filter -->
+
+
+    <!-- Project Lightboxes -->
+    <!-- Lightbox -->
+    <div id="project-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="images/gagne.png" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>Gagne'nin Dokuz Adımı</h3>
+                <hr class="line-heading">
+                <p>Bu video HighLife+ ekibi tarafından CEIT216-Öğretim İlke ve YÖntemleri dersi için tasarlanmıştır.</p>
+                <p>Bu projede amaç Gagne'nin Dokuz Adımını görsel bir şekilde izleyiciye sunmaktır.</p>
+                <p>Videoyu izlemek isterseniz <a href="https://www.youtube.com/watch?v=9iLmQUzz0vc&ab_channel=EzgiK%C3%BC%C3%A7%C3%BCk" target="_blank"> buradan</a> ulaşabilirsiniz.</p>
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">GERİ</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox -->
+    <div id="project-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="images/kvkk.png" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>Kişisel Verileri Koruma ve Çocuklarımız</h3>
+                <hr class="line-heading">
+                <p>Bu video HighLife+ ekibi tarafından CEIT207-Öğretim Materyali Kullanımı ve Tasarımı dersi için tasarlanmıştır.</p>
+                <p>Bu projede amaç çocukları internette karşılaşabilecekleri tehlikeler hakkında eğlenceli bir biçimde bilgilendirmektir.</p>
+                <p>Videoyu izlemek isterseniz <a href="https://www.youtube.com/watch?v=eB3v5iey534&ab_channel=EzgiK%C3%BC%C3%A7%C3%BCk" target="_blank"> buradan</a> ulaşabilirsiniz.</p>
+				<a class="btn-outline-reg mfp-close as-button" href="#projects">GERİ</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox -->
+    <div id="project-3" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="images/meturoam.png" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>Bilgisayar ve Telefon Meturoam'a Nasıl Bağlanır?</h3>
+                <hr class="line-heading">
+				<p>Bu video HighLife+ ekibi tarafından CEIT323-Multimedya Tasarımı ve Geliştirilmesi dersi için tasarlanmıştır.</p>
+                <p>Bu projede amaç ODTÜ'ye yeni gelen öğrencilerin bilgisayarlarını ve telefonları internete bağlarken yaşayacağı zorlukları ortadan kaldırmaktır.</p>
+                <p>Videoyu izlemek isterseniz <a href="https://www.youtube.com/watch?v=vsiUXLNbc7Y&ab_channel=%C3%87a%C4%9FlaYan%C4%B1k" target="_blank"> buradan</a> ulaşabilirsiniz.</p>
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">GERİ</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox -->
+    <div id="project-4" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="images/portfolio.png" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>Portföylerimiz</h3>
+                <hr class="line-heading">
+                <p>Lisans eğitim hayatımız boyunca hazırladığımız materyallere internet sitelerimizden ulaşabilirsiniz.</p>
+                <p>Aysu Köseoğlu'nun portföyüne <a href="https://aysuk.weebly.com/" target="_blank"> buradan</a> ulaşabilirsiniz.</p>
+                <p>Çağla Gül Yanık'ın portföyüne <a href="https://caglagulyanik.weebly.com/" target="_blank"> buradan</a> ulaşabilirsiniz.</p>
+                <p>Ezgi Küçük'ün portföyüne <a href="https://ezgikucuk.weebly.com/" target="_blank"> buradan</a> ulaşabilirsiniz.</p>
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">GERİ</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+
+    <!-- Lightbox -->
+    <!-- end of lightbox -->
+
+    
+    <!-- end of project lightboxes -->
+
+<!-- About -->
+    <div id="hakkımızda" class="counter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-xl-6">
+
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/calli.jpeg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7 col-xl-6">
+                    <div class="text-container">
+                        <div class="section-title">HAKKINDA</div>
+                        <h2>Projenin amacı</h2>
+                        <p>Bu site Orta Doğu Teknik Üniversitesi Bilgisayar ve Öğretim Teknolojileri Eğitimi Bölümü son sınıf öğrencileri Çağla Gül YANIK, Ezgi KÜÇÜK ve Aysu KÖSEOĞLU tarafından Proje Geliştirilmesi ve Yönetimi dersi kapsamında Türkiyenin illeri hakında kullanıcılara bilgi vermek için tasarlanmıştır. </p>
+                        <ul class="list-unstyled li-space-lg">
+
+
+                    </div> <!-- end of text-container -->      
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of counter -->
+    <!-- end of about -->
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>İletişim</h4>
+                        <p class="white">Bizimle iletişime geçmek isterseniz çekinmeden mail atabilirsiniz.</p>
+                        <p class="white">plus.highlife@gmail.com</p>
+
+                    </div>
+                    <!-- end of text-container -->
+                </div>
+                 <!-- end of col -->
+                 <!-- BURAYA LAZIM OLURSA KOD WP -->
+				 <!-- end of col -->
+
+            </div> <!-- end of row -->
+        </div>
+
+        <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Template by Inovatik</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+
+    	
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>
